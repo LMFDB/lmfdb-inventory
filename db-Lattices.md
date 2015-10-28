@@ -11,7 +11,7 @@ Todo:
 
 
 ## Collection lat
-* Field 1: name = aut; description = size of automorphism group; type = int;
+* **aut** (int): size of automorphism group
 * Field 2: name = base_label; description = part of the label which is completely deterministic; type = string;
 * Field 3: name = class_number; description = class number or genus of a lattice; type = int;
 * Field 4: name = comments; description = comments and historical remarks; type = string;
