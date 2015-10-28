@@ -6,6 +6,8 @@ Contact/Maintainer:
 
 Description:
 
+This is coming from [here](https://github.com/annahaensch/lattice_data).
+
 Todo:
 * ...
 
