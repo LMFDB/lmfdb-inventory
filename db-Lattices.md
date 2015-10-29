@@ -1,36 +1,48 @@
 # Database Lattices
 
-Status:
+Status: Work in progress, check the branch lattice on https://github.com/sanni85/lmfdb.git
 
-Contact/Maintainer:
+Contact/Maintainer: Samuele Anni @sanni85
 
-Description:
+Description: Database of integral lattices
 
-This is coming from [here](https://github.com/annahaensch/lattice_data).
+Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe and Neil Sloane
+
+The data is coming from [here](https://github.com/annahaensch/lattice_data).
 
 Todo:
-* ...
-
+* error parsing functions
+* add L series for even dimensional lattices using the new avaliable pari functionalities
+* improve q expansion display
+* upload all the data from [here](https://github.com/annahaensch/lattice_data).
 
 ## Collection lat
 * **aut** (int): size of automorphism group
 * **base_label** (string): part of the **label** which is completely deterministic
-* Field 3: name = class_number; description = class number or genus of a lattice; type = int;
-* Field 4: name = comments; description = comments and historical remarks; type = string;
-* Field 5: name = density; description = density; type = string;
-* Field 6: name = det; description = determinant; type = int;
-* Field 7: name = dim; description = dimension; type = int;
-* Field 8: name = genus_reps; description = list of genus representatives (matrices); type = list of list of lists with int entries;
-* Field 9: name = gram; description = Gram matrix; type = list of lists integers ;
-* Field 10: name = hermite; description = Hermite number; type = string;
-* Field 11: name = index; description = index; type = int;
-* Field 13: name = kissing; description = Kissing number; type = int;
-* Field 14: name = label; description = LMFDB label; type = string;
-* Field 15: name = level; description = level; type = int;
-* Field 16: name = minimum; description = lenght of the shortest vector; type = int;
-* Field 17: name = name; description = name of a lattice; type = string;
-* Field 18: name = shortest; description = list of shortest vestors; dimension; type = list of lists of integers;
-* Field 19: name = theta_series; description = q-expansion of the associated theta series; type = list of integers;
+* **class_number** (int): class number or genus of a lattice
+* **comments** (string): comments and historical remarks
+* **density** (string): density of a lattice
+* **det** (int): determinant of a lattice
+* **dim** (int): dimension of a lattice
+* **genus_reps** (list of matrices with int entries): list of genus representatives (matrices)
+* **gram** (matrix with int entries): Gram matrix of a lattice
+* **hermite**(string): Hermite number of a lattice
+* **index** (int): index of a lattice
+* **kissing**(int): Kissing number of a lattice
+* **label**(string): LMFDB label of a lattice
+* **level**(int): level of a lattice
+* **minimum**(int): lenght of the shortest vector
+* **name**(string): name of a lattice
+* **shortest** (list of vectors of int): list of shortest vectors
+* **theta_series** (list of int): coefficients of the q-expansion of the theta series associated to a lattice
+
+## LMFDB label of an integral lattice in lat
+
+The LMFDB label has the following structure:
+
+    dimension.determinant.level.class_number.number
+
+the first 4 parameters are uniquely defined, given a lattice, the last is depending on the ordering we compute/upload the data
 
 ### One example of lat
 
