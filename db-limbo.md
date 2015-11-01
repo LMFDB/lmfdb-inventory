@@ -1,10 +1,10 @@
 # Database limbo
 
-Status:
+Status: Fields for the most recent version will change soon.  Then older versions can be deleted.
 
-Contact/Maintainer:
+Contact/Maintainer: John Jones
 
-Description:
+Description: These are different versions of the Artin representation databases.  They come in pairs: artrep with Artin representations and nfgal which has corresponding information about Galois groups.  A given Galois group may have several representations, so they are separated to avoid having the same information entered repeatedly.
 
 Todo:
 * ...
