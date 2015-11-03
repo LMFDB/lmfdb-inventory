@@ -49,7 +49,7 @@ Todo:
 ## Collection nfgal20130914
 * **Polynomial** (list of ints): coefficients of a polynomial defining this field
 * **TransitiveDegree** (int): degree of the polynomial
-* **Size** (int): order of the Galois group
+* **Size** (int-as-string): order of the Galois group
 * **DBIndex** (int): counter to distinguish those with the same degree and size, used for crossreferencing from artrep table
 * **ArtinReps** (list of dicts): each entry from the list corresponds to an Artin representation for this field, giving its dimension (Dim), Character, index from the artin rep database (DBIndex), Conductor, and CharacterField
 * **ConjClasses** (list of dicts): for each conjugacy class of the group: its Order (int), Representative (list of ints giving a permutation), and Size (int)
