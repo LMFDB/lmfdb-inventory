@@ -8,6 +8,8 @@ Description: Database of Half Integral Weight Cuspforms spaces and Shimura decom
 
 Contributors: Samuele Anni and Soma Purkait
 
+Data will be uploaded from [here](https://github.com/sanni85/half_integral_mf).
+
 Todo:
 * error parsing functions
 * prettify the html output
