@@ -1,8 +1,8 @@
 # Database Lattices
 
-Status: Work in progress, check the branch lattice on https://github.com/sanni85/lmfdb.git
+Status: Work in progress, on beta: beta.lmfdb.org/Lattice hidden link
 
-Contact/Maintainer: Samuele Anni @sanni85
+Contact/Maintainer: Samuele Anni 
 
 Description: Database of integral lattices
 
@@ -11,9 +11,9 @@ Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe and Neil Sloane
 The data is coming from [here](https://github.com/annahaensch/lattice_data).
 
 Todo:
-* error parsing functions
+* error parsing functions DONE
 * add L series for even dimensional lattices using the new avaliable pari functionalities
-* improve q expansion display
+* improve q expansion display DONE
 * upload all the data from [here](https://github.com/annahaensch/lattice_data).
 
 ## Collection lat
