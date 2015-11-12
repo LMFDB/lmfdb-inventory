@@ -65,8 +65,14 @@ Todo:
 * Extent: primes p with 3,p<100 of good ordinary reduction, for curves of
  conductor up to 130,000 only (last updated in 2010)
 
-* Field 1: ...
-* Field 2: ...
+| Field | Description | Type | Example |
+| --- | --- | --- | --- |
+| _id | Mongo id | ObjectId | |
+| lmfdb_iso | LMFDB label of isogeny class | string | '58.a' |
+| p | prime | int | 97 |
+| prec | p-adic precision | int | 20 |
+| unit | unit factor of regulator | string representing integer | '8471152617139064438417376357679138234' |
+| val | valuation of p-adic regulator | int | 1 |
 
 ## Collection nfcurves
 
@@ -75,6 +81,41 @@ Todo:
 * Origin: https://github.com/JohnCremona/ecnf-data
 * Extent: contains curves over several real and imaginary quadratic fields, in each case complete up to some conductor norm bound
 
-* Field 1: ...
-* Field 2: ...
+* Explanation of data fields representing elements of the field, including points:
+  - Each field of degree d has a distinguished generator
+  - A rational number is represented as a string
+  - A field element is represented as a list of d strings, each representing the coordinate with respect to the power basis
+  - A point is represented (in projective coordinates) as a list of 3 field elements, i.e. a list of 3 lists of d strings
+  - Generator fields are represented by lists of points
 
+| Field | Description | Type | Example |
+| --- | --- | --- | --- |
+| _id | Mongo id | ObjectId | |
+| field_label | Base field label | string | '2.0.8.1' |
+| degree | Base field degree | int | 2 |
+| signature | Base field signature | list of 2 ints | [0, 1] |
+| abs_disc | absolute value of discriminant of base field | int | 8 |
+| label | full label | string | '2.0.8.1-[3618,1146,3]-e2' |
+| short_label | short label (excludes field) | string | '[3618,1146,3]-e2' |
+| class_label | full label of isogeny class | string | '2.0.8.1-[3618,1146,3]-e' |
+| short_class_label | short label of isogeny class (excludes field) | string | '2.0.8.1-[3618,1146,3]-e' |
+| conductor_label | condcutor label | string | '[3618,1146,3]' |
+| iso_label | isogeny class label suffix | string | 'e' |
+| iso_nlabel | isogeny class label suffix (numerical) | int | 4 |
+| conductor_ideal | data defining the conductor ideal | string | '[3618,1146,3]' |
+| conductor_norm | conductor norm | int | 3618 |
+| number | number of curve in isogeny class | int | 2 |
+| isogeny_matrix | Isogeny matrix | list of list of ints (degrees) | [[1, 2], [2, 1]] |
+| ainvs | a-invariants | list of 5 lists of d strings | [['1', '0'], ['1', '-1'], ['1', '1'], ['17', '-7'], ['9', '22']] |
+| jinv | j-invariant | list of d strings | ['288857903821/4771277298', '7556047939133/9542554596'] |
+| analytic_rank | analytic rank | int | 0 |
+| rank | rank | int | 0 |
+| rank_bounds | lower and upper rank bounds | list of 2 ints | [0, 0] |
+| sha_an | analytic order of Sha | int | 1 |
+| gens | generators of infinite order |  list of lists of 3 lists of d strings | [[['2', '2'], ['11', '-12'], ['1', '0']]] |
+| torsion_order | torsion order | int | 6 |
+| torsion_structure | invariants of torsion subgroup | list of at most 2 ints | [3, 3] |
+| torsion_gens | torsion generators |  list of lists of 3 lists of d strings | [[['-9', '2'], ['16', '18'], ['1', '0']]] |
+| q_curve | Q-curve flag | boolean | False |
+| base_change | labels of base change source curves | list of strings | ['4032.k2', '63.a2'] |
+| cm | CM code | int | 0 for no CM, or -3, -4, ... |
