@@ -1,13 +1,14 @@
 # Database bmfs
 
-Status:
+Status: Under construction. So far only contains dimension tables for 5 fields
 
-Contact/Maintainer:
+Contact/Maintainer: John Cremona
 
-Description:
+Description: Bianchi modular forms
 
 Todo:
-* ...
+* Upload data for individual newforms over the fields covered by the dimension database
+* Add more imaginary quadratic fields
 
 
 ## Collection dimensions
