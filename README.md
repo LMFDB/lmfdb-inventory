@@ -16,7 +16,7 @@
 
 ## Databases:
 
-This is just an overview, for detailed informatino see specific files
+This is just an overview, for detailed information see specific files
 in the `database-inventory` subdirectory.
 
 ### HTPicard
@@ -84,9 +84,9 @@ Owner(s):
 
 ### bmfs
 
-Description: 
+Description: Bianchi modular forms
 
-Owner(s): 
+Owner(s): John Cremona
 
 
 ### contrib
@@ -98,37 +98,37 @@ Owner(s):
 
 ### elliptic_curves
 
-Description: 
+Description: Elliptic curves over Q and other number fields
 
-Owner(s): 
+Owner(s): John Cremona
 
 
 ### halfintegralmf
 
-Description: 
+Description: Modular forms of half integral weight
 
-Owner(s): 
+Owner(s): Samuele Anni
 
 
 ### hgm
 
-Description: 
+Description: Hylergeometric motives
 
 Owner(s): 
 
 
 ### hmfs
 
-Description: 
+Description: Hilbert modular forms
 
-Owner(s): 
+Owner(s): John Voight, John Cremona
 
 
 ### knowledge
 
-Description: 
+Description: Knowledge database
 
-Owner(s): 
+Owner(s): LMFDB developers
 
 
 ### limbo
@@ -189,9 +189,9 @@ Owner(s):
 
 ### numberfields
 
-Description: 
+Description: Number fields
 
-Owner(s): 
+Owner(s): John Jones
 
 
 ### quadratic_twists
@@ -203,9 +203,9 @@ Owner(s):
 
 ### siegel_modular_forms
 
-Description: 
+Description: Siegel modular forms
 
-Owner(s): 
+Owner(s): Nils Skoruppa
 
 
 ### test_long_int
@@ -245,16 +245,16 @@ Owner(s):
 
 ### userdb
 
-Description: 
+Description: Database of registered LMFDB users
 
 Owner(s): 
 
 
 ### genus2_curves
 
-Description: 
+Description: Curves of genus 2 over Q
 
-Owner(s): 
+Owner(s): John Voight et al.
 
 
 ### modularforms_raw
@@ -268,7 +268,7 @@ Owner(s):
 
 Description: 
 
-Owner(s): 
+Owner(s): Anna Haensch, Samuele Anni
 
 
 ### siegel_modular_forms_experimental
