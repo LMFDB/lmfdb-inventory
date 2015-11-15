@@ -31,7 +31,7 @@ Each entry in the GaloisConjugates list is a dictionary with the following entri
 * **GalOrbIndex** (ints): an index assigned to the given character
  
 ## Collection field_data
-* **Polynomial** (list of ints): coefficients of a polynomial defining this field
+* **Polynomial** (string): coefficients of a polynomial defining this field, the comma-separated list of coefficients as a string.  This is the main identifier for this field from the representations collection, and also matches entries in the number field database.
 * **TransitiveDegree** (int): degree of the polynomial
 * **Size** (int-as-string): order of the Galois group
 * **DBIndex** (int): counter to distinguish those with the same degree and size, used for crossreferencing from artrep table
