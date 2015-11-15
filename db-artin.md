@@ -45,7 +45,6 @@ Each entry in the GaloisConjugates list is a dictionary with the following entri
 * **QpRts** (list of list of string): each entry is a p-adic root, where entries in the list give the coefficients of powers of p in the p-adic approximation.  They are themselves polynomials in a, where a is a root of the QpRts-minpoly
 * **ComplexConjugation** (int): index for ConjClasses to say where complex conjugation lies
 * **FrobResolvents** (list of dicts):
-* **label** (string): label of the number field in the global number field database
 * **G-Name** (string): name for the Galois group, but we usually substitute a latex'ed name from the Galois group database, but this is a fallback
 
 
