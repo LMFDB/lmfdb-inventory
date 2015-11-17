@@ -17,7 +17,7 @@ Todo:
 * **Conductor** (int-as-string): conductor
 * **Conductor_key** (string): encoding of the conductor for searching.  The first four characters give the number of decimal digits minus 1 (padded with zeros), followed by the conductor itself.
 * **Hide** (int): 0 if we should show it when searching for Artin rep'ns, 1 if not.  The representations are invariants of the Galois closure of the given field.  More than one field can have the same Galois closure.  We pick a best/minimal one and show that.  We have data for others for linking to the number field database.
-* **NFGal** (list of ints): these are the coefficients of the polynomial for the corresponding number field after polredabs, starting with the constant coefficient.
+* **NFGal** (string): comma-separated list of integers giving the coefficients of the polynomial for the corresponding number field after polredabs, starting with the constant coefficient.
 * **CharacterField** (int): the n for writing the character
 * **Baselabel** (string): our label in the form a.b.c.e.f.g where a=the dimension, b=conductor in factored form (using e for ^ and t form *), c=|Galois group|, d=size of the Galois orbit of characters, e= is the Galois group in the form ntm where n is the degree and m is the "t-number", g is a counter to distinguish representations with the same data.
 * **GaloisConjugates** (list): list of Galois conjugate character information.
