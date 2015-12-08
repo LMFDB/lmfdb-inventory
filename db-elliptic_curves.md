@@ -34,7 +34,7 @@ Todo:
 | ainvs | a-invariants | list of strings representing integers | ['0', '1', '1', '10617', '75394'] |
 | jinv | j-invariant | string representing a rational | '-4096/11' |
 | cm | CM code | int | 0 for no CM, or -3, -4, ... |
-| rank | rank | int 0 |
+| rank | rank | int | 0 |
 | torsion | torsion order | int | 1 |
 | torsion_structure | invariants of torsion subgroup | list of at most 2 strings representing ints | ['3'] |
 | torsion_generators | generators of torsion subgroup | list of strings representing points | ['(5, 5)'] |
