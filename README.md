@@ -21,23 +21,23 @@ in the `database-inventory` subdirectory.
 
 ### HTPicard
 
-Description: 
+Description: ???
 
-Owner(s): 
+Owner(s): ???
 
 
 ### Lfunction
 
-Description: 
+Description: ?
 
-Owner(s): 
+Owner(s): Farmer, Lemurell
 
 
 ### Lfunctions
 
 Description: 
 
-Owner(s): 
+Owner(s): David Farmer 
 
 
 ### MaassWaveForm
@@ -63,7 +63,7 @@ Owner(s):
 
 ### WebNewForms
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
@@ -91,7 +91,7 @@ Owner(s): John Cremona
 
 ### contrib
 
-Description: 
+Description: contributed data
 
 Owner(s): 
 
@@ -112,9 +112,9 @@ Owner(s): Samuele Anni
 
 ### hgm
 
-Description: Hylergeometric motives
+Description: Hypergeometric motives
 
-Owner(s): 
+Owner(s): David Roberts
 
 
 ### hmfs
@@ -133,56 +133,57 @@ Owner(s): LMFDB developers
 
 ### limbo
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
 
 ### local
 
-Description: 
+Description: mongo internal
 
-Owner(s): 
+Owner(s): nobody
 
 
 ### localfields
 
-Description: 
+Description: Local fields
 
-Owner(s): 
+Owner(s): John Jones
 
 
 ### modforms
 
-Description: 
+Description: obsolete
 
 Owner(s): 
 
 
 ### modularforms_2010
 
-Description: 
+Description: obsolete
 
 Owner(s): 
 
 
 ### modularforms2
 
-Description: 
+Description: current databae of classical modular forms of all
+weigths, levels and characters
 
-Owner(s): 
+Owner(s): Fredrik Stromberg, Stephan Ehlen
 
 
 ### modularforms
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
 
 ### mwf_dbname
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
@@ -196,7 +197,7 @@ Owner(s): John Jones
 
 ### quadratic_twists
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
@@ -207,17 +208,23 @@ Description: Siegel modular forms
 
 Owner(s): Nils Skoruppa
 
-
-### test_long_int
+### siegel_modular_forms_experimental
 
 Description: 
 
 Owner(s): 
 
 
+### test_long_int
+
+Description: obsolete?
+
+Owner(s): 
+
+
 ### test
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
@@ -226,7 +233,7 @@ Owner(s):
 
 Description: 
 
-Owner(s): 
+Owner(s): Paul Dehaye
 
 
 ### transitivegroups
@@ -256,32 +263,24 @@ Description: Curves of genus 2 over Q
 
 Owner(s): John Voight et al.
 
+### genus2_endomorphisms
+
+Description: Database of endomorphism rings of genus 2 curves
+
+Owner(s): John Voight et al.
+
 
 ### modularforms_raw
 
-Description: 
+Description: obsolete?
 
 Owner(s): 
 
 
 ### Lattices
 
-Description: 
+Description: Database of integral lattices
 
 Owner(s): Anna Haensch, Samuele Anni
-
-
-### siegel_modular_forms_experimental
-
-Description: 
-
-Owner(s): 
-
-
-### genus2_endomorphisms
-
-Description: 
-
-Owner(s): 
 
 
