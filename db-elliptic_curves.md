@@ -33,7 +33,7 @@ Todo:
 | lmfdb_number | LMFDB curve number within its class | int | 2 |
 | ainvs | a-invariants | list of strings representing integers | ['0', '1', '1', '10617', '75394'] |
 | jinv | j-invariant | string representing a rational | '-4096/11' |
-| cm | CM code | int | 0 for no CM, or -3, -4, ... |
+| cm | CM code | int | 0 for no CM, or one of -3, -4, -7, -8, -11, -12, -16, -19, -27, -28, -43, -67, -163 |
 | rank | rank | int | 0 |
 | torsion | torsion order | int | 1 |
 | torsion_structure | invariants of torsion subgroup | list of at most 2 strings representing ints | ['3'] |
