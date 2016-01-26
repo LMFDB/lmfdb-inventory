@@ -20,42 +20,155 @@ Todo:
 * Origin: Cremona database, https://github.com/JohnCremona/ecdata
 * Extent: complete for conductors up to 370,000 (as of November 2015)
 
-| Field | Description | Type | Example |
-| --- | --- | --- | --- |
-| _id | Mongo id | ObjectId | |
-| label | Cremona label | string | '1225a2' |
-| lmfdb_label | LMFDB label | string | '1225.a2' |
-| conductor | Conductor | int | 1225 |
-| iso | Cremona isogeny class code | string | '11a' |
-| lmfdb_iso | LMFDB isogeny class code | string | '11.a' |
-| iso_nlabel | numerical version of the LMFDB isogeny class label | int | 0 |
-| number | Cremona curve number within its class | int | 2 |
-| lmfdb_number | LMFDB curve number within its class | int | 2 |
-| ainvs | a-invariants | list of strings representing integers | ['0', '1', '1', '10617', '75394'] |
-| jinv | j-invariant | string representing a rational | '-4096/11' |
-| cm | CM code | int | 0 for no CM, or one of -3, -4, -7, -8, -11, -12, -16, -19, -27, -28, -43, -67, -163 |
-| rank | rank | int | 0 |
-| torsion | torsion order | int | 1 |
-| torsion_structure | invariants of torsion subgroup | list of at most 2 strings representing ints | ['3'] |
-| torsion_generators | generators of torsion subgroup | list of strings representing points | ['(5, 5)'] |
-| x-coordinates_of_integral_points | x-coordinates of integral points | string representing list of ints | '[5,16]' |
-| gens | generators of infinite order | list of strings representing points | ['(0:0:1)'] |
-| regulator | regulator | float | 1.0 |
-| tamagawa_product | Tamagawa product | int | 4 |
-| special_value | special value of r'th derivative of L-function (divided by r!) | float | 1.490882041449698 |
-| real_period | real period | float | 0.3727205103624245 |
-| degree | degree of modular parametrization | int | 1984 |
-| non-surjective_primes | primes p for which the mod p Galois representation is not surjective | list of ints |  [5] |
-| galois_images | Sutherland codes for the images of the mod p Galois representations for the non-surjective primes | list of strings | ['5B'] |
-| 2adic_index | index in GL(2,Z2) of the 2-adic representation (or 0 for CM curves) | int | 1 |
-| 2adic_log_level | the smallest n such that the image contains the kernel of reduction modulo 2^n (or None for CM curves) | int | 1 |
-| 2adic_gens | list of matrices in GL(2,Z/2^nZ) generating the image (None for CM curves) | list of lists of 4 ints | [[5,0,0,5],[5,5,0,1],[5,5,0,3]] |
-| 2adic_label |  Rouse label of the associated modular curve (None for CM curves) | string | 'X225g' |
-| isogeny_matrix |  isogeny matrix | list of lists of ints)| [[1,5,25],[5,1,5],[25,5,1]] |
-| sha_an | analytic order of sha (approximate unless r<2) | float | 9.0 |
-| sha | analytic order of sha (rounded value of sha_an) | int | 9 |
-| sha_primes | primes dividing sha | list of ints | [2] |
-| torsion_primes | primes dividing torsion | list of ints | [2,3] |
+<table border=2>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type of stored data</th>
+<th>Mathematical type</th>
+<th>Example of stored data</th>
+<th>Remarks</th>
+</tr>
+
+<tr>
+<td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
+</td>
+<td>assigned my Mongo; contains creation timestamp</td></tr>
+
+<tr>
+<td> label </td><td> Cremona label </td><td> string </td><td> -
+</td><td> '1225a2' </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> lmfdb_label </td><td> LMFDB label </td><td> string </td><td>
+- </td><td> '1225.a2' </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> conductor </td><td> Conductor </td><td> int </td><td> N
+</td><td> 1225 </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> iso </td><td> Cremona isogeny class code </td><td> string
+</td><td> - </td><td> '11a' </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> lmfdb_iso </td><td> LMFDB isogeny class code </td><td> string
+</td><td> - </td><td> '11.a' </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> iso_nlabel </td><td> numerical version of the LMFDB isogeny
+class label </td><td> int </td><td> Z </td><td> 0 </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> number </td><td> Cremona curve number within its class
+</td><td> int </td><td> N </td><td> 2 </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> lmfdb_number </td><td> LMFDB curve number within its class
+</td><td> int </td><td> N </td><td> 2 </td>
+<td>&nbsp;</td></tr>
+
+<tr>
+<td> ainvs </td><td> a-invariants (coefficients of minimal reduced
+Weierstass model) </td><td> list of strings representing integers
+</td><td> Z^5 </td><td> ['0', '1', '1', '10617', '75394'] </td>
+<td>&nbsp;</td></tr>
+
+<tr><td> jinv </td><td> j-invariant </td><td> string representing a rational </td><td> Q </td><td> '-4096/11' </td><td>&nbsp;</td></tr>
+
+<tr><td> cm </td><td> CM code </td><td> int </td><td> Z </td><td> 0
+(for no CM), or a negative discriminant </td><td>in {0, -3, -4, -7,
+-8, -11, -12, -16, -19, -27, -28, -43, -67, -163}</td></tr>
+
+<tr><td> rank </td><td> rank </td><td> int </td><td> N_0 </td><td> 0
+</td><td>May be missing</td></tr>
+
+<tr><td> torsion </td><td> torsion order </td><td> int </td><td> Z
+</td><td> 1 </td><td>&nbsp;</td></tr>
+
+<tr><td> torsion_structure </td><td> invariants of torsion subgroup
+ </td><td> list of at most 2 strings representing ints </td><td> N^t
+ (0&le;t&le2) </td><td> ['3'] </td><td>&nbsp;</td></tr>
+
+<tr><td> torsion_generators </td><td> generators of torsion subgroup
+</td><td> list of strings representing points </td><td> A^2(Q)^t
+(0&le;t&le2) </td><td> ['(5, 5)'] </td><td>&nbsp;</td></tr>
+
+<tr><td> x-coordinates_of_integral_points </td><td> x-coordinates of
+integral points </td><td>string representing list of integers</td><td>
+Z^k </td><td> '[5,16]' </td><td>&nbsp;</td></tr>
+
+<tr><td> gens </td><td> generators of infinite order </td><td> list of
+strings representing points </td><td> P^2(Q)^k  (k&ge;0)
+</td><td> ['(0:0:1)'] </td><td>May be missing</td></tr>
+
+<tr><td> regulator </td><td> regulator </td><td> float </td><td> R
+</td><td> 1.0 </td><td>May be missing; approximate if rank>0</td></tr>
+
+<tr><td> tamagawa_product </td><td> Tamagawa product </td><td> int
+</td><td> N </td><td> 4 </td><td>&nbsp;</td></tr>
+
+<tr><td> special_value </td><td> special value of r'th derivative of
+L-function (divided by r!) </td><td> float </td><td> R </td><td>
+1.490882041449698 </td><td>approximate</td></tr>
+
+<tr><td> real_period </td><td> real period </td><td> float </td><td> R
+</td><td> 0.3727205103624245 </td><td>approximate</td></tr>
+
+<tr><td> degree </td><td> degree of modular parametrization </td><td>
+int </td><td> N </td><td> 1984 </td><td>&nbsp;</td></tr>
+
+<tr><td> non-surjective_primes </td><td> primes p for which the mod p
+Galois representation is not surjective </td><td> list of ints
+</td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
+
+<tr><td> galois_images </td><td> Sutherland codes for the images of
+the mod p Galois representations for the non-surjective primes
+</td><td> list of strings </td><td> - </td><td> ['5B']
+</td><td>Sutherland notation; for CM curves, only primes<100</td></tr>
+
+<tr><td> 2adic_label </td><td> Rouse label of the associated modular
+curve (None for CM curves) </td><td> string </td><td> - </td><td>
+'X225g' </td><td>based on Rouse, Zureik-Brown classification</td></tr>
+
+<tr><td> 2adic_index </td><td> index in GL(2,Z2) of the 2-adic
+representation (or 0 for CM curves) </td><td> int </td><td> N
+</td><td> 1 </td><td>&nbsp;</td></tr>
+
+<tr><td> 2adic_log_level </td><td> the smallest n such that the image
+contains the kernel of reduction modulo 2^n (or None for CM curves)
+</td><td> int </td><td> N_0 </td><td> 1 </td><td>&nbsp;</td></tr>
+
+<tr><td> 2adic_gens </td><td> list of matrices in GL(2,Z/2^nZ)
+generating the image (None for CM curves) </td><td> list of lists of 4
+ints </td><td> GL(2,Z)^k  (k&ge;0)</td><td> [[5,0,0,5],[5,5,0,1],[5,5,0,3]]
+</td><td>&nbsp;</td></tr>
+
+<tr><td> isogeny_matrix </td><td> isogeny matrix </td><td> list of
+lists of ints)</td><td> M_k(N)  (k&ge;0)</td><td> [[1,5,25],[5,1,5],[25,5,1]]
+</td><td>&nbsp;</td></tr>
+
+<tr><td> sha_an </td><td> analytic order of Sha </td><td> float
+</td><td> R </td><td> 9.0 </td><td> approximate unless
+rank<2</td></tr>
+
+<tr><td> sha </td><td> analytic order of sha </td><td> int </td><td> N
+</td><td> 9 </td><td>rounded value of sha_an</td></tr>
+
+<tr><td> sha_primes </td><td> primes dividing sha </td><td> list of
+ints </td><td> N^k  (k&ge;0)</td><td> [2] </td><td>&nbsp;</td></tr>
+
+<tr><td> torsion_primes </td><td> primes dividing torsion </td><td>
+list of ints </td><td> N^k  (k&ge;0)</td><td> [2,3] </td><td>&nbsp;</td></tr>
+
+</table>
 
 ## Collection padic_db
 
@@ -65,14 +178,37 @@ Todo:
 * Extent: primes p with 3,p<100 of good ordinary reduction, for curves of
  conductor up to 130,000 only (last updated in 2010)
 
-| Field | Description | Type | Example |
-| --- | --- | --- | --- |
-| _id | Mongo id | ObjectId | |
-| lmfdb_iso | LMFDB label of isogeny class | string | '58.a' |
-| p | prime | int | 97 |
-| prec | p-adic precision | int | 20 |
-| unit | unit factor of regulator | string representing integer | '8471152617139064438417376357679138234' |
-| val | valuation of p-adic regulator | int | 1 |
+<table border=2>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type of stored data</th>
+<th>Mathematical type</th>
+<th>Example of stored data</th>
+<th>Remarks</th>
+</tr>
+
+<tr> <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>
+</td>-<td> </td> <td>assigned my Mongo; contains creation
+timestamp</td></tr>
+
+<tr> </td><td> lmfdb_iso </td><td> LMFDB label of isogeny class
+</td><td> string </td><td>-</td><td> '58.a' </td><td>&nbsp;</td> </tr>
+
+<tr> </td><td> p </td><td> prime </td><td> int </td><td>N (prime)</td><td> 97
+</td><td>&nbsp;</td> </tr>
+
+<tr> </td><td> prec </td><td> p-adic precision </td><td> int
+</td><td>N</td><td> 20 </td><td>&nbsp;</td> </tr>
+
+<tr> </td><td> unit </td><td> unit factor of regulator </td><td>
+string representing integer </td><td>Z_p (mod p^N)</td><td>
+'8471152617139064438417376357679138234' </td><td>&nbsp;</td></tr>
+
+<tr> </td><td> val </td><td> valuation of p-adic regulator </td><td>
+int </td><td>N_0</td><td> 1 </td><td>&nbsp;</td> </tr>
+
+</table>
 
 ## Collection nfcurves
 
@@ -88,34 +224,120 @@ Todo:
   - A point is represented (in projective coordinates) as a list of 3 field elements, i.e. a list of 3 lists of d strings
   - Generator fields are represented by lists of points
 
-| Field | Description | Type | Example |
-| --- | --- | --- | --- |
-| _id | Mongo id | ObjectId | |
-| field_label | Base field label | string | '2.0.8.1' |
-| degree | Base field degree | int | 2 |
-| signature | Base field signature | list of 2 ints | [0, 1] |
-| abs_disc | absolute value of discriminant of base field | int | 8 |
-| label | full label | string | '2.0.8.1-[3618,1146,3]-e2' |
-| short_label | short label (excludes field) | string | '[3618,1146,3]-e2' |
-| class_label | full label of isogeny class | string | '2.0.8.1-[3618,1146,3]-e' |
-| short_class_label | short label of isogeny class (excludes field) | string | '2.0.8.1-[3618,1146,3]-e' |
-| conductor_label | condcutor label | string | '[3618,1146,3]' |
-| iso_label | isogeny class label suffix | string | 'e' |
-| iso_nlabel | isogeny class label suffix (numerical) | int | 4 |
-| conductor_ideal | data defining the conductor ideal | string | '[3618,1146,3]' |
-| conductor_norm | conductor norm | int | 3618 |
-| number | number of curve in isogeny class | int | 2 |
-| isogeny_matrix | Isogeny matrix | list of list of ints (degrees) | [[1, 2], [2, 1]] |
-| ainvs | a-invariants | list of 5 lists of d strings | [['1', '0'], ['1', '-1'], ['1', '1'], ['17', '-7'], ['9', '22']] |
-| jinv | j-invariant | list of d strings | ['288857903821/4771277298', '7556047939133/9542554596'] |
-| analytic_rank | analytic rank | int | 0 |
-| rank | rank | int | 0 |
-| rank_bounds | lower and upper rank bounds | list of 2 ints | [0, 0] |
-| sha_an | analytic order of Sha | int | 1 |
-| gens | generators of infinite order |  list of lists of 3 lists of d strings | [[['2', '2'], ['11', '-12'], ['1', '0']]] |
-| torsion_order | torsion order | int | 6 |
-| torsion_structure | invariants of torsion subgroup | list of at most 2 ints | [3, 3] |
-| torsion_gens | torsion generators |  list of lists of 3 lists of d strings | [[['-9', '2'], ['16', '18'], ['1', '0']]] |
-| q_curve | Q-curve flag | boolean | False |
-| base_change | labels of base change source curves | list of strings | ['4032.k2', '63.a2'] |
-| cm | CM code | int | 0 for no CM, or -3, -4, ... |
+<table border=2>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type of stored data</th>
+<th>Mathematical type</th>
+<th>Example of stored data</th>
+<th>Remarks</th>
+</tr>
+
+<tr>
+<td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
+</td>
+<td>assigned my Mongo; contains creation timestamp</td></tr>
+
+<tr><td> field_label </td><td> Base field label </td><td> string
+</td><td>&nbsp;</td><td> '2.0.8.1' </td><td>&nbsp;</td></tr>
+
+<tr><td> degree </td><td> Base field degree </td><td> int </td>
+<td>N</td><td>2</td> <td>&nbsp;</td></tr>
+
+<tr><td> signature </td><td> Base field signature </td><td> list of 2
+ints </td><td>N_0^2</td><td> [0, 1] </td><td>&nbsp;</td></tr>
+
+<tr><td> abs_disc </td> <td>absolute value of discriminant of base
+field </td><td> int </td> <td>N</td><td> 8 </td><td>&nbsp;</td></tr>
+
+<tr><td> label </td> <td>full label </td> <td> string </td><td>-</td> <td>
+'2.0.8.1-[3618,1146,3]-e2'</td> <td>&nbsp;</td></tr>
+
+<tr><td> short_label </td> <td> short label (excludes field) </td>
+<td> string </td> <td>-</td><td> '[3618,1146,3]-e2' </td>
+<td>&nbsp;</td></tr>
+
+<tr><td> class_label </td> <td> full label of isogeny class </td> <td>
+string </td> <td>-</td><td> '2.0.8.1-[3618,1146,3]-e' </td>
+<td>&nbsp;</td></tr>
+
+<tr><td> short_class_label </td> <td> short label of isogeny class
+(excludes field) </td> <td> string </td> <td>-</td><td>
+'2.0.8.1-[3618,1146,3]-e'</td> <td>&nbsp;</td></tr>
+
+<tr><td> conductor_label </td> <td> condcutor label </td> <td> string
+</td><td>-</td> <td> '[3618,1146,3]' or '37.1' </td>
+<td>&nbsp;</td></tr>
+
+<tr><td> iso_label </td> <td> isogeny class label </td> <td> string
+</td> <td>-</td><td> 'e' </td> <td>base 26 representation of isogeny
+class index</td></tr>
+
+<tr><td> iso_nlabel </td> <td> isogeny class index
+</td> <td> int </td> <td>N_0</td><td> 4 </td> <td>&nbsp;</td></tr>
+
+<tr><td> conductor_ideal </td> <td> data defining the conductor ideal
+</td> <td> string </td> <td>-</td><td>
+'[3618,1146,3]' </td> <td>representation generators</td></tr>
+
+<tr><td> conductor_norm </td> <td> conductor norm </td> <td> int </td>
+<td>N</td><td> 3618 </td> <td>&nbsp;</td></tr>
+
+<tr><td> number </td> <td> index of curve in isogeny class </td> <td>
+int </td><td>N</td> <td> 2 </td> <td>starts at 1</td></tr>
+
+<tr><td> isogeny_matrix </td> <td> Isogeny matrix </td> <td> list of
+list of ints (degrees) </td><td>M_k(N) (k&ge;0)</td> <td> [[1, 2], [2,
+1]] </td> <td>&nbsp;</td></tr>
+
+<tr><td> ainvs </td> <td> a-invariants </td> <td> list of 5 lists of d
+strings </td><td>&nbsp;</td> <td> [['1', '0'], ['1', '-1'], ['1',
+'1'], ['17', '-7'], ['9', '22']] </td> <td>coordinates with respect to
+power basis; d is the degree of the field</td></tr>
+
+<tr><td> jinv </td> <td> j-invariant </td> <td> list of d strings
+</td> <td>&nbsp;</td><td> ['288857903821/4771277298',
+'7556047939133/9542554596'] </td> <td>coordinates with respect to
+power basis; d is the degree of the field</td></tr>
+
+<tr><td> analytic_rank </td> <td> analytic rank </td> <td> int </td>
+<td>N_0</td><td> 0 </td> <td>&nbsp;</td></tr>
+
+<tr><td> rank </td> <td> rank </td> <td> int </td> <td>N_0</td><td> 0
+</td> <td>&nbsp;</td></tr>
+
+<tr><td> rank_bounds </td> <td> lower and upper rank bounds </td> <td>
+list of 2 ints </td> <td>N_0^2</td><td> [0, 0] </td>
+<td>&nbsp;</td></tr>
+
+<tr><td> sha_an </td> <td> analytic order of Sha </td> <td> int </td>
+<td>N</td><td> 1 </td> <td>rounded float</td></tr>
+
+<tr><td> gens </td> <td> generators of infinite order </td> <td> list
+of lists of 3 lists of d strings </td> <td>A^2(K)^r
+(0&le;r&le;rank)</td><td> [[['2', '2'], ['11', '-12'], ['1', '0']]]
+</td> <td>&nbsp;</td></tr>
+
+<tr><td> torsion_order </td> <td> torsion order </td> <td> int </td>
+<td>N</td><td> 6 </td> <td>&nbsp;</td></tr>
+
+<tr><td> torsion_structure </td> <td> invariants of torsion subgroup
+</td> <td> list of at most 2 ints </td> <td> N^t (0&le;t&le2)
+</td><td> [3, 3] </td> <td>&nbsp;</td></tr>
+
+<tr><td> torsion_gens </td> <td> torsion generators </td><td> list of
+lists of 3 lists of d strings </td><td>A^2(K)^t (0&le;t&le2)</td><td>
+[[['-9', '2'], ['16', '18'], ['1', '0']]] </td> <td>&nbsp;</td></tr>
+
+<tr><td> q_curve </td> <td> Q-curve flag </td> <td> boolean </td>
+<td>{True, False}</td><td> False </td> <td>&nbsp;</td></tr>
+
+<tr><td> base_change </td> <td> labels of base change source curves
+</td> <td> list of strings </td> <td>-</td><td> ['4032.k2',
+'63.a2']</td> <td>&nbsp;</td></tr>
+
+<tr><td> cm </td><td> CM code </td><td> int </td><td> Z </td><td> 0
+(for no CM), or a negative discriminant </td><td>&nbsp;</td></tr>
+
+</table>
