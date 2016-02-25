@@ -259,15 +259,9 @@ Owner(s):
 
 ### genus2_curves
 
-Description: Curves of genus 2 over Q
+Description: Curves of genus 2 over QQ
 
-Owner(s): John Voight et al.
-
-### genus2_endomorphisms
-
-Description: Database of endomorphism rings of genus 2 curves
-
-Owner(s): John Voight et al.
+Owner(s): Andrew Booker, Jeroen Sijsling, Andrew Sutherland, Dan Yasaki, John Voight
 
 
 ### modularforms_raw
@@ -282,5 +276,3 @@ Owner(s):
 Description: Database of integral lattices
 
 Owner(s): Anna Haensch, Samuele Anni
-
-
