@@ -33,7 +33,7 @@ Todo:
 |`algebraic`      | bool        | True
 |`instances`      | list of strings | ['EllipticCurve/Q/162/d', 'ModularForms/GL2/Q/holomorphic/162/2/1/d'] |
 |`leading_term`   | number      | 1.736780166943524 |
-|`values`         | list of pairs of numbers | [] |
+|`values`         | list of pairs of numbers (optional) | [] |
 |`euler_factors`  | list of lists (little endian polynomials) | [[1, -1], [1], [1, -3, 5], [1, 4, 7], ...] |
 |`bad_lfactors`   | list of pairs (number, list(polynomial))  | [[2, [1, -1]], [3, [1]]] |
 |`st_group`       | string                                    | 'SU(2)' |
@@ -42,7 +42,12 @@ Todo:
 |`coefficient_field`  | string (a field label or description)     | '1.1.1.1' |
 |`hash`               | integer                                   | 1795737022127482060 |
 |`analytic_normalization` | number                                |.5 |
-|`zeros`              | list of numbers                           | [-19.20902166317646,-18.45614012972598,...] or ['-19.20902166317646','-18.45614012972598',...]|
-|`plot_start`         | number |
-|`plot_delta`         | number |
+|`positive_zeros`     | list of (strictly positive) numbers       | [...]
+|`plot_delta`         | number (float expected) |
 |`plot_values`        | list of numbers (floats expected) |
+|`gamma1`             | float     |
+|`gamma2`             | float     |
+|`gamma3`             | float     |
+|`a2`                 | pair of floats |
+|`a3`                 | pair of floats |
+|`a4`                 | pair of floats |
