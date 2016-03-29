@@ -19,13 +19,14 @@ Todo:
 |----------|    ------     | -----   |
 |`url`| string | 'EllipticCurve/Q/162/d'|
 |`Lhash`| string |    | 
+|`type`| string | 'ECQ' or 'G2Q' or 'DIR' or ...|
 
 ## Collection Lfunctions
 | Field | type | Example|
 |-------|------|--------|
 |`origin`         | string      | 'EllipticCurve/Q/162/d' |
 |`load_key`       | string      | 'cremona'               |
-|`unique_id`      | string      | ?                       |
+|`Lhash`          | string      | ?                       |
 |`conductor`      | integer     |   162                   |
 |`degree`         | integer     | 2 |
 |`motivic_weight` | integer     | 1 |
