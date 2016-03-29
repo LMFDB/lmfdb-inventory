@@ -49,11 +49,11 @@ Todo:
 |`analytic_normalization` | number                                |.5 |
 |`positive_zeros`     | list of (strictly positive) numbers       | [...]
 |`plot_delta`         | number (float expected) |
-|`plot_values`        | list of numbers (floats expected) |
+|`plot_values`        | list of numbers (floats expected), which are values of Z(k * plot_delta) for k = 0, 1, 2, ... |
 |`z1`             | float (imaginary part of the first positive zero) | 
-|`z2`             | float     |
-|`z3`             | float     |
-|`a2`                 | pair of floats |
+|`z2`             | float (imaginary part of the second positive zero)|
+|`z3`             | float (imaginary part of the third positive zero) |
+|`a2`                 | pair of floats (a complex number), the embedding of the 2nd dirichlet coefficient in the analytic normalization|
 |`a3`                 | pair of floats |
 |...|...|
 |`a9`                 | pair of floats |
