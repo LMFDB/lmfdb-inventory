@@ -23,8 +23,8 @@ Todo:
 ## Collection Lfunctions
 | Field | type | Example|
 |-------|------|--------|
-|`url`         | string      | 'EllipticCurve/Q/162/d' |
-|`uploader`       | string      | 'cremona'               |
+|`origin`         | string      | 'EllipticCurve/Q/162/d' |
+|`load_key`       | string      | 'cremona'               |
 |`unique_id`      | string      | ?                       |
 |`conductor`      | integer     |   162                   |
 |`degree`         | integer     | 2 |
@@ -45,7 +45,6 @@ Todo:
 |`types`          | list of strings ('EC', 'MF', 'DIR', 'G2'...?) | ['EC', 'MF'] |
 |`order_of_vanishing` | integer | 0 |
 |`coefficient_field`  | string (a field label or description)     | '1.1.1.1' |
-|`hash`               | integer                                   | 1795737022127482060 |
 |`analytic_normalization` | number                                |.5 |
 |`positive_zeros`     | list of (strictly positive) numbers       | [...]
 |`plot_delta`         | number (float expected) |
