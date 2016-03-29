@@ -14,9 +14,9 @@ Todo:
 * To delete...
 
 ## Collection Instances
-* ???...
+
 | Field | type | Example|
-|----------|    ------             | -----   |
+|----------|    ------     | -----   |
 |`url`| string | 'EllipticCurve/Q/162/d'|
 |`Lhash`| string |    | 
 
