@@ -41,7 +41,7 @@ Todo:
 
 <tr>
 <td> aut_grp </td>
-<td> automorphism group (shorthand) </td>
+<td> automorphism group (specified by GAP id) </td>
 <td> list of integers </td>
 <td> - </td>
 <td> [6, 2] </td>
@@ -519,7 +519,7 @@ Jacobian is defined </td>
 
 <tr>
 <td> analytic_rank </td>
-<td> analytic rank of the curves in the isogeny class </td>
+<td> analytic rank upper bound of the curves in the isogeny class (believed to be tight, known for rank 0,1) </td>
 <td> integer </td>
 <td> NN_0 </td>
 <td> 0</td>
@@ -529,7 +529,7 @@ Jacobian is defined </td>
 <tr>
 <td> bad_lfactors </td>
 <td> bad primes and the corresponding L-factors </td>
-<td> list of lists </td>
+<td> list of pairs [p, [a0, ...] where p is a bad prime and [a0,...] are coefficients of the L-factor at p</td>
 <td> - </td>
 <td> [[13, [1, 5, 13]]] </td>
 <td> </td>
@@ -546,10 +546,19 @@ Jacobian is defined </td>
 
 <tr>
 <td> hash </td>
-<td> hash </td>
-<td> hash </td>
+<td> L-function hash value (integer mod 2^61-1), deprecated (use Lhash) </td>
+<td> Z/2^61-1Z </td>
 <td> - </td>
 <td> 1456780685049277288L </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> Lhash </td>
+<td> L-function hash value (decimal string) </td>
+<td> string </td>
+<td> - </td>
+<td> u'1456780685049277288' </td>
 <td> </td>
 </tr>
 
@@ -742,7 +751,7 @@ field </td>
 
 <tr>
 <td> order_of_vanishing </td>
-<td> order of vanishing at critical point </td>
+<td> order of vanishing at critical point (analytic rank bound) </td>
 <td> integer </td>
 <td> NN_0 </td>
 <td> 0 </td>
