@@ -13,13 +13,19 @@ Todo:
 ## Collection first_zeros_testing
 * To delete...
 
-## Collection full_collection
+## Collection Instances
 * ???...
+| Field | type | Example|
+|----------|    ------             | -----   |
+|`url`| string | 'EllipticCurve/Q/162/d'|
+|`Lhash`| string |    | 
 
 ## Collection Lfunctions
 | Field | type | Example|
 |-------|------|--------|
-|`origin`         | string      | 'EllipticCurve/Q/162/d' |
+|`url`         | string      | 'EllipticCurve/Q/162/d' |
+|`uploader`       | string      | 'cremona'               |
+|`unique_id`      | string      | ?                       |
 |`conductor`      | integer     |   162                   |
 |`degree`         | integer     | 2 |
 |`motivic_weight` | integer     | 1 |
@@ -31,7 +37,6 @@ Todo:
 |`self_dual`      | bool        | True |
 |`symmetry_type`  | string      | 'unitary' or 'orthogonal' or 'symplectic' |
 |`algebraic`      | bool        | True
-|`instances`      | list of strings | ['EllipticCurve/Q/162/d', 'ModularForms/GL2/Q/holomorphic/162/2/1/d'] |
 |`leading_term`   | number      | 1.736780166943524 |
 |`values`         | list of pairs of numbers (optional) | [] |
 |`euler_factors`  | list of lists (little endian polynomials) | [[1, -1], [1], [1, -3, 5], [1, 4, 7], ...] |
@@ -50,4 +55,11 @@ Todo:
 |`gamma3`             | float     |
 |`a2`                 | pair of floats |
 |`a3`                 | pair of floats |
-|`a4`                 | pair of floats |
+|...|...|
+|`a9`                 | pair of floats |
+|`a10`                | pair of floats |
+|`A2`                 | string (integer in arithmetic normalization)|
+|`A3`                 | string |
+|...|...|
+|`A9`                 | string |
+|`A10`                | string |
