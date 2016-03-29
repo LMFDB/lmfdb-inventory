@@ -50,9 +50,9 @@ Todo:
 |`positive_zeros`     | list of (strictly positive) numbers       | [...]
 |`plot_delta`         | number (float expected) |
 |`plot_values`        | list of numbers (floats expected) |
-|`gamma1`             | float     |
-|`gamma2`             | float     |
-|`gamma3`             | float     |
+|`z1`             | float (imaginary part of the first positive zero) | 
+|`z2`             | float     |
+|`z3`             | float     |
 |`a2`                 | pair of floats |
 |`a3`                 | pair of floats |
 |...|...|
