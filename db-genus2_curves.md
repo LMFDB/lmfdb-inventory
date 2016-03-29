@@ -205,6 +205,33 @@ ZZ x ZZ / d_2 ZZ x ...  </td>
 <td> </td>
 </tr>
 
+<tr>
+<td> analytic_rank </td>
+<td> analytic rank upper bound that is believed to be tight (known for rank 0 or 1) </td>
+<td> integer </td>
+<td> NN_0 </td>
+<td> 0 </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> has_square_sha </td>
+<td> assuming Sha is finite, true if the order of Sha is a square, false otherwise (in which case it is 2 times a square, by a result of Poonen-Stoll 1999) </td>
+<td> boolean </td>
+<td> - </td>
+<td> True </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> locally_solvable </td>
+<td> true if the curve has rational points locally everywhere (i.e. over every completion of Q, including R) </td>
+<td> boolean </td>
+<td> - </td>
+<td> True </td>
+<td> </td>
+</tr>
+
 </table>
 
 
