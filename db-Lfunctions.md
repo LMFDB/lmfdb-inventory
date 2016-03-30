@@ -42,6 +42,7 @@ Todo:
 |`values`         | list of pairs of numbers (optional) | [] |
 |`euler_factors`  | list of lists (little endian polynomials) | [[1, -1], [1], [1, -3, 5], [1, 4, 7], ...] |
 |`bad_lfactors`   | list of pairs (number, list(polynomial))  | [[2, [1, -1]], [3, [1]]] |
+|`dirichlet_coefficients`| list of numbers (optional) |
 |`st_group`       | string                                    | 'SU(2)' |
 |`types`          | list of strings ('EC', 'MF', 'DIR', 'G2'...?) | ['EC', 'MF'] |
 |`order_of_vanishing` | integer | 0 |
