@@ -36,6 +36,7 @@ Todo:
 |`sign_arg`       | number      | 0     |
 |`central_character` | string (conrey label) | '162.1' |
 |`self_dual`      | bool        | True |
+|`conjugate`      | string (the `Lhash`) entry of the conjugate |  |
 |`symmetry_type`  | string      | 'unitary' or 'orthogonal' or 'symplectic' |
 |`algebraic`      | bool        | True
 |`leading_term`   | number      | 1.736780166943524 |
