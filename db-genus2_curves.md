@@ -67,6 +67,15 @@ Todo:
 </tr>
 
 <tr>
+<td> abs_disc </td>
+<td> absolute discriminant </td>
+<td> integer </td>
+<td> NN </td>
+<td> 169 </td>
+<td> </td>
+</tr>
+
+<tr>
 <td> disc_key </td>
 <td> representation of the discriminant D of the curve: the first three digits
 are int(log_10 (D)), which is followed by digits representing the absolute
