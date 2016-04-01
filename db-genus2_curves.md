@@ -241,6 +241,15 @@ ZZ x ZZ / d_2 ZZ x ...  </td>
 <td> </td>
 </tr>
 
+<tr>
+<td> globally_solvable </td>
+<td> 1 if known to have rational points, 0 if known to have no rational points, -1 if unknown </td>
+<td> NN </td>
+<td> 0 </td>
+<td> True </td>
+<td> </td>
+</tr>
+
 </table>
 
 
