@@ -32,7 +32,7 @@ Todo:
 * **label**(string): LMFDB label of a lattice
 * **level**(int): level of a lattice
 * **minimum**(int): lenght of the shortest vector
-* **name**(string): name of a lattice
+* **name**(list of strings): list of known names of a given lattice
 * **shortest** (list of vectors of int): list of shortest vectors
 * **theta_series** (list of int): coefficients of the q-expansion of the theta series associated to a lattice
 
@@ -84,7 +84,7 @@ the first 4 parameters are uniquely defined, given a lattice, the last is depend
     "label": "2.3.3.1.1", 
     "level": 3, 
     "minimum": 2, 
-    "name": "A2", 
+    "name": ["A2"], 
     "shortest": [
       [
         1, 
