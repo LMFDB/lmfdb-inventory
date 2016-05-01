@@ -11,9 +11,7 @@ Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe and Neil Sloane
 The data is coming from [here](https://github.com/annahaensch/lattice_data).
 
 Todo:
-* error parsing functions DONE
 * add L series for even dimensional lattices using the new avaliable pari functionalities
-* improve q expansion display DONE
 * upload all the data from [here](https://github.com/annahaensch/lattice_data).
 
 ## Collection lat
@@ -34,7 +32,9 @@ Todo:
 * **minimum**(int): lenght of the shortest vector
 * **name**(list of strings): list of known names of a given lattice
 * **shortest** (list of vectors of int): list of shortest vectors
-* **theta_series** (list of int): coefficients of the q-expansion of the theta series associated to a lattice
+* **theta_series** (list of int): coefficients of the q-expansion of the theta series associated to a lattice*
+
+*for the Leech lattice it is a list of strings
 
 ## LMFDB label of an integral lattice in lat
 
