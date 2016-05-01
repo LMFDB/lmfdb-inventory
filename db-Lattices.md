@@ -31,7 +31,7 @@ Todo:
 * **level**(int): level of a lattice
 * **minimum**(int): lenght of the shortest vector
 * **name**(list of strings): list of known names of a given lattice
-* **shortest** (list of vectors of int): list of shortest vectors
+* **shortest** (list of vectors of int): list of shortest vectors*
 * **theta_series** (list of int): coefficients of the q-expansion of the theta series associated to a lattice*
 
 *for the Leech lattice it is a list of strings
