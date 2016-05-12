@@ -36,7 +36,7 @@ Todo:
 <td> ObjectId </td>
 <td> - </td>
 <td> </td>
-<td> assigned my Mongo; contains creation timestamp</td>
+<td> assigned by Mongo; contains creation timestamp</td>
 </tr>
 
 <tr>
