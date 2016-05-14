@@ -25,6 +25,11 @@ Description: ???
 
 Owner(s): ???
 
+### Lattices
+
+Description: Database of integral lattices
+
+Owner(s): Anna Haensch, Samuele Anni
 
 ### Lfunction
 
@@ -81,6 +86,12 @@ Description:
 
 Owner(s): 
 
+### artin
+
+Description: 
+
+Owner(s): 
+
 
 ### bmfs
 
@@ -102,6 +113,11 @@ Description: Elliptic curves over Q and other number fields
 
 Owner(s): John Cremona
 
+### genus2_curves
+
+Description: Curves of genus 2 over QQ
+
+Owner(s): Andrew Booker, Jeroen Sijsling, Andrew Sutherland, Dan Yasaki, John Voight
 
 ### halfintegralmf
 
@@ -151,6 +167,12 @@ Description: Local fields
 
 Owner(s): John Jones
 
+### mod_l_eigenvalues
+
+Description: 
+
+Owner(s): 
+
 
 ### modforms
 
@@ -158,13 +180,11 @@ Description: obsolete
 
 Owner(s): 
 
+### modularforms
 
-### modularforms_2010
-
-Description: obsolete
+Description: obsolete?
 
 Owner(s): 
-
 
 ### modularforms2
 
@@ -174,7 +194,13 @@ weigths, levels and characters
 Owner(s): Fredrik Stromberg, Stephan Ehlen
 
 
-### modularforms
+### modularforms_2010
+
+Description: obsolete
+
+Owner(s): 
+
+### modularforms_raw
 
 Description: obsolete?
 
@@ -201,12 +227,20 @@ Description: obsolete?
 
 Owner(s): 
 
+### sato_tate_groups
+
+Description: Sato-Tate groups
+
+Contact/Maintainer: Andrew Sutherland
+
+
 
 ### siegel_modular_forms
 
 Description: Siegel modular forms
 
 Owner(s): Nils Skoruppa
+
 
 ### siegel_modular_forms_experimental
 
@@ -217,7 +251,7 @@ Owner(s):
 
 ### test_long_int
 
-Description: obsolete?
+Description: obsolete? dropped?
 
 Owner(s): 
 
@@ -231,7 +265,7 @@ Owner(s):
 
 ### test_pdehaye
 
-Description: 
+Description: ? dropped? 
 
 Owner(s): Paul Dehaye
 
@@ -257,22 +291,5 @@ Description: Database of registered LMFDB users
 Owner(s): 
 
 
-### genus2_curves
-
-Description: Curves of genus 2 over QQ
-
-Owner(s): Andrew Booker, Jeroen Sijsling, Andrew Sutherland, Dan Yasaki, John Voight
 
 
-### modularforms_raw
-
-Description: obsolete?
-
-Owner(s): 
-
-
-### Lattices
-
-Description: Database of integral lattices
-
-Owner(s): Anna Haensch, Samuele Anni
