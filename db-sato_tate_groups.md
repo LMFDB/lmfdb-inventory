@@ -1,6 +1,6 @@
 ## sato_tate_groups
 
-Status: New, introduced at May 10 launch
+Status: Released
 
 Contact/Maintainer: Andrew Sutherland
 
