@@ -20,8 +20,7 @@ Todo:
 * **degree** (int): degree of the field over **Q** 
   **Example:** 11
 * **coeffs** (list of ints as string): coefficients of our defining polynomial starting with the constant term.
-* **reduced** (int 0 or 1): 1 if the polynomial is the output of polredabs, otherwise 0.
-  **Example:** 1
+  **Example:** '-3,0,1'
 * **coeffhash** (string): output of hexdigest applied to coeffs -- it can be used as an index for coefficient lookup (coeffs can be too long)
   **Example:** 'c187070bd71b8ab0a64176f5bc999046'
 * **disc_abs_key** (string of digits): the absolute discriminant prepended by 3 digits which give the number of digits minus one, as a string.  This is because discriminants get too big to store as ints, but we want to be able to sort on them  
@@ -32,14 +31,25 @@ Todo:
   **Example:** -285271354516394619
 * **signature** (list of ints as string): signature (r_1, r_2) of the field stored as r_1,r_2
   **Example:** '1,5'
-* ** ramps** (list of ints as strings): the ramified primes in a list.  Stored as strings because they may be too big
+* **ramps** (list of ints as strings): the ramified primes in a list.  Stored as strings because they may be too big
   **Example:** ['2', '3', '5', '11']
-* ** all_ramps ** (list of ints as string): the list of ramified primes, separated by commas, as a single string  
+* **all_ramps** (list of ints as string): the list of ramified primes, separated by commas, as a single string  
   **Example:** '2,3,5,11'
+* **galois** (bson pair of integers): stores (n,t) where n is the degree and t is the t-number of the Galois group. bson structure is like a python dict.  Works better for indexing than a list.  Must be reencoded whenever a database entry is updated
+  **Example:** {'n': 11, 't': 8}
+**zk** (list of strings): an integral basis in terms of 'a', a root of the defining polynomial 
+  **Example:** ['1','a','1/3*a^2','1/9*a^3','1/27*a^4','1/81*a^5','1/81*a^6','1/243*a^7','1/729*a^8','1/2187*a^9','1/13122*a^10']
 
-The dischash is computed as follows, assuming the disc_abs_key is stored as d:
-        if len(d)<19:
-          dhash=int(dak)
-        else:
-          dhash = int(d[0:19])
-        dhash = dhash * disc_sign
+# Optional fields
+* **reduced** (int 0 or 1): 1 if the polynomial is the output of polredabs, otherwise 0.  If not present, assume 1
+  **Example:** 1
+* **class_number** (int): class number
+  **Example:** 8
+* **class_group** (list of integers as string): invariant factors for the class group, in descending order
+  **Example:** '4,2'
+* **units** (list of latex strings): list of generators of the units modulo torsion, stored as latex ready strings.  If there is no class number, assume units are too hard to compute.  If there is a class number but no units, units can be computed on the fly
+  **Example:** '\\( \\frac{31638929986556713906387419624924061291280938773945071}{3} a^{2} + 359196363271711287724533550734596540399636025857543545 a + \\frac{8691254239667400643787765894631631739446478482481677573}{3} \\)'
+
+The dischash is computed as follows, assuming the disc_abs_key is stored as d
+ * if length of d is less than 19, set the hash equal to d, otherwise use the first 19 characters
+ * multiply the result by the sign of the discriminant
