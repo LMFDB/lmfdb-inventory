@@ -37,7 +37,7 @@ Todo:
   **Example:** '2,3,5,11'
 * **galois** (bson pair of integers): stores (n,t) where n is the degree and t is the t-number of the Galois group. bson structure is like a python dict.  Works better for indexing than a list.  Must be reencoded whenever a database entry is updated
   **Example:** {'n': 11, 't': 8}
-**zk** (list of strings): an integral basis in terms of 'a', a root of the defining polynomial 
+* **zk** (list of strings): an integral basis in terms of 'a', a root of the defining polynomial 
   **Example:** ['1','a','1/3*a^2','1/9*a^3','1/27*a^4','1/81*a^5','1/81*a^6','1/243*a^7','1/729*a^8','1/2187*a^9','1/13122*a^10']
 
 # Optional fields
