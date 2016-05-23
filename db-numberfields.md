@@ -77,12 +77,33 @@ Todo:
 * **subfields** (list): List of subfields, each represented as a pair [coefs, mult].  The coefficients are of a polredabs'ed polynomial for the subfield, and mult is the multiplicity of the subfield (since representing a field by a polynomial only gives it up to isomorphism).
 
   **Example:** [[[1, 0, 1], 2], [[6, -2, 1, 0, 1], 1]]
+* **unitsGmodule** (list of pairs of integers): in some cases we have data on the units modulo torsion as an integral Galois module.  In each pair, the first coordinate is an index to the database of integral representations of the finite group, and the second is the multiplicity with which this representation appears.
+
+  **Example:** [[3, 1]]
 * **res** (dictionary): Resolvent information.  Currently, only certain types of siblings are represented.  Each key is a type and the value is a list of coefficients of polredabs'ed polynomials.  The types are 'gal' for Galois closure, 'ae' for arithmetically equivalent field, 'sex' for twin sextic algebra (for degree 6 fields only), and 'sib' for other siblings.
 
-  **Example:**
-
-
+  **Example:** {u'sib': ['-4,1,2,-7,6,-3,1', '1,0,-1,-1,-1,0,1', '183,-217,111,-28,35,-14,4,0,1']}
 
 The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * if length of d is less than 19, set the hash equal to d, otherwise use the first 19 characters
  * multiply the result by the sign of the discriminant
+
+## Indices
+
+ * {'**_id**': 1}: created by mongodb
+ * {'**class_group**':1}: class group
+ * {'**class_number**': 1}: class number
+ * {'**coeffhash**': 1}:
+ * {'**degree**':1}: 
+ * {'**degree**': 1, '**disc_abs_key**':1, '**disc_sign**':1}:
+ * {'**degree**': 1, '**discriminant**':1}:
+ * {'**degree**': 1, '**ramps**': 1}:
+ * {'**degree**': 1, '**ramps_all**': 1}:
+ * {'**disc_abs_key**': 1, '**disc_sign**': 1, '**signature**': -1}:
+ * {'**discriminant**': 1}: 
+ * {'**galois**': 1}: 
+ * {'**galois**': 1, '**ramps**': 1}: 
+ * {'**label**': 1}: 
+ * {'**ramps**': 1}: 
+ * {'**ramps_all**: 1}:
+ * {'**signature**': 1}: 
