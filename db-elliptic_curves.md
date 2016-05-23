@@ -371,25 +371,43 @@ ints</td><td> Z^20 </td><td> [0, 1, -1, ..., 2] </td><td>a_n for
 
 Index information on collection curves2:
 
- [('rank', 1), ('number', 1)],
- [('number', 1)],
- [('conductor', 1), ('iso_nlabel', 1), ('lmfdb_number', 1)],
- [('non-surjective_primes', 1)],
- [('cm', 1)],
- [('conductor', 1)],
- [('lmfdb_label', 1), ('number', 1)],
- [('lmfdb_iso', 1)],
- [('sha', 1)],
- [('lmfdb_label', 1)],
- [('_id', 1)],
- [('rank', 1)],
- [('label', 1)],
- [('jinv', 1)],
- [('torsion_structure', 1)],
- [('iso', 1)],
- [('torsion', 1)],
- [('label', 1), ('number', 1)],
- [('xainvs', 1)]
+-  [('_id', 1)] (created by mongo)
+
+-  [('rank', 1), ('number', 1)] (for searching)
+
+-  [('number', 1)] (for searching)
+
+-  [('conductor', 1), ('iso_nlabel', 1), ('lmfdb_number', 1)] (for sorting)
+
+-  [('non-surjective_primes', 1)] (for searching)
+
+-  [('cm', 1)] (for searching)
+
+-  [('conductor', 1)] (for searching)
+
+-  [('lmfdb_label', 1), ('number', 1)] (for searching)
+
+-  [('lmfdb_iso', 1)] (for searching)
+
+-  [('sha', 1)] (for searching)
+
+-  [('lmfdb_label', 1)] (for searching)
+
+-  [('rank', 1)] (for searching)
+
+-  [('label', 1)] (for searching)
+
+-  [('jinv', 1)] (for searching)
+
+-  [('torsion_structure', 1)] (for searching)
+
+-  [('iso', 1)] (for searching)
+
+-  [('torsion', 1)] (for searching)
+
+-  [('label', 1), ('number', 1)] (for searching)
+
+-  [('xainvs', 1)] (for searching)
 
 ## Collection padic_db
 
