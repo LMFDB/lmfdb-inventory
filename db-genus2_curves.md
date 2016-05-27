@@ -507,7 +507,7 @@ Jacobian is defined </td>
 </table>
 
 
-## Collection isogeny-classes
+## Collection isogeny_classes
 
 * Content: Isogeny classes of genus 2 curves over QQ.
 * Contributors: Andrew Sutherland.
