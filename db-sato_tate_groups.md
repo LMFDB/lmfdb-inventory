@@ -29,7 +29,7 @@ Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (
  symmetric function of the eigenvalues and *s_n* denotes the nth power sum), and *value_list* is a list of
  pairs [_v_,_n_] where _v_ is an integer value and _n_ is the number of components for which _x_=_v_.
  <p>**Example**: [[u'a_1',[[0,9]]],[u'a_2',[[-1,,2],[2,1]]].</p>
- * **degree**: degree of the Sato-Tate group (cohomological dimension), stored as an integer
+ * **degree**: degree of the Sato-Tate group (cohomological dimension), a positive integer
  <p>**Example**: int(4)</p>
  * **gens**: generators, stored as a list of *d*-by-*d* matrices whose entries are strings, where *d* is the degree;
  together with the identity component, they generate the group.
@@ -45,7 +45,7 @@ Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (
  <p>**Example**: [[u'a_1',u'1',u'0',u'1',u'0',u'3',u'0',u'14',....,u'4719'],[u'a_2',u'1',u'1',u'2',u'4',u'10',...,u'223412']]
  * **name**: string naming the Sato-Taate group unique within its weight and degree
  <p>**Example**: u'USp(4)'</p>
- * **pretty**: pretty-print version of name in latex
+ * **pretty**: pretty-print version of name in latex math mode
  <p>**Example**: u'\\mathrm{USp}(4)'</p>
  * **subgroups**: list of labels of maximal proper subgroups
  <p>**Example**: [u'1.4.3.1.1a']
@@ -66,4 +66,35 @@ Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (
 * {'**degree**':1} (for browsing/searching by degree)
 * {'**weight**':1,'**degree**':1,'**real_dimension**':1,'**components**':1} (used to sort search results)
 
+## Collection: **st0_groups**
+
+Description: Collection containing information about the identity components of Sato-Tate groups
+
+Origin: Code by Andrew Sutherland
+
+Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (52) over any number field.  This addresses all self-dual motives with rational coefficients of weight 1 and degree up to 4.
+
+## **Fields**
  
+* **label**: label of the identity component, currently of the form w.d.r, where w is the weight, d is the degree, and r is the real dimension (this is sufficient to uniquely identify the identity component for w=1 and d=0,2,4) but in other cases more information will be required (so the label format may need to vary with w and d).
+<p>**Example**: u'1.4.6'
+* **name**: text name of the identity component, used for displaying in scrolled input boxes where latex is not supported
+<p>**Example**: u'SU(2)xSU(2)'
+* **pretty**: pretty-print version of the name in latex math mode
+<p>**Example**: u'\\mathrm{SU}(2)\\times\\mathrm{SU}(2)'
+* **weight**: weight of the corresponding Sato-Tate group (nonnegative integer)
+ <p>**Example**: int(1)
+* **degree**: degree of the corresponding Sato-Tate group (positive integer)
+ <p>**Example**: int(4)</p>
+* **real_dimension**: dimension of the identity component as a connected compact real Lie group (positive integer)
+<p>**Example**: int(6)</p>
+* **description**: mathematical description of the identity component as a set of d-by-d matrices (latex math mode string)
+<p>**Example**: u'\\left\\{\\begin{bmatrix}A&0\\\\0&B\\end{bmatrix}: A,B\\in\\mathrm{SU}(2)\\right\\}'
+
+## **Indexes**
+
+* {'**_id**':1} (created by mongo db)
+* {'**label**':1} (for searching by label)
+* {'**name**':1}: (for searching by name)
+* {'**weight**':1}: (for browsing/searching by weight)
+* {'**degree**':1} (for browsing/searching by degree)
