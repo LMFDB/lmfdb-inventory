@@ -98,3 +98,36 @@ Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (
 * {'**name**':1}: (for searching by name)
 * {'**weight**':1}: (for browsing/searching by weight)
 * {'**degree**':1} (for browsing/searching by degree)
+
+## Collection: **small_groups**
+
+Description: Collection containing information about finite groups of small order used to describe component groups of Sato-Tate groups (could also be used in many other places).
+
+Origin: GAP
+
+Extent: All groups of order up to 24 (up to isomorphism), and the one group of order 48 that arises as the component group of a Sato-Tate in weight 1 and degree 4.  Easy to add more (up to order 1024).
+
+## **Fields**
+ 
+* **label**: GAP ID encoded as a string u'N.n', where N is the order of the group and n distinguishes groups of the same order (as determined in GAP).
+<p>**Example**: u'24.13'
+* **name**: text discription of the group
+<p>**Example**: u'C_2*A_4'
+* **pretty**: pretty-print version of the name in latex math mode
+<p>**Example**: u'C_2\\times A_4'
+* **order**: order of the group (positive integer)
+ <p>**Example**: int(24)
+* **solvable**: true if the group is solvable, false otherwise
+ <p>**Example**: bool(True)</p>
+* **abelian**: true if the group is abelian, false otherwise
+ <p>**Example**: bool(False)</p>
+* **cyclic**: true if the group is cyclic, false otherwise
+ <p>**Example**: bool(False)</p>
+
+## **Indexes**
+
+* {'**_id**':1} (created by mongo db)
+* {'**label**':1} (for searching by label)
+* {'**name**':1}: (for searching by name)
+* {'**order**':1}: (for browsing/searching by order)
+
