@@ -497,7 +497,7 @@ Jacobian is defined </td>
 
 <tr>
 <td> st_group_geom </td>
-<td> Sato-Tate group over the algebraic closure </td>
+<td> Sato-Tate group over the algebraic closure (equivalently, its identity component) </td>
 <td> string </td>
 <td> - </td>
 <td> E_1 </td>
