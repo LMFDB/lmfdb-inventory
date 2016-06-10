@@ -2,7 +2,7 @@
 
 Status: In good shape over QQ (all collections synced).
 
-Contact/Maintainer: Jeroen Sijsling.
+Contact/Maintainer: Andrew Sutherland.
 
 Description: Genus 2 curves over QQ.
 
@@ -78,7 +78,7 @@ Todo:
 <tr>
 <td> disc_key </td>
 <td> representation of the discriminant D of the curve: the first three digits
-are int(log_10 (D)), which is followed by digits representing the absolute
+are floor(log_10 (D)), which is followed by digits representing the absolute
 value of |D|. </td>
 <td> string </td>
 <td> - </td>
