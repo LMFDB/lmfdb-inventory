@@ -5,7 +5,7 @@
 |**Description**|Integral lattices|
 |**Status**|[production](http://www.lmfdb.org/Lattice)|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
-|**Code**|[lattice/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
+|**Code**|[lattice](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
 |**Collections**|[lat](http://www.lmfdb.org/api/Lattices/lat)|
 
 Contibutors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
