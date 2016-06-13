@@ -54,6 +54,7 @@ the first 4 parameters are uniquely defined, given a lattice, the last is depend
 * {'**dim_1_label_1**': 1} (for searching by dim/label)
 * {'**label_1**': 1} (for searching by label)
 * {'**level_1**': 1} (for searching by level)
+* **lat.rand** (auxilliary collection used fo random objection access)
 
 ### One example of lat
 
