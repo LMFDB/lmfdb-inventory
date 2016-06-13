@@ -1,12 +1,16 @@
 # Database curve_automorphisms
 
-Status:  In Development
+|||
+|---|---|
+|**Description**|Group actions on higher genus curves|
+|**Status**|development|
+|**Contact**|[Jen Paulhus](https://github.com/jenpaulhus)|
+|**Code**|[higher_genus_w_automorphisms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/higher_genus_w_automorphisms)|
+|**Collections**|[families](http://www.lmfdb.org/api/curve_automorphisms/families)|
 
-Contact/Maintainer: Jen Paulhus
+**Notes**:  Collection families is the data for the released version, Collection passports is the data for the proposed changes to these pages.   Eventually passport will probably replace families
 
-Description:  Group actions on higher genus curves.  Collection families is the data for the released version, Collection passports is the data for the proposed changes to these pages.   Eventually passport will probably replace families
-
-Todo: 
+**Todo**: 
 * Add higher genus data.
 * Add equations for curves. 
 
