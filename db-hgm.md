@@ -1,14 +1,15 @@
 # Database hgm
 
-Status: Beta
+|||
+|---|---|
+|**Description**|Hypergeometric motives|
+|**Status**|[beta](http://beta.lmfdb.org/Motive/Hypergeometric/Q/)|
+|**Contact**|[John Jones](https://github.com/jwj61)|
+|**Code**|[motives](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/motives)|
+|**Collections**|[families](http://www.lmfdb.org/api/hgm/families), [motives](http://www.lmfdb.org/api/hgm/motives)|
 
-Contact/Maintainer: John Jones
-
-Description: Hypergeometric motives
-
-Todo:
+**Todo**:
 * expand the range of the data
-
 
 ## Collection families
  * **_id** (ObjectId): object id created by mongo
@@ -124,8 +125,3 @@ Todo:
  * {'**sign**': 1}: 
  * {'**t**': 1}: 
  * {'**weight**': 1}: 
-
-## Collection motives_copy
-* Field 1: ...
-* Field 2: ...
-
