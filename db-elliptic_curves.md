@@ -1,15 +1,19 @@
 # Database elliptic_curves
 
-Status: In good shape over Q (collection curves).  Over quadratic and
+|||
+|---|---|
+|**Description**|Elliptic curves over **Q** and other number fields|
+|**Status**|[production](http://www.lmfdb.org/EllipticCurve/)|
+|**Contact**|[John Cremona](https://github.com/JohnCremona)|
+|**Code**|[elliptic_curves](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/elliptic_curves/)|
+|**Collections**|[curves](http://www.lmfdb.org/api/elliptic_curves/curves), [nfcurves](http://www.lmfdb.org/api/elliptic_curves/nfcurves), [padic_db](http://www.lmfdb.org/api/elliptic_curves/padic_db)|
+
+**Notes**: In good shape over Q (collection curves).  Over quadratic and
 cubic fields (collection nfcurves) complete as far as curves matching
-Hilbert modualr forms go; awaiting addition of curves over more fields
+Hilbert modular forms go; awaiting addition of curves over more fields
 of degrees 4-6 to match Hilbert modular forms.
 
-Contact/Maintainer: John Cremona
-
-Description: Elliptic curves over Q and other number fields.
-
-Todo:
+**Todo**:
 * Complete the finding and uploading of curves over totally real
   fields to match the HMF newforms for fields of degrees >3.
 * compute and add p-adic data for curves over Q of conductor > 130000.
