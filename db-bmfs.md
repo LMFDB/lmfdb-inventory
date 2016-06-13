@@ -25,11 +25,11 @@ Todo:
  <p>**Example:** 11981</p>
  * **dimension_data** (dict): dimension data.  Keys are weights,
    values are dicts with keys 'cuspidal_dim' and 'new_dim', values ints.
- <p>**Example:** {'2': {u'cuspidal_dim': 0, 'new_dim': 0}}</p>
+ <p>**Example:** {'2': {'cuspidal_dim': 0, 'new_dim': 0}}</p>
 
 ## Collection forms
 
-* Collection currently empty.  It will contain one entery for each
+* Collection currently empty.  It will contain one entry for each
   newform.
 
 
