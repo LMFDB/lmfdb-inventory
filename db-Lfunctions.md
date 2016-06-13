@@ -10,8 +10,7 @@ Code: lmfdb/lfunctions/*
 
 Collections: **intances**, **Lfunctions**
 
-Todo:
-* document indexes for Lfunctions (many appear to be obsolete or never used)
+Todo: Document indexes for Lfunctions (many appear to be obsolete or never used)
 
 
 ## Collection instances
