@@ -8,7 +8,7 @@
 |Code|[lmfdb/artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)|
 |Collections|representations, field_data|
 
-Todo: Add index information
+**Todo**: Add index information
 
 ## Collection representations
 * **Dim** (int): dimension
