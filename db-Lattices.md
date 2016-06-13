@@ -1,12 +1,14 @@
 # Database Lattices
 
-Status: www.lmfdb.org/Lattice
-
-Contact/Maintainer: Samuele Anni 
-
 Description: Database of integral lattices
 
-Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe and Neil Sloane
+Contact: Samuele Anni (@sanni85)
+
+Status: [production](https://www.lmfdb.org/Lattice)
+
+Code: lmfdb/lattice/*
+
+Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
 
 The data is coming from [here](https://github.com/annahaensch/lattice_data).
 
