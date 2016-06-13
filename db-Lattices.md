@@ -3,10 +3,10 @@
 |||
 |---|---|
 |**Description**|Integral lattices|
-|**Contact**|[Samuele Anni](https://github.com/sanni85)|
 |**Status**|[production](http://www.lmfdb.org/Lattice)|
 |**Code**|[lmfdb/lattice/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
 |**Collections**|[lat](http://www.lmfdb.org/api/Lattices/lat)|
+|**Contact**|[Samuele Anni](https://github.com/sanni85)|
 
 Contibutors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
 
