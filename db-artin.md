@@ -30,6 +30,11 @@ Each entry in the GaloisConjugates list is a dictionary with the following entri
 * **HardFactors**: local factors for bad primes
 * **GalOrbIndex** (ints): an index assigned to the given character
  
+## Index information for representations collection (to be added)
+
+* ...
+* **representations.rand** (auxilliary collection used for random objection access)
+
 ## Collection field_data
 * **Polynomial** (string): coefficients of a polynomial defining this field, the comma-separated list of coefficients as a string.  This is the main identifier for this field from the representations collection, and also matches entries in the number field database.
 * **TransitiveDegree** (int): degree of the polynomial
