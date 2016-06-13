@@ -107,3 +107,4 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * {'**ramps**': 1}: 
  * {'**ramps_all**: 1}:
  * {'**signature**': 1}: 
+ * fields.rand (auxilliary collection used for random objection access)
