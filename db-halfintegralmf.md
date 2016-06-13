@@ -1,20 +1,18 @@
 # Database halfintegralmf
 
-Status:  Work in progress, check the branch half_integral on https://github.com/sanni85/lmfdb.git
+|||
+|---|---|
+|**Description**|Half integral weight cuspforms spaces and Shimura decomposition|
+|**Status**|development|
+|**Contact**|[Samuele Anni](https://github.com/sanni85)|
+|**Code**|[half_integral_weight_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/half_integral_weight_forms)|
+|**Collections**|[forms](http://www.lmfdb.org/api/halfintegralmf/forms)|
 
-Contact/Maintainer: Samuele Anni @sanni85
+**Comments**:  Work in progress, check the branch half_integral on https://github.com/sanni85/lmfdb.git for the latest.  Data will be uploaded from [here](https://github.com/sanni85/half_integral_mf).
 
-Description: Database of Half Integral Weight Cuspforms spaces and Shimura decomposition
-
-Contributors: Samuele Anni and Soma Purkait
-
-Data will be uploaded from [here](https://github.com/sanni85/half_integral_mf).
-
-Todo:
-* error parsing functions
-* prettify the html output
+**Todo**:
+* add index information for forms
 * correct all the labels of classical newforms stored (since they changed in the last update)
-
 
 ## Collection forms
 
