@@ -1,14 +1,16 @@
 # Database MaassWaveForms
 
-Status:
+Description: Maass wave forms
 
-Contact/Maintainer:
+Status: [production](http://www.lmfdb.org/ModularForm/GL2/Q/Maass/)
 
-Description:
+Contact: Fredrik Strömberg (@fredstro)
 
-Todo:
-* ...
+Code: lmfdb/modular_forms/maass_forms/maass_waveforms/*
 
+Collections: ???
+
+Todo: Document or delete the collections below and identify which are actually needed on www.lmfdb.org
 
 ## Collection CoeffProgress
 * Field 1: ...
