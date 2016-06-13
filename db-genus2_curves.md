@@ -272,6 +272,7 @@ ZZ x ZZ / d_2 ZZ x ...  </td>
 * st_group -- search/browse
 * torsion_order -- search_browse
 * torsion_subgroup -- search/browse
+* curves.rand (auxilliary collection used for random objection access)
 
 ## Collection endomorphisms
 
