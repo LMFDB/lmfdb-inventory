@@ -390,7 +390,7 @@ Index information on collection curves2:
 -  {'torsion': 1} (for searching)
 -  {'label': 1, 'number': 1} (for searching)
 -  {'xainvs': 1} (for searching)
--  lat.rand (auxilliary collection used fo random objection access)
+-  curves2.rand (auxilliary collection used for random objection access)
 
 
 ## Collection padic_db
@@ -567,5 +567,5 @@ lists of 3 lists of d strings </td><td>A^2(K)^t (0&le;t&le2)</td><td>
 
 Index information for collection nfcurves (currently incomplete, to be added)
 
--  nfcurve.rand (auxilliary collection used fo random objection access)
+-  nfcurve.rand (auxilliary collection used for random objection access)
 
