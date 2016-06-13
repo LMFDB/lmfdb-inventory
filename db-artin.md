@@ -1,13 +1,14 @@
-# Database limbo
+# Database artin
 
-Status: New database, undergoing revisions
+Description: Artin representations
 
-Contact/Maintainer: John Jones
+Contact: [John Jones](https://github.com/jwj61)
 
-Description: There are collections: artrep with Artin representations and nfgal which has corresponding information about Galois groups.  A given Galois group may have several representations, so they are separated to avoid having the same information entered repeatedly.
+Status: [production](http://www.lmfdb.org/ArtinRepresentation/)
 
-Todo:
-* ...
+Code: [lmfdb/artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)
+
+Todo: Add index information
 
 ## Collection representations
 * **Dim** (int): dimension
