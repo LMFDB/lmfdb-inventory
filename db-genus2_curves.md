@@ -525,6 +525,24 @@ Jacobian is defined </td>
 <td> </td>
 </tr>
 
+<tr>
+<td> root_number </td>
+<td> root number </td>
+<td> string </td>
+<td> - </td>
+<td> u'1' </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> bad_lfactors </td>
+<td> bad primes and the corresponding L-factors </td>
+<td> string encoding list of pairs [p,c] where p is a bad prime and c is a list of the coefficients of the Euler factor at p </td>
+<td> - </td>
+<td> [[13, [1, 5, 13]]] </td>
+<td> </td>
+</tr>
+
 </table>
 
 ## Indexes on curves
