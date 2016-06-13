@@ -1,12 +1,12 @@
 # Database HTPicard
 
-Status: future
-
-LMFDB code: lmfdb/modular_forms/maass_forms/picard/*
-
-Contact/Maintainer: David Farmer (@davidfarmer)
-
 Description: Maass forms on SL_2(Z[i])
+
+Contact: David Farmer (@davidfarmer)
+
+Code: lmfdb/modular_forms/maass_forms/picard/*
+
+Contributors: ???
 
 Todo:
 * Document the collections below
