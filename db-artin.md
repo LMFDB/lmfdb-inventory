@@ -1,12 +1,12 @@
 # Database artin
 
-Description: Artin representations
-
-Contact: [John Jones](https://github.com/jwj61)
-
-Status: [production](http://www.lmfdb.org/ArtinRepresentation/)
-
-Code: [lmfdb/artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)
+|||
+|---|---|
+|Description|Artin representations|
+|Contact|[John Jones](https://github.com/jwj61)|
+|Status|[production](http://www.lmfdb.org/ArtinRepresentation/)|
+|Code|[lmfdb/artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)|
+|Collections|representations, field_data|
 
 Todo: Add index information
 
