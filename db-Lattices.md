@@ -4,7 +4,7 @@
 |---|---|
 |**Description**|Integral lattices|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
-|**Status**|[production](https://www.lmfdb.org/Lattice)|
+|**Status**|[production](http://www.lmfdb.org/Lattice)|
 |**Code**|[lmfdb/lattice/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
 |**Collections**|lat|
 
