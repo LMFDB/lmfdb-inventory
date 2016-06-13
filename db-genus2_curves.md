@@ -1,13 +1,16 @@
 # Database genus2_curves
 
-Status: In good shape over QQ (all collections synced).
+|||
+|---|---|
+|**Description**|Genus 2 curves over **Q**|
+|**Status**|[production](http://www.lmfdb.org/Genus2Curve/Q/)|
+|**Contact**|[Andrew Sutherland](https://github.com/AndrewVSutherland)|
+|**Code**|[genus2_curves](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/genus2_curves/)|
+|**Collections**|[curves](http://www.lmfdb.org/api/genus2_curves/curves), [endomorphisms](http://www.lmfdb.org/api/genus2_curves/endomorphisms)|
 
-Contact/Maintainer: Andrew Sutherland.
+**Contributors**: Andrew Booker, Jeroen Sijsling, Andrew Sutherland, John Voight, and Dan Yasaki
 
-Description: Genus 2 curves over QQ.
-
-Todo:
-* Match with automorphic objects.
+**Todo**: Match all automorphic friends and move data in temporary Lfunctions.instances collection to Lfunctions database.
 
 
 ## Collection curves
