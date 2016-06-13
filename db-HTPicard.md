@@ -5,10 +5,10 @@
 |**Description**|Maass forms on SL_2(Z[i])|
 |**Status**|future|
 |**Contact**|[David Farmer](https://github.com/davidfarmer)|
-|**Code**|[lmfdb/modular_forms/maass_forms/picard/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/maass_forms/picard/)|
+|**Code**|[modular_forms/maass_forms/picard/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/maass_forms/picard/)|
 |**Collections**|[picard](http://www.lmfdb.org/api/HTPicard/picard)|
 
-**Todo**: Document the picard collection
+**Todo**: Document the picard collection below
 
 ## Collection picard
 * **ev**: ...
