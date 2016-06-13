@@ -16,175 +16,12 @@ Todo:
 * Precompute more data for the nfcurves collection so the webserver
 does not have to do any nontrivial computations on the fly.
 
-## Collection curves (see also curves2)
+## Collection curves
 
 * Content: elliptic curves over Q
 * Contributors: John Cremona, Andrew Sutherland, Jeremy Rouse
 * Origin: Cremona database, https://github.com/JohnCremona/ecdata
 * Extent: complete for conductors up to 380,000 (as of February 2016)
-* Note: superseded by collection curves2 (May 2016) which contains
-  additional data fields; eventually that one will replace this one.
-
-
-<table border=2>
-<tr>
-<th>Field</th>
-<th>Description</th>
-<th>Type of stored data</th>
-<th>Mathematical type</th>
-<th>Example of stored data</th>
-<th>Remarks</th>
-</tr>
-
-<tr>
-<td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
-</td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
-
-<tr>
-<td> label </td><td> Cremona label </td><td> string </td><td> -
-</td><td> '1225a2' </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> lmfdb_label </td><td> LMFDB label </td><td> string </td><td>
-- </td><td> '1225.a2' </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> conductor </td><td> Conductor </td><td> int </td><td> N
-</td><td> 1225 </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> iso </td><td> Cremona isogeny class code </td><td> string
-</td><td> - </td><td> '11a' </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> lmfdb_iso </td><td> LMFDB isogeny class code </td><td> string
-</td><td> - </td><td> '11.a' </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> iso_nlabel </td><td> numerical version of the LMFDB isogeny
-class label </td><td> int </td><td> Z </td><td> 0 </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> number </td><td> Cremona curve number within its class
-</td><td> int </td><td> N </td><td> 2 </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> lmfdb_number </td><td> LMFDB curve number within its class
-</td><td> int </td><td> N </td><td> 2 </td>
-<td>&nbsp;</td></tr>
-
-<tr>
-<td> ainvs </td><td> a-invariants (coefficients of minimal reduced
-Weierstass model) </td><td> list of strings representing integers
-</td><td> Z^5 </td><td> ['0', '1', '1', '10617', '75394'] </td>
-<td>&nbsp;</td></tr>
-
-<tr><td> jinv </td><td> j-invariant </td><td> string representing a rational </td><td> Q </td><td> '-4096/11' </td><td>&nbsp;</td></tr>
-
-<tr><td> cm </td><td> CM code </td><td> int </td><td> Z </td><td> 0
-(for no CM), or a negative discriminant </td><td>in {0, -3, -4, -7,
--8, -11, -12, -16, -19, -27, -28, -43, -67, -163}</td></tr>
-
-<tr><td> rank </td><td> rank </td><td> int </td><td> N_0 </td><td> 0
-</td><td>May be missing</td></tr>
-
-<tr><td> torsion </td><td> torsion order </td><td> int </td><td> Z
-</td><td> 1 </td><td>&nbsp;</td></tr>
-
-<tr><td> torsion_structure </td><td> invariants of torsion subgroup
- </td><td> list of at most 2 strings representing ints </td><td> N^t
- (0&le;t&le2) </td><td> ['3'] </td><td>&nbsp;</td></tr>
-
-<tr><td> torsion_generators </td><td> generators of torsion subgroup
-</td><td> list of strings representing points </td><td> A^2(Q)^t
-(0&le;t&le2) </td><td> ['(5, 5)'] </td><td>&nbsp;</td></tr>
-
-<tr><td> x-coordinates_of_integral_points </td><td> x-coordinates of
-integral points </td><td>string representing list of integers</td><td>
-Z^k </td><td> '[5,16]' </td><td>&nbsp;</td></tr>
-
-<tr><td> gens </td><td> generators of infinite order </td><td> list of
-strings representing points </td><td> P^2(Q)^k  (k&ge;0)
-</td><td> ['(0:0:1)'] </td><td>May be missing</td></tr>
-
-<tr><td> regulator </td><td> regulator </td><td> float </td><td> R
-</td><td> 1.0 </td><td>May be missing; approximate if rank>0</td></tr>
-
-<tr><td> tamagawa_product </td><td> Tamagawa product </td><td> int
-</td><td> N </td><td> 4 </td><td>&nbsp;</td></tr>
-
-<tr><td> special_value </td><td> special value of r'th derivative of
-L-function (divided by r!) </td><td> float </td><td> R </td><td>
-1.490882041449698 </td><td>approximate</td></tr>
-
-<tr><td> real_period </td><td> real period </td><td> float </td><td> R
-</td><td> 0.3727205103624245 </td><td>approximate</td></tr>
-
-<tr><td> degree </td><td> degree of modular parametrization </td><td>
-int </td><td> N </td><td> 1984 </td><td>&nbsp;</td></tr>
-
-<tr><td> non-surjective_primes </td><td> primes p for which the mod p
-Galois representation is not surjective </td><td> list of ints
-</td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
-
-<tr><td> galois_images </td><td> Sutherland codes for the images of
-the mod p Galois representations for the non-surjective primes
-</td><td> list of strings </td><td> - </td><td> ['5B']
-</td><td>Sutherland notation; for CM curves, only primes<100</td></tr>
-
-<tr><td> 2adic_label </td><td> Rouse label of the associated modular
-curve (None for CM curves) </td><td> string </td><td> - </td><td>
-'X225g' </td><td>based on Rouse, Zureik-Brown classification</td></tr>
-
-<tr><td> 2adic_index </td><td> index in GL(2,Z2) of the 2-adic
-representation (or 0 for CM curves) </td><td> int </td><td> N
-</td><td> 1 </td><td>&nbsp;</td></tr>
-
-<tr><td> 2adic_log_level </td><td> the smallest n such that the image
-contains the kernel of reduction modulo 2^n (or None for CM curves)
-</td><td> int </td><td> N_0 </td><td> 1 </td><td>&nbsp;</td></tr>
-
-<tr><td> 2adic_gens </td><td> list of matrices in GL(2,Z/2^nZ)
-generating the image (None for CM curves) </td><td> list of lists of 4
-ints </td><td> GL(2,Z)^k  (k&ge;0)</td><td> [[5,0,0,5],[5,5,0,1],[5,5,0,3]]
-</td><td>&nbsp;</td></tr>
-
-<tr><td> isogeny_matrix </td><td> isogeny matrix </td><td> list of
-lists of ints)</td><td> M_k(N)  (k&ge;0)</td><td> [[1,5,25],[5,1,5],[25,5,1]]
-</td><td>&nbsp;</td></tr>
-
-<tr><td> sha_an </td><td> analytic order of Sha </td><td> float
-</td><td> R </td><td> 9.0 </td><td> approximate unless
-rank<2</td></tr>
-
-<tr><td> sha </td><td> analytic order of sha </td><td> int </td><td> N
-</td><td> 9 </td><td>rounded value of sha_an</td></tr>
-
-<tr><td> sha_primes </td><td> primes dividing sha </td><td> list of
-ints </td><td> N^k  (k&ge;0)</td><td> [2] </td><td>&nbsp;</td></tr>
-
-<tr><td> torsion_primes </td><td> primes dividing torsion </td><td>
-list of ints </td><td> N^k  (k&ge;0)</td><td> [2,3] </td><td>&nbsp;</td></tr>
-
-</table>
-
-## Collection curves2 (see also curves)
-
-* Content: elliptic curves over Q
-* Contributors: John Cremona, Andrew Sutherland, Jeremy Rouse
-* Origin: Cremona database, https://github.com/JohnCremona/ecdata
-* Extent: complete for conductors up to 380,000 (as of February 2016)
-* Note: supersedes collection curves (May 2016), containing
-  additional data fields; eventually this one will replace that one.
-
 
 <table border=2>
 <tr>
@@ -369,7 +206,7 @@ ints</td><td> Z^20 </td><td> [0, 1, -1, ..., 2] </td><td>a_n for
 
 </table>
 
-Index information on collection curves2:
+Index information on collection curves:
 
 -  {'_id': 1} (created by mongo)
 -  {'rank': 1, 'number': 1} (for searching and stats)
