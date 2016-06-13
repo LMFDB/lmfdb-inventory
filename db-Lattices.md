@@ -1,6 +1,6 @@
 # Database Lattices
 
-Description: Database of integral lattices
+Description:Integral lattices
 
 Contact: Samuele Anni (@sanni85)
 
@@ -12,6 +12,7 @@ Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
 
 The data is coming from [here](https://github.com/annahaensch/lattice_data).
 
+Collections: **lat**
 
 ## Collection lat
 * **aut** (int): size of automorphism group
