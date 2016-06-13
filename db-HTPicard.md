@@ -1,16 +1,22 @@
 # Database HTPicard
 
-Status:
+Status: future
 
-Contact/Maintainer:
+LMFDB code: lmfdb/modular_forms/maass_forms/picard/*
 
-Description:
+Contact/Maintainer: David Farmer (@davidfarmer)
+
+Description: Maass forms on SL_2(Z[i])
 
 Todo:
-* ...
+* Document the collections below
 
 
 ## Collection picard
-* Field 1: ...
-* Field 2: ...
+* **ev**: ...
+* **prec**: ...
+* **sym**: ...
+* **coef**: ...
 
+Index information for collection picard:
+* **ev*
