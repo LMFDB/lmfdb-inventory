@@ -5,7 +5,7 @@
 |Description|Artin representations|
 |Status|[production](http://www.lmfdb.org/ArtinRepresentation/)|
 |Contact|[John Jones](https://github.com/jwj61)|
-|Code|[lmfdb/artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)|
+|Code|[artin_representations](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/artin_representations)|
 |Collections|[representations](http://www.lmfdb.org/api/artin/representations), [field_data](http://www.lmfdb.org/api/artin/field_data)|
 
 **Todo**: Add index information
