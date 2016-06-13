@@ -19,4 +19,4 @@ Todo:
 * **coef**: ...
 
 Index information for collection picard:
-* **ev*
+* **ev**
