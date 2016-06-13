@@ -8,10 +8,9 @@ Status: future
 
 Code: lmfdb/modular_forms/maass_forms/picard/*
 
-Todo:
-* Document the picard collection
-
 Collections: **picard**
+
+Todo: Document the picard collection
 
 ## Collection picard
 * **ev**: ...
