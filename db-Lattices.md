@@ -1,18 +1,16 @@
 # Database Lattices
 
-Description:Integral lattices
+|||
+|---|---|
+|**Description**|Integral lattices|
+|**Contact**|[Samuele Anni](https://github.com/sanni85)|
+|**Status**|[production](https://www.lmfdb.org/Lattice)|
+|**Code**|[lmfdb/lattice/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
+|**Collections**|lat|
 
-Contact: Samuele Anni (@sanni85)
-
-Status: [production](https://www.lmfdb.org/Lattice)
-
-Code: lmfdb/lattice/*
-
-Contributors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
+Contibutors: Samuele Anni, Anna Haensch, Gabriele Nebe, and Neil Sloane
 
 The data is coming from [here](https://github.com/annahaensch/lattice_data).
-
-Collections: **lat**
 
 ## Collection lat
 * **aut** (int): size of automorphism group
