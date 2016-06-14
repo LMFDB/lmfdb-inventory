@@ -1,8 +1,8 @@
-# Database hmfs
+# Database mod_l_eigenvalues
 
 |||
 |---|---|
-|**Description**|Mod-_l_ modular forms|
+|**Description**|Mod-ell modular forms|
 |**Status**|[alpha](http://beta.lmfdb.org/ModularForm/GL2/ModL/)|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
 |**Code**|[modlmf](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modlmf)|
