@@ -1,12 +1,15 @@
 # Database numberfields
 
-Status: Released
 
-Contact/Maintainer: John Jones
+|||
+|---|---|
+|**Description**|Number fields|
+|**Status**|[production](http://www.lmfdb.org/NumberField)|
+|**Contact**|[John Jones](https://github.com/jwj61)|
+|**Code**|[number_fields](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/number_fields)|
+|**Collections**|[fields](http://www.lmfdb.org/api/numberfields/fields)|
 
-Description: Global number fields
-
-Todo:
+**Todo**:
 * Add more data on siblings
 * Possibly add narrow class groups
 * Possibly add more class group/unit information
@@ -88,7 +91,7 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * if length of d is less than 19, set the hash equal to d, otherwise use the first 19 characters
  * multiply the result by the sign of the discriminant
 
-## Indices
+### Index information for collection fields
 
  * {'**_id**': 1}: created by mongodb
  * {'**class_group**':1}: class group
