@@ -4,7 +4,7 @@
 |---|---|
 |**Description**|Maass wave forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/Maass/)|
-|**Contact**|[Fredrik Strömberg](https://github.com/fredstro)|
+|**Contact**|[Stefan Lemurell](https://github.com/lemurell), [Fredrik Strömberg](https://github.com/fredstro)|
 |**Code**|[modular_forms/maass_forms/maass_waveforms/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/maass_forms/maass_waveforms/)|
 |**Collections**|to be added|
 
