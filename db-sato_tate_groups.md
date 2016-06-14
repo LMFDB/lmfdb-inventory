@@ -1,12 +1,14 @@
 ## sato_tate_groups
 
-Status: Released
+|||
+|---|---|
+|**Description**|Sato-Tate groups|
+|**Status**|[production](http://www.lmfdb.org/SatoTateGroup)|
+|**Contact**|[Andrew Sutherland](https://github.com/AndrewVSutherland)|
+|**Code**|[sato_tate_groups](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/sato_tate_groups/)|
+|**Collections**|[st_groups](http://www.lmfdb.org/api/sato_tate_groups/st_groups), [st0_groups](http://www.lmfdb.org/api/sato_tate_groups/st_groups), [small_groups](http://www.lmfdb.org/api/sato_tate_groups/small_groups)|
 
-Contact/Maintainer: Andrew Sutherland
-
-Description: Sato-Tate groups
-
-Todo:
+**Todo**:
 * add weight 0 groups to support Artin and Dirichlet L-functions
 * add generators for weight 1 degree 4 groups
 
