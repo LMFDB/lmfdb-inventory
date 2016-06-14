@@ -3,10 +3,10 @@
 |||
 |---|---|
 |**Description**|Group actions on higher genus curves|
-|**Status**|development|
+|**Status**|[alpa](http://beta.lmfdb.org/HigherGenus/C/aut/)|
 |**Contact**|[Jen Paulhus](https://github.com/jenpaulhus)|
 |**Code**|[higher_genus_w_automorphisms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/higher_genus_w_automorphisms)|
-|**Collections**|[families](http://www.lmfdb.org/api/curve_automorphisms/families)|
+|**Collections**|[families](http://beta.lmfdb.org/api/curve_automorphisms/families)|
 
 **Notes**:  Collection families is the data for the released version, Collection passports is the data for the proposed changes to these pages.   Eventually passport will probably replace families
 
