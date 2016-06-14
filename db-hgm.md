@@ -6,7 +6,7 @@
 |**Status**|[beta](http://beta.lmfdb.org/Motive/Hypergeometric/Q/)|
 |**Contact**|[John Jones](https://github.com/jwj61)|
 |**Code**|[motives](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/motives)|
-|**Collections**|[families](http://www.lmfdb.org/api/hgm/families), [motives](http://www.lmfdb.org/api/hgm/motives)|
+|**Collections**|[families](http://beta.lmfdb.org/api/hgm/families), [motives](http://beta.lmfdb.org/api/hgm/motives)|
 
 **Todo**:
 * expand the range of the data
