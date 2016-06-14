@@ -3,7 +3,7 @@
 |||
 |---|---|
 |**Description**|Half integral weight cuspforms spaces and Shimura decomposition|
-|**Status**|development|
+|**Status**|[alpha](http://beta.lmfdb.org/ModularForm/GL2/Q/holomorphic/half/)|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
 |**Code**|[half_integral_weight_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/half_integral_weight_forms)|
 |**Collections**|[forms](http://www.lmfdb.org/api/halfintegralmf/forms)|
