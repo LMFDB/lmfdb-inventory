@@ -3,7 +3,7 @@
 |||
 |---|---|
 |**Description**|Group actions on higher genus curves|
-|**Status**|[alpa](http://beta.lmfdb.org/HigherGenus/C/aut/)|
+|**Status**|[alpha](http://beta.lmfdb.org/HigherGenus/C/aut/)|
 |**Contact**|[Jen Paulhus](https://github.com/jenpaulhus)|
 |**Code**|[higher_genus_w_automorphisms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/higher_genus_w_automorphisms)|
 |**Collections**|[families](http://beta.lmfdb.org/api/curve_automorphisms/families)|
