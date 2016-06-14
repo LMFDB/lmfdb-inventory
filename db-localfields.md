@@ -1,12 +1,14 @@
 # Database localfields
 
-Status: released
+|||
+|---|---|
+|**Description**|Local number fields|
+|**Status**|[production](http://www.lmfdb.org/LocalField)|
+|**Contact**|[John Jones](https://github.com/jwj61)|
+|**Code**|[local_fields](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/local_fields)|
+|**Collections**|[fields](http://www.lmfdb.org/api/local_fields/fields)|
 
-Contact/Maintainer: John Jones
-
-Description: Local number fields
-
-Todo:
+**Todo:**
 * Extend range?
 
 
@@ -72,7 +74,7 @@ Todo:
 
   **Example**: 'y^3 - 11*t^3'
 
-## Indexes
+### Index information for collection fields
  * {'**_id**': 1}: Created by mongo
  * {'**e**': 1}: search by ramification index
  * {'**f**': 1}: search by residue field degree
