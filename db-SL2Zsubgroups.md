@@ -6,7 +6,7 @@
 |**Status**|future|
 |**Contact**|[Stefan Ehlen](https://github.com/sehlen)|
 |**Code**|[modular_forms/elliptic_modular_forms/backend/emf_utils.py](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/elliptic_modular_forms/backend/emf_utils.py) (see render_fd_plot)|
-|**Collections**|[groups](http://www.lmfdb.org/api/SL2Zsubgroups/groups)|
+|**Collections**|[groups](http://beta.lmfdb.org/api/SL2Zsubgroups/groups)|
 
 **Todo**: Document the groups collection and document or delete the groups2 collections (groups2 is not currently referenced anywhere in the code)
 
