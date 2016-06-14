@@ -6,7 +6,7 @@
 |**Status**|[alpha](http://beta.lmfdb.org/ModularForm/GL2/Q/holomorphic/half/)|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
 |**Code**|[half_integral_weight_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/half_integral_weight_forms)|
-|**Collections**|[forms](http://www.lmfdb.org/api/halfintegralmf/forms)|
+|**Collections**|[forms](http://beta.lmfdb.org/api/halfintegralmf/forms)|
 
 **Comments**:  Work in progress, check the branch half_integral on https://github.com/sanni85/lmfdb.git for the latest.  Data will be uploaded from [here](https://github.com/sanni85/half_integral_mf).
 
