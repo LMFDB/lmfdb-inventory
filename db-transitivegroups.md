@@ -1,14 +1,12 @@
 # Database transitivegroups
 
-Status: Fairly complete
-
-Contact/Maintainer: John Jones
-
-Description: Data on transitive subgroups of S<sub>n</sub> for small n, up to conjugation
-
-Todo:
-* ...
-
+|||
+|---|---|
+|**Description**|Galois groups|
+|**Status**|[production](http://www.lmfdb.org/GaloisGroup)|
+|**Contact**|[John Jones](https://github.com/jwj61)|
+|**Code**|[galois_groups](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/galois_groups)|
+|**Collections**|[groups](http://www.lmfdb.org/api/transitivegroups/groups), [Gmodules](http://www.lmfdb.org/api/transitivegroups/Gmodules)|
 
 ## Collection groups
 * **label** (string): label is of the form nTt where n is the degree and t is the "t-number"
