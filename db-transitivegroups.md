@@ -8,6 +8,10 @@
 |**Code**|[galois_groups](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/galois_groups)|
 |**Collections**|[groups](http://www.lmfdb.org/api/transitivegroups/groups), [Gmodules](http://www.lmfdb.org/api/transitivegroups/Gmodules)|
 
+**Todo**:
+* Document the Gmodules collection
+* Add index information
+
 ## Collection groups
 * **label** (string): label is of the form nTt where n is the degree and t is the "t-number"
 * **n** (int): the degree (n from S<sub>n</sub>)
@@ -23,7 +27,13 @@
 * **name** (string): the name given by gap (also used by pari, magma, sage, etc)
 * **pretty** (string): latex of a nicer name for this group
 
-## Collection Gmodules
-* Field 1: ...
-* Field 2: ...
+### Index information for collection groups:
 
+## Collection Gmodules
+* **index** ...
+* **name** ...
+* **dim** ...
+* **gens** ...
+* **complete** ...
+
+### Index information for collection Gmodules:
