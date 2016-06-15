@@ -6,7 +6,7 @@
 |**Status**|[production](http://www.lmfdb.org/NumberField)|
 |**Contact**|[John Jones](https://github.com/jwj61)|
 |**Code**|[number_fields](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/number_fields)|
-|**Collections**|[fields](http://www.lmfdb.org/api/numberfields/fields)|
+|**Collections**|[fields](http://www.lmfdb.org/api/numberfields/fields), fields.rand, stats|
 
 **Todo**:
 * Add more data on siblings
