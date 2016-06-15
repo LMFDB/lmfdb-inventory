@@ -279,7 +279,8 @@ int </td><td>N_0</td><td> 1 </td><td>&nbsp;</td> </tr>
 * Content: elliptic curves over number fields other than Q
 * Contributors: John Cremona, Alyson Deines, Steve Donelly, Paul Gunnells, Warren Moore, Haluk Sengun, John Voight, Dan Yasaki.
 * Origin: https://github.com/JohnCremona/ecnf-data
-* Extent: contains curves over several real and imaginary quadratic fields, in each case complete up to some conductor norm bound
+* Extent: contains curves over several totally real fields (of degrees up to 6) and a few imaginary quadratic fields, in each case complete up to some conductor norm bound
+* Note: This collection is currently being rebuilt with additional data fields; the new version is temporarily called nfcurves2.  When this process is complete and the necessary code changes made the description here will be updated, and index information added.
 
 * Explanation of data fields representing elements of the field, including points:
   - Each field of degree d has a distinguished generator
