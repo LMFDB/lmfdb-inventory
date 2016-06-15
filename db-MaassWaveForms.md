@@ -5,7 +5,7 @@
 |**Description**|Maass wave forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/Maass/)|
 |**Contact**|[Stefan Lemurell](https://github.com/lemurell), [Fredrik Strömberg](https://github.com/fredstro)|
-|**Code**|[modular_forms/maass_forms/maass_waveforms/](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/maass_forms/maass_waveforms/)|
+|**Code**|[modular_forms/maass_forms/maass_waveforms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/maass_forms/maass_waveforms/)|
 |**Collections**|to be added|
 
 **Todo**: Document or delete the collections below, identify which are actually needed on www.lmfdb.org, and put in links to them in the table above.
