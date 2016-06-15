@@ -3,9 +3,9 @@
 |||
 |---|---|
 |**Description**|Bianchi modular forms|
-|**Status**|future|
+|**Status**|[future](https://github.com/LMFDB/lmfdb/issues/1431#issuecomment-225529987)|
 |**Contact**|[John Cremona](https://github.com/JohnCremona)|
-|**Code**|none yet|
+|**Code**|none|
 |**Collections**|[dimensions](http://beta.lmfdb.org/api/bmfs/dimensions)|
 
 **Todo**:
