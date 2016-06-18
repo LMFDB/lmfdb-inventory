@@ -21,6 +21,7 @@ Records with **data_type** equal to "sample" contain the following additional fi
 * **degree_of_field**: string encoding the integer degree of field_poly
 * **field_poly**: string encoding a monic polynomial f(x) in Z[x] defining a number field Q(a)=Q[x]/(f(x)) (x is used for Q)
 * **is_eigenform**: boolean
+* **is_integral**: boolean
 * **representation**: string encoding an integer (currently an element of {0,2})
 * **type**: string describing the type of sample (e.g. "Ikeda lift, cusp form")
 * **weight**: string encoding an integer (currently an even integer in [2,58])
