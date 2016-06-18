@@ -4,13 +4,13 @@
 |---|---|
 |**Description**|Siegel modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GSp/Q/)|
-|**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa)|
+|**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa),[Andrew Sutherland](htts://github/com/AndrewVSutherland)|
 |**Code**|[siegel_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/siegel_modular_forms)|
 |**Collections**|[dimensions](http://www.lmfdb.org/api/siegel_modular_forms/dimensions), [samples](http://www.lmfdb.org/api/siegel_modular_forms/samples)| 
 **Todo**: Add details expanding on utilitarian descriptions below
 
 ## Collection samples
-* **_id**: ObjectId assigned by mongo id (and referenced by owner_id below)
+* **_id**: ObjectId assigned by mongo db (referenced by owner_id below, must not change when moving/copying)
 * **data_type**: string equal to one of "sample", "ev", or "fc"
 
 Records with **data_type** equal to "sample" contain the following additional fields:
@@ -47,7 +47,7 @@ Records with **data_type** equal to "fc" (Fourier coefficient) contain the follo
 * **owner_id**: internal lookup
 
 ## Collection dimensions
-* **_id**: ObjectId assigned by mongo
+* **_id**: ObjectId assigned by mongo db
 * **title**: string (currently always set to "Hilbert Poincare series")
 * **group**: name of the modular group, string (currently always "Gamma(2)")
 * **description**: string describing the space
