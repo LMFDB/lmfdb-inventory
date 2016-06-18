@@ -7,17 +7,17 @@
 |**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa)|
 |**Code**|[siegel_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/siegel_modular_forms)|
 |**Collections**|[dimensions](http://www.lmfdb.org/api/siegel_modular_forms/dimensions), [samples](http://www.lmfdb.org/api/siegel_modular_forms/samples)| 
-**Todo**: Add details to samples collection and document dimensions collection
+**Todo**: Add details expanding on utilitarian descriptions below
 
 ## Collection samples
-* **_id**: unique ObjectId assigned by mongo
+* **_id**: ObjectId assigned by mongo id (and referenced by owner_id below)
 * **data_type**: string equal to one of "sample", "ev", or "fc"
 
 Records with **data_type** equal to "sample" contain the following additional fields:
 * **collection**: array of strings identifying "collections" (not in the mongdo dbs sense) of Siegel modular forms
 * **name**: name uniquely identifying the sample within any of the collections it belongs to
 * **courtesy_of**: string identifying the source of the sample (e.g. authors and date)
-* **degree**: string encoding an integer (currently an element of {2,3,4})
+* **degree**: string encoding the integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples with d=2,3,4)
 * **degree_of_field**: string encoding the integer degree of field_poly
 * **field_poly**: string encoding a monic polynomial f(x) in **Z**[x] defining a number field **Q**(a):=**Q**[x]/(f(x)) (x is used for **Q**)
 * **explicit_formular**: string encoding a polynomial in **Q**(a)[A,B,C,D]
@@ -47,6 +47,27 @@ Records with **data_type** equal to "fc" (Fourier coefficient) contain the follo
 * **owner_id**: internal lookup
 
 ## Collection dimensions
-* Field 1: ...
-* Field 2: ...
+* **_id**: ObjectId assigned by mongo
+* **title**: string (currently always set to "Hilbert Poincare series")
+* **group**: name of the modular group, string (currently always "Gamma(2)")
+* **description**: string describing the space
+* **space**: string describing the type of the space (either "total" or "cusp")
+* **sym_power**: string encoding a nonnegative even integer (currently in [0,100])
+* **note**: string containing a latex note
+* **author**: string naming the author(s)
+* **111111**: string encoding a rational function in **Q**(t)
+* **21111**: string encoding a rational function in **Q**(t)
+* **2211**: string encoding a rational function in **Q**(t)
+* **222**: string encoding a rational function in **Q**(t)
+* **3111**: string encoding a rational function in **Q**(t)
+* **321**: string encoding a rational function in **Q**(t)
+* **33**: string encoding a rational function in **Q**(t)
+* **411**: string encoding a rational function in **Q**(t)
+* **42**: string encoding a rational function in **Q**(t)
+* **51**: string encoding a rational function in **Q**(t)
+* **6**: string encoding a rational function in **Q**(t)
 
+### Index information for collection dimensions
+* **sym_power**: search/browse
+* **group**: search/browse
+* **space**: search/browse
