@@ -20,6 +20,7 @@ Records with **data_type** equal to "sample" contain the following additional fi
 * **degree**: string encoding an integer (currently an element of {2,3,4})
 * **degree_of_field**: string encoding the integer degree of field_poly
 * **field_poly**: string encoding a monic polynomial f(x) in Z[x] defining a number field Q(a)=Q[x]/(f(x)) (x is used for Q)
+* **explicit_formular**: string encoding a polynomial in Q(a)[A,B,C,D]
 * **is_eigenform**: boolean
 * **is_integral**: boolean
 * **representation**: string encoding an integer (currently an element of {0,2})
