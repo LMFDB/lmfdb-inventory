@@ -4,7 +4,7 @@
 |---|---|
 |**Description**|Siegel modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GSp/Q/)|
-|**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa), [Andrew Sutherland](https://github/com/AndrewVSutherland)|
+|**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa), [Andrew Sutherland](https://github.com/AndrewVSutherland)|
 |**Code**|[siegel_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/siegel_modular_forms)|
 |**Collections**|[dimensions](http://www.lmfdb.org/api/siegel_modular_forms/dimensions), [samples](http://www.lmfdb.org/api/siegel_modular_forms/samples)| 
 **Todo**: Add details expanding on utilitarian descriptions below
