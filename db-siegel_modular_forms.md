@@ -14,13 +14,13 @@
 * **data_type**: string equal to one of "sample", "ev", or "fc"
 
 Records with **data_type** equal to "sample" contain the following additional fields:
-* **collection**: array of strings identifying "collections" (not in the mongdo dbs sense) of Siegel modular forms
+* **collection**: array of strings identifying families of spaces of Siegel modular forms that contain this sample (the families currently defined are not disjoint, so the same sample more appear in more than one)
 * **name**: name uniquely identifying the sample within any of the collections it belongs to
 * **courtesy_of**: string identifying the source of the sample (e.g. authors and date)
-* **degree**: string encoding the integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples with d=2,3,4)
-* **degree_of_field**: string encoding the integer degree of field_poly
+* **degree**: string encoding the integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples for d=2,3,4)
+* **degree_of_field**: string encoding the integer degree of field_poly (current an integer in [1..29])
 * **field_poly**: string encoding a monic polynomial f(x) in **Z**[x] defining a number field **Q**(a):=**Q**[x]/(f(x)) (x is used for **Q**)
-* **explicit_formular**: string encoding a polynomial in **Q**(a)[A,B,C,D]
+* **explicit_formula**: string encoding a polynomial in **Q**(a)[A,B,C,D]
 * **is_eigenform**: boolean
 * **is_integral**: boolean
 * **representation**: string encoding an integer (currently an element of {0,2})
@@ -29,18 +29,20 @@ Records with **data_type** equal to "sample" contain the following additional fi
 
 Records with **data_type** equal to "ev" (eigenvalue) contain the following additional fields:
 * **owner_id**: Object(id) equal to the _id attribute of the sample to which this eigenvalue data belongs
-* **index**: string encoding the integer index of the eigenvalue (currently an integer in [2,100]).  This uniquely identifies the eigenvalue among other eigenvalues with the same owner_id.
+* **index**: string encoding the integer index of the eigenvalue (currently an integer in [2..100]).  This uniquely identifies the eigenvalue among other eigenvalues with the same owner_id.
 * **data**: string encoding the eigenvalue as an element of the number field **Q**(a) of the sample (as defined by field_poly)
 
 Records with **data_type** equal to "fc" (Fourier coefficient) contain the following additional fields:
 * **owner_id**: Object(id) equal to the _id attribute of the sample to which this Fourier coefficient data belongs
-* **det**: string encoding an integer that uniquely identifies this Fourier coefficient data record among others with the same owner_id
+* **det**: string encoding an integer that uniquely identifies this Fourier coefficient data record among others with the same owner_id (currently an integer in [0..2999])
 * **data**: dictionary whose keys are strings encoding integer vectors and whose values are strings encoding (possibly constant) polynomials in **Q**(a)[x,y]
 
 ### Index information for collection samples
 * **collection**: search/browse
 * **name**: search/browse
 * **weight**: search/browse
+* **degree**: search/browse
+* **degree_of_field**: search/browse
 * **det**: search/browse
 * **index**: search/browse
 * **data_type**: internal lookup
