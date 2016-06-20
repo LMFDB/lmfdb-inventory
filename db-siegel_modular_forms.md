@@ -24,7 +24,7 @@ Records with **data_type** equal to "sample" contain the following additional fi
 * **is_eigenform**: boolean
 * **is_integral**: boolean
 * **representation**: string encoding an integer (currently an element of {0,2})
-* **type**: string describing the type of sample (e.g. "Ikeda lift, cusp form")
+* **data_type**: string describing the type of sample (e.g. "Ikeda lift, cusp form")
 * **weight**: string encoding an integer (currently an even integer in [2,58])
 
 Records with **data_type** equal to "ev" (eigenvalue) contain the following additional fields:
