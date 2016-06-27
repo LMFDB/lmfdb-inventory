@@ -6,34 +6,13 @@
 |**Status**|[alpha](http://beta.lmfdb.org/HigherGenus/C/aut/)|
 |**Contact**|[Jen Paulhus](https://github.com/jenpaulhus)|
 |**Code**|[higher_genus_w_automorphisms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/higher_genus_w_automorphisms)|
-|**Collections**|[families](http://beta.lmfdb.org/api/curve_automorphisms/families)|
+|**Collections**|[passports](http://beta.lmfdb.org/api/curve_automorphisms/passports)|
 
-**Notes**:  Collection families is the data for the released version, Collection passports is the data for the proposed changes to these pages.   Eventually passport will probably replace families
+**Notes**: families collection has been superseded by passports
 
 **Todo**: 
 * Add higher genus data.
 * Add equations for curves. 
-
-
-## Collection families
-* dim: dimension of the family of curves
-* genus: genus of the family of curves
-* gen_vectors: generating vector for this action
-* label: label of action
-* r:  number of branch points of the cover
-* g0: quotient genus
-* signature: signature
-* group: automorphism group
-* _id: mongodb defined id
-* hyperelliptic: True/False whether curve is hyperelliptic
-* hyp_inv: hyperellitpic involution if hyperelliptic
-* eqn: model for family
-* signH: signature of full action
-* full_auto: this example is not the full automorphism
-* full_label: label for full automorphism group
-
-## Indexes
-*{'_id':1} (created by mongo db)
 
 
 ## Collection passports
@@ -45,8 +24,8 @@
 * g0: quotient genus
 * label: label for whole family
 * r: number of branch points of the cover
-* signature: signature
-* group: automorphism group
+* signature: signature (encoded as string)
+* group: automorphism group (GAP id encoded as string)
 * _id: mongodb generated
  hyperelliptic: True/False whether curve is hyperelliptic
 * hyp_inv: hyperellitpic involution if hyperelliptic
@@ -56,7 +35,11 @@
 * cc: ordered pair of integers where first number is which conjgacy class list and second is which generating vector for that conjugacy class list
 * con: list of conjugacy classes where the action occurs
 
-
-## Indexes
-{'_id':1} (created by mongo db)
-
+#### Indexes on passports collection
+* **genus** - search/browse
+* **group** - search/browse
+* **hyperelliptic** - search/browse
+* **signature** - search/brose
+* **dim** - search/browse
+* **label** - lookup
+* **passport_label** - lookup
