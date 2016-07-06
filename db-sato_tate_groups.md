@@ -42,7 +42,7 @@ Extent: All Sato-Tate groups that arise for elliptic curves (3) and genus 2 curv
  *dim* is the real dimension, *a.b* is the GAP id of the component group, and *c* is a letter or string of letters
  used to break ties; uniquely identifies the Sato-Tate group.
  <p>**Example**: u'1.4.10.1.1a'
- * **moments**: list of pairs [*x*,*m_1*, *m_2*,..., ], where *x* is a class function (elementary symmetric or power
+ * **moments**: list of lists [*x*,*m_1*, *m_2*,..., ], where *x* is a class function (elementary symmetric or power
  sum function of eigenvalues), and *m_n* is the *n*th moment of *x*, stored as s string.
  <p>**Example**: [[u'a_1',u'1',u'0',u'1',u'0',u'3',u'0',u'14',....,u'4719'],[u'a_2',u'1',u'1',u'2',u'4',u'10',...,u'223412']]
  * **name**: string naming the Sato-Tate group unique within its weight and degree
