@@ -14,7 +14,7 @@
 * **data_type**: string equal to one of "sample", "ev", or "fc"
 
 Records with **data_type** equal to "sample" contain the following additional fields:
-* **collection**: array of strings identifying families of spaces of Siegel modular forms that contain this sample (the families currently defined are not disjoint, so the same sample more appear in more than one)
+* **collection**: array of strings identifying families of spaces of Siegel modular forms that contain this sample (the families currently defined are not disjoint, so the same sample may appear in multiple families)
 * **name**: name uniquely identifying the sample within any of the collections it belongs to
 * **courtesy_of**: string identifying the source of the sample (e.g. authors and date)
 * **degree**: string encoding the integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples for d=2,3,4)
