@@ -6,7 +6,8 @@
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GSp/Q/)|
 |**Contact**|[Nils Skouruppa](https://github.com/nilsskoruppa), [Andrew Sutherland](https://github.com/AndrewVSutherland)|
 |**Code**|[siegel_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/siegel_modular_forms)|
-|**Collections**|[dimensions](http://www.lmfdb.org/api/siegel_modular_forms/dimensions), [samples](http://www.lmfdb.org/api/siegel_modular_forms/samples)| 
+|**Collections**|[dimensions](http://www.lmfdb.org/api/siegel_modular_forms/dimensions), [samples](http://www.lmfdb.org/api/siegel_modular_forms/samples),
+[families]http://www.lmfdb.org/api/siegel_modular_forms/families)| 
 **Todo**: Add details expanding on utilitarian descriptions below
 
 ## Collection samples
@@ -73,3 +74,14 @@ Records with **data_type** equal to "fc" (Fourier coefficient) contain the follo
 * **sym_power**: search/browse
 * **group**: search/browse
 * **space**: search/browse
+
+## Collection families
+* **_id**: ObjectedId assigned by mongo db
+* **name**: string identifying the family (e.g. "Sp4Z")
+* **degree*: integer degree of the famly (currently 2, 3, or 4)
+* **latex_name**: latex string for displaying the name
+* **order**: integer used to control the ordering of the families for display purposes
+
+### Index information for families
+* **name** search/lookup
+* **order** browsing
