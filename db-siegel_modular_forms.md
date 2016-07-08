@@ -81,6 +81,7 @@ Records with **data_type** equal to "fc" (Fourier coefficient) contain the follo
 * **degree*: integer degree of the famly (currently 2, 3, or 4)
 * **latex_name**: latex string for displaying the name
 * **order**: integer used to control the ordering of the families for display purposes
+* **dim_args_default**: for families with dimension formulas, a dictionary with default values for k and j
 
 ### Index information for families
 * **name** search/lookup
