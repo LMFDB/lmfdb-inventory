@@ -17,15 +17,15 @@ Records with **data_type** equal to "sample" contain the following additional fi
 * **collection**: array of strings identifying families of spaces of Siegel modular forms that contain this sample (the families currently defined are not disjoint, so the same sample may appear in multiple families)
 * **name**: name uniquely identifying the sample within any of the collections it belongs to
 * **courtesy_of**: string identifying the source of the sample (e.g. authors and date)
-* **degree**: string encoding the integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples for d=2,3,4)
-* **degree_of_field**: string encoding the integer degree of field_poly (current an integer in [1..29])
+* **deg**: integer degree of the form (forms on M_k(Sp(2d)) have degree d, currently we have samples for d=2,3,4)
+* **fdeg**: integer degree of field_poly (current an integer in [1..29])
 * **field_poly**: string encoding a monic polynomial f(x) in **Z**[x] defining a number field **Q**(a):=**Q**[x]/(f(x)) (x is used for **Q**)
 * **explicit_formula**: string encoding a polynomial in **Q**(a)[A,B,C,D]
 * **is_eigenform**: boolean
 * **is_integral**: boolean
 * **representation**: string encoding an integer (currently an element of {0,2})
 * **data_type**: string describing the type of sample (e.g. "Ikeda lift, cusp form")
-* **weight**: string encoding an integer (currently an even integer in [2,58])
+* **wt**: integer weight (currently an even integer in [2,58])
 
 Records with **data_type** equal to "ev" (eigenvalue) contain the following additional fields:
 * **owner_id**: Object(id) equal to the _id attribute of the sample to which this eigenvalue data belongs
