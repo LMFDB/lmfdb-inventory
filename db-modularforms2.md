@@ -40,21 +40,21 @@ This collection contains two types of records:
 | `one_in_wdb` | bool |  True | True if at least one of these spaces is in the db
 #### Gamma0 with character
 | Field | type | Example| Description
- |-------|------|--------|---------------|
- |   `cchi` | integer | 9 | Conrey character number |
- |   `character_orbit` | list |  [9, 11] | List of conrey character numbers of elements of the orbits of 'cchi'|
- |   `character_orbit_rep` | integer | 9 | The number of the representative of the Galois orbit |
- |  `character_parity` | integer | 1 | '1' if the character is even and '-1' if it is odd |
- |  `d_cusp` | integer |  24 | Dimension of space of cusp forms S_k(N, chi), where N is the level, chi is the character specified by cchi. |
- |  `d_eis` |  integer | 4 | Dimension of  Eisenstein series E_k(N,chi) |
- |  `d_mod` | integer | 28 | Dimension of modular forms M_k(N,chi) |
- |  `d_newf` | integer | 8 | Dimension of (cuspidal) newforms in S_k(N,chi)|  
- |  `in_msdb` | integer | 1 | Equals 1 if this space has a record in the Modular_Symbols.files collection, else 0|
- |  `in_wdb` |  integer | 1 |   is 1 if we have this space in the web database, i.e. an entry exists in the collection webmodformspace and all galois orbits of newforms are stored in the collection webnewforms, else 0 |
- |  `level` | integer | 14 | The level of the space |
- |  `space_label`| string | '14.14.9' | the label of this space  of the form N.k.i where N is the level, k the weight and i the Conrey character number|,
- |  `space_orbit_label` | string |  '14.14.2' | The label of the Galois orbit of this space of the form N.k.i, where i is the index of the Galois orbit of the character in the list of Galois orbits of characters of this level. The Galois orbits are ordered by the minimal number appearing in the orbit. |
- |  ` weight` | integer |  14 | the weight of self |
+|-------|------|--------|---------------|
+|   `cchi` | integer | 9 | Conrey character number |
+|   `character_orbit` | list |  [9, 11] | List of conrey character numbers of elements of the orbits of 'cchi'|
+|   `character_orbit_rep` | integer | 9 | The number of the representative of the Galois orbit |
+|  `character_parity` | integer | 1 | '1' if the character is even and '-1' if it is odd |
+|  `d_cusp` | integer |  24 | Dimension of space of cusp forms S_k(N, chi), where N is the level, chi is the character specified by cchi. |
+|  `d_eis` |  integer | 4 | Dimension of  Eisenstein series E_k(N,chi) |
+|  `d_mod` | integer | 28 | Dimension of modular forms M_k(N,chi) |
+|  `d_newf` | integer | 8 | Dimension of (cuspidal) newforms in S_k(N,chi)|  
+|  `in_msdb` | integer | 1 | Equals 1 if this space has a record in the Modular_Symbols.files collection, else 0|
+|  `in_wdb` |  integer | 1 |   is 1 if we have this space in the web database, i.e. an entry exists in the collection webmodformspace and all galois orbits of newforms are stored in the collection webnewforms, else 0 |
+|  `level` | integer | 14 | The level of the space |
+|  `space_label`| string | '14.14.9' | the label of this space  of the form N.k.i where N is the level, k the weight and i the Conrey character number|,
+|  `space_orbit_label` | string |  '14.14.2' | The label of the Galois orbit of this space of the form N.k.i, where i is the index of the Galois orbit of the character in the list of Galois orbits of characters of this level. The Galois orbits are ordered by the minimal number appearing in the orbit. |
+|  ` weight` | integer |  14 | the weight of self |
 
 ## Collection webchar
     Description: Json data for WebCharacter objects as defined in '/modular_forms/elliptic_modular_forms/backend/web_character.py'
