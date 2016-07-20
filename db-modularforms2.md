@@ -4,7 +4,7 @@
 |---|---|
 |**Description**|Classical modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/)|
-|**Contact**|[Stefan Ehlen](https://github.com/sehlen), [Fredrik StrC6mberg](https://github.com/fredstro)|
+|**Contact**|[Stefan Ehlen](https://github.com/sehlen), [Fredrik Strömberg](https://github.com/fredstro)|
 |**Code**|[modular_forms/elliptic_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/elliptic_modular_forms)|
 |**Collections**|[dimension_table](http://www.lmfdb.org/api/modularforms2/dimension_table), [webchar](http://www.lmfdb.org/api/modularforms2/webchar), [webchar.chunks](http://www.lmfdb.org/api/modularforms2/webchar.chunks), [webchar.files](http://www.lmfdb.org/api/modularforms2/webchar.files), [webmodformspace](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewformspace.chunks](http://www.lmfdb.org/api/modularforms2/webmodformspace.chunks), [webnewformspace.files](http://www.lmfdb.org/api/modularforms2/webmodformspace.files), [webnewforms](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewforms.chunks](http://www.lmfdb.org/api/modularforms2/webnewforms.chunks), [webnewforms.files](http://www.lmfdb.org/api/modularforms2/webnewforms.files), [webeigenvalues](http://www.lmfdb.org/api/modularforms2/webeigenvalues), [webeigenvalues.chunks](http://www.lmfdb.org/api/modularforms2/webeigenvalues.chunks), [webeigenvalues.files](http://www.lmfdb.org/api/modularforms2/webeigenvalues.files)|
 
