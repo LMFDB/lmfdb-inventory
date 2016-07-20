@@ -25,22 +25,35 @@
  
 
 ## Collection dimension_table
-    Description: Dimension data for modular forms
+    Description: Dimension data for modular forms. 
+This collection contains two types of records: 
+#### Gamma1
+| Field | type | Example| Description
+  |-------|------|--------|---------------|
+| `level` | integer | 29 | level
+| `weight` | integer |6 | weight
+| `d_eis` | integer | 28 | The dimension of the space of Eisenstein series E_k(Gamma_1(N))
+| `d_mod` |  integer | 189| The dimension of the space of all modular forms  M_k(Gamma_1(N))
+| `d_newf` | integer|  integer | 161 | The dimension of the space of all cuspidal newforms in S_k(Gamma_1(N))
+| `gamma1_label` | string | '29.6' | A label for the space, of the form level.weight
+| `all_in_db`| bool | True | True if the spaces S_k^{new}(N,chi) for all chi are in the db, False otherwise
+| `one_in_wdb` | bool |  True | True if at least one of these spaces is in the db
+#### Gamma0 with character
 | Field | type | Example| Description
  |-------|------|--------|---------------|
  |   `cchi` | integer | 9 | Conrey character number |
  |   `character_orbit` | list |  [9, 11] | List of conrey character numbers of elements of the orbits of 'cchi'|
  |   `character_orbit_rep` | integer | 9 | The number of the representative of the Galois orbit |
  |  `character_parity` | integer | 1 | '1' if the character is even and '-1' if it is odd |
- |  `d_cusp` | integer |  24 | Dimension of space of cusp forms with this label |
- |  `d_eis` |  integer | 4 | Dimension of  Eisenstein series |
- |  `d_mod` | integer | 28 | Dimension of nodular forms |
- |  `d_newf` | integer | 8 | Dimension of newforms |  
- |  `in_msdb` | integer | 1 | Equals 1 if this space has a record in the Modular_Symbols.files collection |
- |  `in_wdb` |  integer | 1 |  Equals 1 if this space has a record in the webmodforms.files collection |
+ |  `d_cusp` | integer |  24 | Dimension of space of cusp forms S_k(N, chi), where N is the level, chi is the character specified by cchi. |
+ |  `d_eis` |  integer | 4 | Dimension of  Eisenstein series E_k(N,chi) |
+ |  `d_mod` | integer | 28 | Dimension of modular forms M_k(N,chi) |
+ |  `d_newf` | integer | 8 | Dimension of (cuspidal) newforms in S_k(N,chi)|  
+ |  `in_msdb` | integer | 1 | Equals 1 if this space has a record in the Modular_Symbols.files collection, else 0|
+ |  `in_wdb` |  integer | 1 |   is 1 if we have this space in the web database, i.e. an entry exists in the collection webmodformspace and all galois orbits of newforms are stored in the collection webnewforms, else 0 |
  |  `level` | integer | 14 | The level of the space |
  |  `space_label`| string | '14.14.9' | the label of this space  of the form N.k.i where N is the level, k the weight and i the Conrey character number|,
- |  `space_orbit_label` | string |  '14.14.2' | The label of the Galois orbit of this space of the form N.k.o where 'o' is the index of the Galois orbit of the character of self in the ConreyDirichletGroup of modulus N |
+ |  `space_orbit_label` | string |  '14.14.2' | The label of the Galois orbit of this space of the form N.k.i, where i is the index of the Galois orbit of the character in the list of Galois orbits of characters of this level. The Galois orbits are ordered by the minimal number appearing in the orbit. |
  |  ` weight` | integer |  14 | the weight of self |
 
 ## Collection webchar
