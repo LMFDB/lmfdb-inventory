@@ -16,12 +16,12 @@
 
 | Field | type | Example| Description |
 |-------|------|--------|---------------|
-  | `_id` | bson.ObjectId | ObjectId('52daa5560964b55ea2a516ec')| Unique id|
-  | `chunkSize` | integer | 261120 |  size of associated chunks |
-  | `length` | integer |  408 | length of the file in bytes |
-  | `md5`:  |  string | '7828b070ebd9a49aacd950f8e621267a' | has of the file |
-  | `uploadDate` | datetime | datetime.datetime(2014, 9, 10, 13, 52, 20, 258000)} | date this file was uploaded |
-   | `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
+| `_id` | bson.ObjectId | ObjectId('52daa5560964b55ea2a516ec')| Unique id|
+| `chunkSize` | integer | 261120 |  size of associated chunks |
+| `length` | integer |  408 | length of the file in bytes |
+| `md5`:  |  string | '7828b070ebd9a49aacd950f8e621267a' | has of the file |
+| `uploadDate` | datetime | datetime.datetime(2014, 9, 10, 13, 52, 20, 258000)} | date this file was uploaded |
+| `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
  
 
 ## Collection dimension_table
@@ -29,7 +29,7 @@
 This collection contains two types of records: 
 #### Gamma1
 | Field | type | Example| Description
-  |-------|------|--------|---------------|
+|-------|------|--------|---------------|
 | `level` | integer | 29 | level
 | `weight` | integer |6 | weight
 | `d_eis` | integer | 28 | The dimension of the space of Eisenstein series E_k(Gamma_1(N))
@@ -59,22 +59,22 @@ This collection contains two types of records:
 ## Collection webchar
     Description: Json data for WebCharacter objects as defined in '/modular_forms/elliptic_modular_forms/backend/web_character.py'
 | Field | type | Example| Description |
- |-------|------|--------|---------------|
- | `conductor` | integer | 1 | conductor |
- | `label`: | string | '1.1' | label  of the form M.i where M is the modulus and i is the Conrey character number |
- | `latex_name`: | string | '\\chi_{1}(1, \\cdot)' | latex_string |
- | `modulus` | integer|  1 | modulus |
- | `modulus_euler_phi` | integer | 1 | Euler phi function of modulus |
- | `number` | integer | 1 | Conrey character number |
- | `order` | integer | 1 | order of this character |
- | `version` | float | 1.2 | version number | 
+|-------|------|--------|---------------|
+| `conductor` | integer | 1 | conductor |
+| `label`: | string | '1.1' | label  of the form M.i where M is the modulus and i is the Conrey character number |
+| `latex_name`: | string | '\\chi_{1}(1, \\cdot)' | latex_string |
+| `modulus` | integer|  1 | modulus |
+| `modulus_euler_phi` | integer | 1 | Euler phi function of modulus |
+| `number` | integer | 1 | Conrey character number |
+| `order` | integer | 1 | order of this character |
+| `version` | float | 1.2 | version number | 
 
 ## Collection webchar.files
     Description: GridFS files associated with WebCharacter objects.
 | Field | type | Example| Description |
 |-------|------|--------|---------------|
-  | `modulus` | integer | 3 | modulus of the character |
-  | `number` | integer | 1 | Conrey character number |
+| `modulus` | integer | 3 | modulus of the character |
+| `number` | integer | 1 | Conrey character number |
 
 ## Collection webmodformspace
 * Field 1: ...
@@ -119,16 +119,16 @@ This collection contains two types of records:
 ## Collection Atkin_Lehner.files 
     Description: GridFS files containing Atkin-Lehner eigenvalues for newforms.
     File format: a string of '+' and '-'  corresponding to eigenvalue 1 or -1 of W_p for p in prime_divisors(N)
- | Field | type | Example| Description |
- |-------|------|--------|---------------|
- | `N` | integer |  17 | level |
-  | `cchi` | integer | 1 | Conrey character number |
-  | `chi` | integer | 0 | Sage character number (index in DirichletGroup(N) |
-  | `cputime`  | float | 5.744359 | time to compute the eigenvalues |
-  | `k` | integer |  2 | weight |
-  | `newform` | integer | 0 | index of the newform in the list of all newforms with this level, weight and character, ordered as in Sage by traces of Hecke operators (?)
-  | `sage_version`:  | string | '7.2' | version of sage used to compute this object |
-   | `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+| `N` | integer |  17 | level |
+| `cchi` | integer | 1 | Conrey character number |
+| `chi` | integer | 0 | Sage character number (index in DirichletGroup(N) |
+| `cputime`  | float | 5.744359 | time to compute the eigenvalues |
+| `k` | integer |  2 | weight |
+| `newform` | integer | 0 | index of the newform in the list of all newforms with this level, weight and character, ordered as in Sage by traces of Hecke operators (?)
+| `sage_version`:  | string | '7.2' | version of sage used to compute this object |
+ | `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
  
 
 
@@ -137,69 +137,69 @@ This collection contains two types of records:
     File format: Sage object of type 'sage.modular.modsym.ambient.ModularSymbolsAmbient_wtk_eps_with_category'
     Example: Modular Symbols space of dimension 75 and level 500, weight 2, character [-1, zeta4], sign 1, over Cyclotomic Field of order 4 and degree 2
 | Field | type | Example| Description |
- |-------|------|--------|------------------|
-  | `N` | integer | 500 | level |
-  | `cchi` | integer | 307 | Conrey character number |
-  | `character_galois_orbit` | list | [307, 443] | Conrey character numbers of the orbit of cchi
-  | `chi` | integer | 16 | sage character number |
-  | `complete` |  integer | 4 | indicates how 'complete' all records for this space is, set to 4 (currently the maximum) if all newform orbits and their aps up to the bound given by the L-functions requirements are computed |
-  | `conrey_galois_orbit_number` |  integer | 16 | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
-  | `cputime` | float | 0. | time it took  to compute this record in seconds | 
-  | `dima` |  integer | 75 | dimension of ambient space of modular symbols of weight k, level N, character chi and sign =-1 |
-  | `dimc` |  integer | 65 |  dimension of cuspidal submodule |
-  | `dimn` |  integer | 48 | dimension of new submodule of the cuspidal submodule |
-  | `filename` | string | 'gamma0-ambient-modsym-00500-002-016' | filename in gridfs |
-  | `k` |  integer | 2 | weight |
-  | `nfactors` |  integer | 0 | number of newform factors in the database for this record (should be updated after the orbits are computed) | 
-  | `orbits` |  integer | 0 | same as 'nfactors' (probably one of these were introduced by some bug some time ago) |
-  | `sage_version` | string | '6.1beta' | version of sage used to compute the object (and that may be needed to unpickle it sucessfully) |
-  | `space_label` |  string | '500.2.307' | label of the space in the format N.k.cchi |
-  | `space_orbit_label` | string  | '500.2.16' | label of the orbit of the space in the format N.k.o where 'o' is the order of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey
+|-------|------|--------|------------------|
+| `N` | integer | 500 | level |
+| `cchi` | integer | 307 | Conrey character number |
+| `character_galois_orbit` | list | [307, 443] | Conrey character numbers of the orbit of cchi
+| `chi` | integer | 16 | sage character number |
+| `complete` |  integer | 4 | indicates how 'complete' all records for this space is, set to 4 (currently the maximum) if all newform orbits and their aps up to the bound given by the L-functions requirements are computed |
+| `conrey_galois_orbit_number` |  integer | 16 | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
+| `cputime` | float | 0. | time it took  to compute this record in seconds | 
+| `dima` |  integer | 75 | dimension of ambient space of modular symbols of weight k, level N, character chi and sign =-1 |
+| `dimc` |  integer | 65 |  dimension of cuspidal submodule |
+| `dimn` |  integer | 48 | dimension of new submodule of the cuspidal submodule |
+| `filename` | string | 'gamma0-ambient-modsym-00500-002-016' | filename in gridfs |
+| `k` |  integer | 2 | weight |
+| `nfactors` |  integer | 0 | number of newform factors in the database for this record (should be updated after the orbits are computed) | 
+| `orbits` |  integer | 0 | same as 'nfactors' (probably one of these were introduced by some bug some time ago) |
+| `sage_version` | string | '6.1beta' | version of sage used to compute the object (and that may be needed to unpickle it sucessfully) |
+| `space_label` |  string | '500.2.307' | label of the space in the format N.k.cchi |
+| `space_orbit_label` | string  | '500.2.16' | label of the orbit of the space in the format N.k.o where 'o' is the order of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey
   
 ## Collection Newform_factors.files
     Description: GridFS files containing newform factors.
     File format: Sage object of type 'sage.modular.modsym.subspace.ModularSymbolsSubspace_with_category'
     Example: Modular Symbols subspace of dimension 1 of Modular Symbols space of dimension 70 for Gamma_0(372) of weight 2 with sign 1 over Rational Field
- | Field | type | Example| Description |
- |-------|------|--------|---------------|
-  |  `N` | integer | 372 | level |
-  |  `ambient_id` | string | ObjectId('56be2428769754c49d4031d5') | id of the corresponding ambient space record in Modular_Symbols.files |
-  |  `cchi` | integer |  1 | conrey character number |
-  |  `character_galois_orbit` | list | [1] |  | Conrey character numbers of the orbit of cchi
-  |  `chi` |  integer | 0 |  sage character number |
-  |  `chunkSize` | integer |  261120 | chunk size of gridfs files |
-  |  `conrey_galois_orbit_number` |  integer | 0  | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
-  |  `cputime` | 0.8625200000000002 | time it took  to compute this record in seconds | 
-  |  `filename` |  |  'gamma0-factors-00001-00500/00372-002-000-002' time it took  to compute this record in seconds | 
-  |  `hecke_orbit_label` | string |  `372.2.1.c' | the label of the Hecke orbit in the format N.k.cchi.label where 'label' is the string representation given by 'newform' using the 'Cremona label' conventions |
-  |  `k` |  integer | 2 | weight |
-  |  `length` |  integer | 152207 | length of the file |
-  |  `md5` |  string |  '19ea166976add07563e23bece2eb9458' | hash of the file |
-  |  `newform` |  integer | 2 | the number of the newform in the list of all newforms of level `N`, weight `k` and character `cchi`, ordered as in Sage (by traces of Hecke eigenvalues...) |
-  |  `sage_version` |  |  '6.10' | version of sage used to compute the object |
-  |  `uploadDate` | datetime | datetime.datetime(2016, 2, 12, 18, 27, 55, 213000)| time the file was uploaded |
-  |  `v` | list | [1] | the dual eigenvector as returned by the sage method compact_system_of_eigenvalues although this seems to be set to '1' in all records so I assume the records in 'vector_on_basis.files' or 'ap.files' should be used instead? |
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+|  `N` | integer | 372 | level |
+|  `ambient_id` | string | ObjectId('56be2428769754c49d4031d5') | id of the corresponding ambient space record in Modular_Symbols.files |
+|  `cchi` | integer |  1 | conrey character number |
+|  `character_galois_orbit` | list | [1] |  | Conrey character numbers of the orbit of cchi
+|  `chi` |  integer | 0 |  sage character number |
+|  `chunkSize` | integer |  261120 | chunk size of gridfs files |
+|  `conrey_galois_orbit_number` |  integer | 0  | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
+|  `cputime` | 0.8625200000000002 | time it took  to compute this record in seconds | 
+|  `filename` |  |  'gamma0-factors-00001-00500/00372-002-000-002' time it took  to compute this record in seconds | 
+|  `hecke_orbit_label` | string |  `372.2.1.c' | the label of the Hecke orbit in the format N.k.cchi.label where 'label' is the string representation given by 'newform' using the 'Cremona label' conventions |
+|  `k` |  integer | 2 | weight |
+|  `length` |  integer | 152207 | length of the file |
+|  `md5` |  string |  '19ea166976add07563e23bece2eb9458' | hash of the file |
+|  `newform` |  integer | 2 | the number of the newform in the list of all newforms of level `N`, weight `k` and character `cchi`, ordered as in Sage (by traces of Hecke eigenvalues...) |
+|  `sage_version` |  |  '6.10' | version of sage used to compute the object |
+|  `uploadDate` | datetime | datetime.datetime(2016, 2, 12, 18, 27, 55, 213000)| time the file was uploaded |
+|  `v` | list | [1] | the dual eigenvector as returned by the sage method compact_system_of_eigenvalues although this seems to be set to '1' in all records so I assume the records in 'vector_on_basis.files' or 'ap.files' should be used instead? |
   
 ## Collection aps.files
     Description: GridFS files containing aps.
     File format: Tuple of the form (E,v) where E is an 'n times d' matrix
     and v is a length d vector as returned by the method 'compact_system_of_egenvalues(primes_first_n(n))' on a newform factor (object in the GridFS collection 'Newform_factors'). 
     Example: (25 x 4 dense matrix over Number Field in a with defining polynomial x^4 + 4*zeta12*x^2 + (4*zeta12^3 - 8*zeta12^2 - 8*zeta12 + 4)*x + 6*zeta12^2 - 10 over its base field, (1, (8/37*zeta12^3 - 109/444*zeta12^2 + 6/37*zeta12 + 5/111)*a^3 + (29/111*zeta12^3 - 5/12*zeta12^2 - 61/444*zeta12 + 1/12)*a^2 + (-83/111*zeta12^3 + 139/148*zeta12^2 + 121/444*zeta12 - 53/148)*a - 7/3*zeta12^3 - 293/222*zeta12^2 + 19/6*zeta12 - 244/111, ...))
- | Field | type | Example| Description |
- |-------|------|--------|---------------|
-   | `N` | integer | 90 | level |
-  | `ambient_id` | ObjectId('55baa63d769754a2084cc440') | id of the ambient space in the collection Modular_Symbols.files 
-  | `cchi` | integer |47 | Conrey character number |
-  | `character_galois_orbit` | [23, 47, 77, 83] | the galois orbit of cchi
-  | `chi` | integer |4 | sage character number
-  | `conrey_galois_orbit_number` | integer |5 | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
-  | `cputime` | 2.290000000000001 | time it took to compute this (in seconds)
-  | `filename` |  | `gamma0-aplists-00090-002-005-001-00000-00100' | file name in gridfs |
-  | `hecke_orbit_label` |  | `90.2.47.b' | label of the Hecke orbit (see above) |
-  | `k` | integer |2 | weight |
-  | `newform` | integer |1 | the number of the newform in the list of all newforms with level N, weight k and character cchi |
-  | `nmax` | integer |100 | the end prime in the list, for instance 97 |
-  | `nmin` | integer | 0 | the starting prime in the list ('0' means the first prime which is 2)
-  | `prec` | integer | 100 | the number of a(n) that can be obtained by the a(p)'s in this file
-  | `sage_version` | string  | `Sage Version 5.0.beta7, Release Date: 2012-03-05' | version of sage used to compute this object |
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+| `N` | integer | 90 | level |
+| `ambient_id` | ObjectId('55baa63d769754a2084cc440') | id of the ambient space in the collection Modular_Symbols.files 
+| `cchi` | integer |47 | Conrey character number |
+| `character_galois_orbit` | [23, 47, 77, 83] | the galois orbit of cchi
+| `chi` | integer |4 | sage character number
+| `conrey_galois_orbit_number` | integer |5 | the number of the Galois orbit in the list of all Galois orbits in DirichletGroup_Conrey |
+| `cputime` | 2.290000000000001 | time it took to compute this (in seconds)
+| `filename` |  | `gamma0-aplists-00090-002-005-001-00000-00100' | file name in gridfs |
+| `hecke_orbit_label` |  | `90.2.47.b' | label of the Hecke orbit (see above) |
+| `k` | integer |2 | weight |
+| `newform` | integer |1 | the number of the newform in the list of all newforms with level N, weight k and character cchi |
+| `nmax` | integer |100 | the end prime in the list, for instance 97 |
+| `nmin` | integer | 0 | the starting prime in the list ('0' means the first prime which is 2)
+| `prec` | integer | 100 | the number of a(n) that can be obtained by the a(p)'s in this file
+| `sage_version` | string  | `Sage Version 5.0.beta7, Release Date: 2012-03-05' | version of sage used to compute this object |
 
