@@ -7,7 +7,8 @@
 |**Contact**|[Stefan Ehlen](https://github.com/sehlen), [Fredrik Strömberg](https://github.com/fredstro)|
 |**Code**|[modular_forms/elliptic_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/elliptic_modular_forms)|
 |**Collections**|[dimension_table](http://www.lmfdb.org/api/modularforms2/dimension_table), [webchar](http://www.lmfdb.org/api/modularforms2/webchar), [webchar.files](http://www.lmfdb.org/api/modularforms2/webchar.files), [webmodformspace](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewformspace.files](http://www.lmfdb.org/api/modularforms2/webmodformspace.files), [webnewforms](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewforms.files](http://www.lmfdb.org/api/modularforms2/webnewforms.files), [webeigenvalues](http://www.lmfdb.org/api/modularforms2/webeigenvalues), [webeigenvalues.files](http://www.lmfdb.org/api/modularforms2/webeigenvalues.files)|
-|**Other data**| [Atkin_Lehner.files](http://beta.lmfdb.org/api/modularforms2/AtkinLehner.files), [Modular_symbols.files](http://beta.lmfdb.org/api/modularforms2/Modular_symbols.files), [Newform_factors.files](http://beta.lmfdb.org/api/modularforms2/Newform_factors.files), [ap.files](http://beta.lmfdb.org/api/modularforms2/ap.files)|
+|**Other data**| [Atkin_Lehner.files](http://beta.lmfdb.org/api/modularforms2/AtkinLehner.files), [Modular_symbols.files](http://beta.lmfdb.org/api/modularforms2/Modular_symbols.files), [Newform_factors.files](http://beta.lmfdb.org/api/modularforms2/Newform_factors.files), [ap.files](http://beta.lmfdb.org/api/modularforms2/ap.files),
+[vector_on_basis.files](http://beta.lmfdb.org/api/vector_on_basis.files)|
 
 ## General notes
 * All collections contain the field `_id` which is an object of the type bson.ObjectId and uniquely identifies the record in the database. 
