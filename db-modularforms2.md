@@ -77,44 +77,118 @@ This collection contains two types of records:
 | `number` | integer | 1 | Conrey character number |
 
 ## Collection webmodformspace
-* Field 1: ...
-* Field 2: ...
-
-## Collection webmodformspace.chunks
-* Field 1: ...
-* Field 2: ...
-
+    Description: Json data for a Modular form space object of type 'WebModFormSpace' defined in  /modular_forms/elliptic_modular_forms/backend/web_modform_space.py
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+| `_has_oldspace` | integer | 0 | 1 if we have computed the decomposiiton of the space of oldforms, else 0
+  | `bitprec` |  integer | 53 | the precision (in bits) of the stored embedded coefficients default is 53 = double precision|
+  | `character` |  integer |  1 | number of the character,
+  | `character_naming_scheme` |  string | `Conrey' | 'Conrey' or 'Sage', used to denote the naming/labeling scheme used. Default is 'Conrey' |
+  | `character_orbit_rep` |  integer | 1 | The number of the character which is the representative of the Galois orbit (in the same naming scheme as above). The representative is chosen as the smallest integer in the list of character numbers |
+  | `character_used_in_computation` |  integer | 1 | number of the character which was used in the computation (could be another character in the Galois orbit)|
+  | `creation_date` | datetime | datetime.datetime(1970, 1, 1, 0, 0) | when the record was created |
+  | `cuspidal` |  integer |  1 | 1 if the record describes a space of cusp forms, else 0 |
+  | `dimension` |  integer |  0 | dimension of this space
+  | `dimension_cusp_forms` |  integer | 0 | dimension of the space of cusp forms with this level, weight and character |
+  | `dimension_modular_forms` |  integer |  1 | dimension of the space of modular forms with this level, weight and character
+  | `dimension_new_cusp_forms` |  integer |  0 |   dimension of the space of (cuspidal) newforms with this level, weight and character
+  | `hecke_orbits` | list | [] | list of labels of the newforms Hecke orbits of self which are stored in the collection 'webnewforms' 
+  | `level` |  integer | 2 | level 
+  | `prec` |  integer | 10 | number of coefficients stored in the q-expansions for the newforms (if they are stored) |
+  | `space_label` |  string | `2.2.1' | label of the format level.weight.character where character is the number above (in particular given by the naming scheme in 'character_naming_scheme') 
+  | `space_orbit_label` | string | `2.2.0' | label of the format level.weight.o where o is the number of the galois orbit of the character in the list of all galois orbits (ordered by their minimal element)
+  | `sturm_bound` | integer |  0 | the Sturm bound for this space, i.e. a general bound on the number of coefficients which must be given to uniquely indentify a modular form in this space |
+  | `version` | float | 1.2 | version number 
+  | `weight` |  integer | 2 | weight 
+  | `zeta_orders` | list | [] | list of orders of the generators of the cyclotomic fields which are the base fields of the Fourier coefficients of the newforms in the database
+  
 ## Collection webmodformspace.files
-   Description: GridFS files associated with WebModFormSpace objects.
-* Field 1: ...
-* Field 2: ...
+    Description: GridFS files associated with WebModFormSpace objects which are also given by records in the collection webmodformspace. See the definition of  'WebModFormSpace' in /modular_forms/elliptic_modular_forms/backend/web_modform_space.py 
+    File format: a dictionary containing data for the webmodformspace as described in the second table below. 
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+| `space_label` | string | '10.8.7' | label of the form level.weight.character  corresponding to the record in the collection 'webmodformspace'
+| `version` | float | version number 
+### Data structure for the file 
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+`_character_galois_orbit`| list | [1] | list of characters in the Galois orbit of the character
+ `_character_galois_orbit_embeddings` | dict | {} | embeddings (if computed) 
+ `character_naming_scheme` | string | 'Conrey' | character naming scheme |
+ `character_orbit_rep` | integer | 1 | the number of the representative of the Galois orbit (should be the smallest number in the orbit) 
+ `character_used_in_computation` | integer | 1 | the character used to compute this space 
+ `group` | string |  'x\x9ck`J.NLO\xd5\xcb\xcdO)\xcdI,...' | a binary string givng the subgroup as an object of type sage.modular.arithgroup.congroup_gamma0.Gamma0_class_with_category
+ `oldspace_decomposition` | {} | the decomposition of the old subspace of this modular form space
+ `space_label`: '32.6.1' | the label in format level.weight.character 
+ `version` | float | 1.3 | version number
+ `zeta_orders` | list | [] | list of orders of the generators of the cyclotomic field which the character takes values in
 
 ## Collection webnewforms
-    Description: Json data associated with WebNewform objects as defined in '/modular_forms/elliptic_modular_forms/backend/web_newforms.py'
-* Field 1: ...
-* Field 2: ...
+    Description: Json data for a Newform object of type 'WebNewform' as defined in '/modular_forms/elliptic_modular_forms/backend/web_newforms.py'
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+| `absolute_polynomial` | string | `x^2 - 3072' | the absolute polynomial for the coefficient field  
+  | `base_ring` | string  | `1.1.1.1' | the base field of the coefficient field. Should be the same as the field in which the character has values (we view the trivial character as having values in Q which has label '1.1.1.1')
+  | `character` | integer | 1 | the character number in the scheme described below
+  | `character_naming_scheme` | string  | `Conrey' | The naming scheme of the character used for this object
+  | `cm_disc` | integer | 0 | equals D, the discriminant of the imaginary quadratic field with which this newform has CM if it has CM, else 0
+  | `coefficient_field` |  string | `2.2.12.1' | the label (in the format as given by lmfdb number fields) of the coefficient field
+  | `coefficient_field_degree` | integer | 2 | the absolute degree of the coefficient field
+  | `creation_date` | datetime datetime.datetime(2016, 4, 13, 9, 43) | when this record was created 
+  | `dimension` | integer |2 | dimension of this newform as an irreducible submodule of the ambient space 
+  | `hecke_orbit_label` | string | '32.6.1.d' | the label of format level.weight.character.label where 'label' is given in the field `label` below
+  | `is_cm` | integer | 0 | 1 if this newform has CM, else 0 |
+  | `is_cuspidal` | integer |1  | 1 if this record corresponds to a cuspidal newform (for future compatibility if Eisenstein series will be included), else 0  
+  | `is_rational` | integer | 0 | 1 if this newform has rational Fourier coefficients, else 0
+  | `label` |  | `d' | label of this orbit in the 'Cremona label' convention, i.e. the first (0th in python ordering) orbit has label 'a', the second 'b', the 27-th 'aa' and then 'ab', the 702nd is 'aaa' etc.
+  | `level` | integer | 32 | level 
+  | `modification_date` | datetime | datetime.datetime(2016, 4, 13, 9, 43, 44, 974000) | when this record was last modified 
+  | `parent` |  | `32.6.1' | label of form label.weight.character of the space which contains the given newform (corresponding to the key 'space_label' in the collection webmodformspace)
+  | `prec` | integer | 190 | number of coefficients in the stored q-expansion (either in this record or in the gridfs record)
+  | `q_expansion` |  string | 'q + 1/2*a*q^3 + 46*q^5 - 3*a*q^7 + 525*q^9' | string formatted q-expansion of this newform (if not stored here it is taken from the gridfs object in webmodformspace.files)
+  | `version` | 1.3 | version number
+  | `weight` |integer | 6 | weight
 
-## Collection webnewforms.chunks
-* Field 1: ...
-* Field 2: ...
 
 ## Collection webnewforms.files
-   Description: GridFS files associated with WebNewform objects.
-* Field 1: ...
-* Field 2: ...
-
-## Collection webeigenvalues.chunks
-    Description: GridFS files associated with WebEigenvalue objects.
-* Field 1: ...
-* Field 2: ...
-
+    Description: GridFS files associated with WebNewform objects in the collection webnewforms
+    File format: a dictionary containing data for the webnewform as described in the second table below. 
+| Field | type | Example| Description |
+ |-------|------|--------|---------------|
+`hecke_orbit_label` | string | '11.12.1.b' | the label of this newform, corresponds to the same entry in the collection webnewforms
+`prec` | integer | 220 | the number of coefficients which are stored in this record
+### Data structure for the file 
+| Field | type | Example| Description |
+ |-------|------|--------|---------------|
+ `_atkin_lehner_eigenvalues` | dict | { 2:-1 } | Atkin-Lehner eigenvalues (if they are known) corresponding to divisors of N 
+ `_cm_values` | list |  [] | values of self at CM-points (computed numerically)
+`_embeddings` |  dict |  {`bitprec` :  53,  `prec` :  191,  `values` :  {0: [0.0],  1: [1.0, 1.0], 2: [0.0, 0.0],   3: [-27.7128129211020, 27.7128129211020]} | dictionary of complex embeddings with keys 'bitprec' -- the precision of the computed embeddings, 'prec'-- the number of coefficients and 'values' -- dictionary of lists containing the embeddings 
+`explicit_formulas` | dict | {'as_polynomial_in_E4_and_E6': [2,  {0: [0, 2], 1: [3, 0]},   (-1/1728, 1/1728)]} | dictionary containing information about explicit formulas
+`_coefficients` | dict | {1:1,2:0,3:1/2*a} | dictionary of coefficients as elements of the coefficient field given by sage objects
+  `absolute_polynomial` |  x^2 - 3072 | the absolute polynomial of the coefficient field
+ `base_ring` |  dict | {`base` :  'QQ', `gens` : ('x',), `relative polynomial` : 'x'}, | dictionary representing the base ring (field) with keys: 'base' -- the base ring this is defined over (usually QQ), 'gens'-- the name(s) of the variable(s) in the polynomial, and 'relative_polynomial' -- the relative polynomial of this number field over the base 
+ `coefficient_field` |  {`base` :  'QQ',  `gens` :  'a',  `relative polynomial` |  `a^2 - 3072`} | the coefficient field in the same format as above
+ `q_expansion` | sage object | q + 1/2*a*q^3 + 46*q^5 +O(q^7) | q-expansion as an element of sage.rings.power_series_poly.PowerSeries_poly over the coefficient field
+ `satake` | dict |  {`alphas` :  {0: {3: -0.888888888888889 + 0.458122847290851*I,    },   1: {3: 0.888888888888889 + 0.458122847290851*I,  + 0.767295761583521*I}},  `alphas_latex` :  {0: {3: -0.888888888888889 + 0.458122847290851i, }, 1: {3: 0.888888888888889 + 0.458122847290851i}},  `ps` :  [3],  `thetas` :  {0: {3: 2.66571040392938,   1: {3: 0.475882249660417}}},  `thetas_latex` :  {0: {3: 2.66571040392938},  1: {3: 0.475882249660417}}} | 
+ `twist_info` | list | [False, [`4.6.1.a`]] | the first entry is True if this newform is primitive and False if it is a twist, the second entry is a list of labels of newforms which twist to this newform
+ `version` |  float | 1.3 | version number
+    
 ## Collection webeigenvalues.files
-* Field 1: ...
-* Field 2: ...
-
+    Description: Contains GridFS files with Hecke aigenvalues of newforms. 
+    The format of the file is a dictionary containing the matrix and vector E and v as returned by the method compact_system_of_eigenvalues in sage. The precise format is given in the second table below.
+ | Field | type | Example| Description |
+ |-------|------|--------|---------------|
+ `hecke_orbit_label` | string | '28.6.1.a' | label of the newform, matching the record in the collection webnewforms
+ `prec` | integer | 100 | the number of coefficients we can get with the eigenvalues in this file
+ `version` | float | 1.3 | version number
+### Data structure for the file 
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+ `E` | string | '' | binary string giving a matrix as a sage object
+ `v` | string | '' | binary string giving a vector as a sage object
+ `meta` | dict | {'cputime': u'', 'version': u''} | metadata
+ 
 # Collections used for computing webobjects 
-
-## Collection Newform_Factor
 
 ## Collection Atkin_Lehner.files 
     Description: GridFS files containing Atkin-Lehner eigenvalues for newforms.
