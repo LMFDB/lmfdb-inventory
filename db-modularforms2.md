@@ -286,7 +286,7 @@ This collection contains two types of records:
 | `prec` | integer | 100 | the number of a(n) that can be obtained by the a(p)'s in this file
 | `sage_version` | string  | `Sage Version 5.0.beta7, Release Date: 2012-03-05' | version of sage used to compute this object |
 
-## collection computations
+## Collection computations
     Description: contains information about ongoing computations (however this doesn't really work as intended at the moment...)
 | Field | type | Example| Description |
 |-------|------|--------|---------------|
@@ -298,7 +298,7 @@ This collection contains two types of records:
 |`startTime` | datetime | datetime.datetime(2016, 6, 24, 17, 6, 41, 595000) | when this computation started|
 |`type` | string | 'mf' | type of computation|
  
- ## collection vector_on_basis.files
+ ## Collection vector_on_basis.files
     Description: Contains GridFS files with the vector v which describes Hecke eigenvalues of newforms. This is the vector returned by the sage method compact_system_of_eigenvalues() on an irreducible Hecke invariant subspace of the ambient space. 
     File format: object of the type sage.modules.free_module_element.FreeModuleElement_generic_dense
 
