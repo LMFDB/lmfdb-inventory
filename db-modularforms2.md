@@ -6,9 +6,12 @@
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/)|
 |**Contact**|[Stefan Ehlen](https://github.com/sehlen), [Fredrik Strömberg](https://github.com/fredstro)|
 |**Code**|[modular_forms/elliptic_modular_forms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/modular_forms/elliptic_modular_forms)|
-|**Collections**|[dimension_table](http://www.lmfdb.org/api/modularforms2/dimension_table), [webchar](http://www.lmfdb.org/api/modularforms2/webchar), [webchar.chunks](http://www.lmfdb.org/api/modularforms2/webchar.chunks), [webchar.files](http://www.lmfdb.org/api/modularforms2/webchar.files), [webmodformspace](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewformspace.chunks](http://www.lmfdb.org/api/modularforms2/webmodformspace.chunks), [webnewformspace.files](http://www.lmfdb.org/api/modularforms2/webmodformspace.files), [webnewforms](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewforms.chunks](http://www.lmfdb.org/api/modularforms2/webnewforms.chunks), [webnewforms.files](http://www.lmfdb.org/api/modularforms2/webnewforms.files), [webeigenvalues](http://www.lmfdb.org/api/modularforms2/webeigenvalues), [webeigenvalues.chunks](http://www.lmfdb.org/api/modularforms2/webeigenvalues.chunks), [webeigenvalues.files](http://www.lmfdb.org/api/modularforms2/webeigenvalues.files)|
+|**Collections**|[dimension_table](http://www.lmfdb.org/api/modularforms2/dimension_table), [webchar](http://www.lmfdb.org/api/modularforms2/webchar), [webchar.files](http://www.lmfdb.org/api/modularforms2/webchar.files), [webmodformspace](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewformspace.files](http://www.lmfdb.org/api/modularforms2/webmodformspace.files), [webnewforms](http://www.lmfdb.org/api/modularforms2/webnewforms), [webnewforms.files](http://www.lmfdb.org/api/modularforms2/webnewforms.files), [webeigenvalues](http://www.lmfdb.org/api/modularforms2/webeigenvalues), [webeigenvalues.files](http://www.lmfdb.org/api/modularforms2/webeigenvalues.files)|
+|**Related data**|[ap.files](http://beta.lmfdb.org/api/modularforms2/ap.files),
+[Atkin_Lehner.files](http://beta.lmfdb.org/api/modularforms2/AtkinLehner.files),
+[Modular_symbols.files](http://beta.lmfdb.org/api/modularforms2/Modular_symbols.files),
+[Newform_factors.files](http://beta.lmfdb.org/api/modularforms2/Newform_factors.files)|
 
-**Todo**: Document the collections listed above (and either document or delete all others)
 ## General notes
 * All collections contain the field `_id` which is an object of the type bson.ObjectId and uniquely identifies the record in the database. 
 * All collections with names ending with .chunks contain chunks of files for GridFS for the corresponding collection with name ending with .files and will not be further described.
@@ -190,7 +193,7 @@ This collection contains two types of records:
 |`v` | string | '' | binary string giving a vector as a sage object
 |`meta` | dict | {'cputime': u'', 'version': u''} | metadata
  
-# Collections used for computing webobjects 
+# Collections used for computing webobjects -- not present on the cloud database
 
 ## Collection Atkin_Lehner.files 
     Description: GridFS files containing Atkin-Lehner eigenvalues for newforms.
@@ -204,14 +207,12 @@ This collection contains two types of records:
 | `k` | integer |  2 | weight |
 | `newform` | integer | 0 | index of the newform in the list of all newforms with this level, weight and character, ordered as in Sage by traces of Hecke operators (?)
 | `sage_version`:  | string | '7.2' | version of sage used to compute this object |
- | `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
+| `filename` | string  | `atkin_lehner_evs-   17-  2-  0-  0` | filename in gridfs |
  
-
-
-## Collection Modular_symbols.files'
+## Collection Modular_symbols.files
     Description: GridFS files containing modular symbols. 
     File format: Sage object of type 'sage.modular.modsym.ambient.ModularSymbolsAmbient_wtk_eps_with_category'
-    Example: Modular Symbols space of dimension 75 and level 500, weight 2, character [-1, zeta4], sign 1, over Cyclotomic Field of order 4 and degree 2
+    Example: Modular symbols space of dimension 75 and level 500, weight 2, character [-1, zeta4], sign 1, over Cyclotomic Field of order 4 and degree 2
 | Field | type | Example| Description |
 |-------|------|--------|------------------|
 | `N` | integer | 500 | level |
@@ -235,11 +236,11 @@ This collection contains two types of records:
 ## Collection Newform_factors.files
     Description: GridFS files containing newform factors.
     File format: Sage object of type 'sage.modular.modsym.subspace.ModularSymbolsSubspace_with_category'
-    Example: Modular Symbols subspace of dimension 1 of Modular Symbols space of dimension 70 for Gamma_0(372) of weight 2 with sign 1 over Rational Field
+    Example: Modular symbols subspace of dimension 1 of Modular Symbols space of dimension 70 for Gamma_0(372) of weight 2 with sign 1 over Rational Field
 | Field | type | Example| Description |
 |-------|------|--------|---------------|
 |  `N` | integer | 372 | level |
-|  `ambient_id` | string | ObjectId('56be2428769754c49d4031d5') | id of the corresponding ambient space record in Modular_Symbols.files |
+|  `ambient_id` | string | ObjectId('56be2428769754c49d4031d5') | id of the corresponding ambient space record in Modular_symbols.files |
 |  `cchi` | integer |  1 | conrey character number |
 |  `character_galois_orbit` | list | [1] |  | Conrey character numbers of the orbit of cchi
 |  `chi` |  integer | 0 |  sage character number |
@@ -256,8 +257,8 @@ This collection contains two types of records:
 |  `uploadDate` | datetime | datetime.datetime(2016, 2, 12, 18, 27, 55, 213000)| time the file was uploaded |
 |  `v` | list | [1] | the dual eigenvector as returned by the sage method compact_system_of_eigenvalues although this seems to be set to '1' in all records so I assume the records in 'vector_on_basis.files' or 'ap.files' should be used instead? |
   
-## Collection aps.files
-    Description: GridFS files containing aps.
+## Collection ap.files
+    Description: GridFS files containing ap's.
     File format: Tuple of the form (E,v) where E is an 'n times d' matrix
     and v is a length d vector as returned by the method 'compact_system_of_egenvalues(primes_first_n(n))' on a newform factor (object in the GridFS collection 'Newform_factors'). 
     Example: (25 x 4 dense matrix over Number Field in a with defining polynomial x^4 + 4*zeta12*x^2 + (4*zeta12^3 - 8*zeta12^2 - 8*zeta12 + 4)*x + 6*zeta12^2 - 10 over its base field, (1, (8/37*zeta12^3 - 109/444*zeta12^2 + 6/37*zeta12 + 5/111)*a^3 + (29/111*zeta12^3 - 5/12*zeta12^2 - 61/444*zeta12 + 1/12)*a^2 + (-83/111*zeta12^3 + 139/148*zeta12^2 + 121/444*zeta12 - 53/148)*a - 7/3*zeta12^3 - 293/222*zeta12^2 + 19/6*zeta12 - 244/111, ...))
