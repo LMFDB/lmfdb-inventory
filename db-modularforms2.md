@@ -56,6 +56,15 @@ This collection contains two types of records:
  |  `space_orbit_label` | string |  '14.14.2' | The label of the Galois orbit of this space of the form N.k.i, where i is the index of the Galois orbit of the character in the list of Galois orbits of characters of this level. The Galois orbits are ordered by the minimal number appearing in the orbit. |
  |  ` weight` | integer |  14 | the weight of self |
 
+## collection webmodformspace_dimension
+    Description: more dimension data for webmodform spaces
+| Field | type | Example| Description |
+ |-------|------|--------|---------------|
+    `weight_max` | integer | 100 | the largest weight in the table
+    `group` | string | u'gamma0' | the group, either 'gamma0' or 'gamma1' 
+    `level_max` | integer | 100 | the maximum level contained in this table
+    `date`  | datetime | datetime.datetime(2016, 5, 4, 17, 33, 55, 54000) | when this dimension data was generated 
+    `data` | string | "{'1' : {'12' : [1,1] }}" | unicode string giving json formatted dimension data in the form data[level][weight]=[d,i] where d is the dimension and i=1 if this space is in the database and otherwise 0
 ## Collection webchar
     Description: Json data for WebCharacter objects as defined in '/modular_forms/elliptic_modular_forms/backend/web_character.py'
 | Field | type | Example| Description |
@@ -277,3 +286,31 @@ This collection contains two types of records:
   | `prec` | integer | 100 | the number of a(n) that can be obtained by the a(p)'s in this file
   | `sage_version` | string  | `Sage Version 5.0.beta7, Release Date: 2012-03-05' | version of sage used to compute this object |
 
+## collection computations
+    Description: contains information about ongoing computations (however this doesn't really work as intended at the moment...)
+   | Field | type | Example| Description |
+ |-------|------|--------|---------------|
+   `N` | integer| 32 | level
+ `cch` | integer | 31 | character number in Conrey scheme
+ `k` | integer |10 | weight
+ `pid` | integer | 15136 | process id for this computation
+ `server` | srting | u'atkin' | server name where the process is running
+ `startTime` | datetime | datetime.datetime(2016, 6, 24, 17, 6, 41, 595000) | when this computation started
+ `type` | string | 'mf' | type of computation
+ 
+ ## collection vector_on_basis.files
+    Description: Contains GridFS files with the vector v which describes Hecke eigenvalues of newforms. This is the vector returned by the sage method compact_system_of_eigenvalues() on an irreducible Hecke invariant subspace of the ambient space. 
+    File format: object of the type sage.modules.free_module_element.FreeModuleElement_generic_dense
+
+| Field | type | Example| Description |
+ |-------|------|--------|---------------|
+| `N` |  integer | 1 | level
+ | `ambient_id` |  ObjectId('5232e16888aece65ecf74814'),
+ | `cchi` |  integer | 1 | character number in Conrey ordering
+ | `chi` |  integer | 0 | character number in Sage ordering
+ | `filename` | string | 'gamma0-ambient-v-00001-036-000-000' file name in GridFS
+ | `k` |  integer | 36 | weight
+ | `newform` |  integer | 0 | the index  of the newform in the list of all newforms with level N, weight k and character cchi (starting from 0)
+ | `prec` |  integer | 100 | the number of coefficients which can be obtained from the vector in the gridfs file
+ | `sage_version` |  string | '6.0' | sage version used to ompute this object
+   
