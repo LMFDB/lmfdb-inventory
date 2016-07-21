@@ -288,29 +288,29 @@ This collection contains two types of records:
 
 ## collection computations
     Description: contains information about ongoing computations (however this doesn't really work as intended at the moment...)
-   | Field | type | Example| Description |
- |-------|------|--------|---------------|
-   `N` | integer| 32 | level
- `cch` | integer | 31 | character number in Conrey scheme
- `k` | integer |10 | weight
- `pid` | integer | 15136 | process id for this computation
- `server` | srting | u'atkin' | server name where the process is running
- `startTime` | datetime | datetime.datetime(2016, 6, 24, 17, 6, 41, 595000) | when this computation started
- `type` | string | 'mf' | type of computation
+| Field | type | Example| Description |
+|-------|------|--------|---------------|
+|`N` | integer| 32 | level|
+| `cch` | integer | 31 | character number in Conrey scheme|
+|`k` | integer |10 | weight|
+|`pid` | integer | 15136 | process id for this computation|
+|`server` | srting | u'atkin' | server name where the process is running|
+|`startTime` | datetime | datetime.datetime(2016, 6, 24, 17, 6, 41, 595000) | when this computation started|
+|`type` | string | 'mf' | type of computation|
  
  ## collection vector_on_basis.files
     Description: Contains GridFS files with the vector v which describes Hecke eigenvalues of newforms. This is the vector returned by the sage method compact_system_of_eigenvalues() on an irreducible Hecke invariant subspace of the ambient space. 
     File format: object of the type sage.modules.free_module_element.FreeModuleElement_generic_dense
 
 | Field | type | Example| Description |
- |-------|------|--------|---------------|
-| `N` |  integer | 1 | level
- | `ambient_id` |  ObjectId('5232e16888aece65ecf74814'),
- | `cchi` |  integer | 1 | character number in Conrey ordering
- | `chi` |  integer | 0 | character number in Sage ordering
- | `filename` | string | 'gamma0-ambient-v-00001-036-000-000' file name in GridFS
- | `k` |  integer | 36 | weight
- | `newform` |  integer | 0 | the index  of the newform in the list of all newforms with level N, weight k and character cchi (starting from 0)
- | `prec` |  integer | 100 | the number of coefficients which can be obtained from the vector in the gridfs file
- | `sage_version` |  string | '6.0' | sage version used to ompute this object
-   
+|-------|------|--------|---------------|
+| `N` |  integer | 1 | level|
+| `ambient_id` |ObjectId|  ObjectId('5232e16888aece65ecf74814')||
+| `cchi` |  integer | 1 | character number in Conrey ordering|
+| `chi` |  integer | 0 | character number in Sage ordering|
+| `filename` | string | 'gamma0-ambient-v-00001-036-000-000'| file name in GridFS|
+| `k` |  integer | 36 | weight|
+| `newform` |  integer | 0 | the index  of the newform in the list of all newforms with level N, weight k and character cchi (starting from 0)|
+| `prec` |  integer | 100 | the number of coefficients which can be obtained from the vector in the gridfs file|
+| `sage_version` |  string | '6.0' | sage version used to ompute this object|
+  
