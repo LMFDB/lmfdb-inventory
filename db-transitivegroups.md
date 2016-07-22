@@ -9,8 +9,7 @@
 |**Collections**|[groups](http://www.lmfdb.org/api/transitivegroups/groups), [Gmodules](http://www.lmfdb.org/api/transitivegroups/Gmodules)|
 
 **Todo**:
-* Document the Gmodules collection
-* Add index information
+* Make the collection groups information prettier
 
 ## Collection groups
 * **label** (string): label is of the form nTt where n is the degree and t is the "t-number"
