@@ -411,20 +411,20 @@ point-strings </td><td>P^2(K)^t (0&le;t&le2)</td><td>['[[0,0,0],[0,1,-1],[1,0,0]
 <tr><td> local_data</td>
 
 <tr><td> minD</td> <td> minimal discriminant ideal </td>
-<td>ideal-string</td> <td>'[1399489,199927,101*w^2-44*w-121]</td><td>&nbsp;</td></tr>
+<td>ideal-string</td> <td>Ideal</td> <td>'[1399489,199927,101*w^2-44*w-121]</td><td>&nbsp;</td></tr>
 
 <tr><td> heights</td> <td>heights of generators</td> <td> list of
-floats </td><td>[0.2815779492939666, 0.25465400108973096]</td>
+floats </td><td>R^r</td><td>[0.2815779492939666, 0.25465400108973096]</td>
 <td>&nbsp;</td></tr>
 
-<tr><td> reg</td><td> regulator </td><td> float </td><td>0.01024588468931388</td>
+<tr><td> reg</td><td> regulator </td><td> float </td><td>R</td><td><td>0.01024588468931388</td>
 <td>&nbsp;</td></tr>
 
-<tr><td> non_min_p</td><td>Non-minimal primes</td><td> list of ideal-strings</td><td>[]</td>
+<tr><td> non_min_p</td><td>Non-minimal primes</td><td> list of ideal-strings</td><td>{ideals}^k</td><td><td>[]</td>
 <td>&nbsp;</td></tr>
 
 <tr><td> equation</td><td> Weierstrass equation</td><td>string</td><td>'\\( y^2 + x y + y = x^{3} + a x^{2} + \\left(-30047 a - 303287\\right) x - 9341927 a - 94305014  \\)</td>
-<td>&nbsp;</td></tr>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
 
 
 </table>
