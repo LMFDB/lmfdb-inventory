@@ -28,12 +28,33 @@
 * **pretty** (string): latex of a nicer name for this group
 
 ### Index information for collection groups:
+ * {'**_id**': 1}:  mongo internal
+ * {'**n**': 1, '**t**': 1}: for Galois group search
+ * {'**t**': 1}: for Galois group search
 
 ## Collection Gmodules
-* **index** ...
-* **name** ...
-* **dim** ...
-* **gens** ...
-* **complete** ...
+
+Each Gmodule is uniqely determined by a Galois group (nTt) and then an
+abitrary index.
+
+ * **_id** (): Object id assigned by mongo
+<p>**Example**: 53dbc9290eb55b5881ba484f</p>
+ * **complete** (int): Do we have complete information, 1 for yes, 0 for no
+<p>**Example**: 1</p>
+ * **dim** (int): dimension of lattice
+<p>**Example**: 1</p>
+ * **gens** (pair [string of cycle type, matrix for action]): generators of group and matrix for their actions
+<p>**Example**: [['(1,2,3)', [[1]]], ['(1,2)', [[1]]]]</p>
+ * **n** (int): for Galois group in form nTt
+<p>**Example**: 3</p>
+ * **t** (int): for Galois group in form nTt
+<p>**Example**: 2</p>
+ * **index** (int): index to identify the G-module
+<p>**Example**: 0</p>
+ * **name** (string): name of this G-module
+<p>**Example**: 'Triv'</p>
 
 ### Index information for collection Gmodules:
+ * {'**_id**': 1}: mongo internal
+
+
