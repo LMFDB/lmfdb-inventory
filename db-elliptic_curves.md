@@ -409,10 +409,10 @@ point-strings </td><td>P^2(K)^t (0&le;t&le2)</td><td>['[[0,0,0],[0,1,-1],[1,0,0]
 (for no CM), or a negative discriminant </td><td>&nbsp;</td></tr>
 
 <tr><td> local_data</td><td>List of local data at bad
-  primes</td><td>{'p','normp','red','kod',ord_cond','ord_disc','ord_den_j'}^k</td><td>[{u'cp':
-  1, u'kod': u'\\( I_{27} \\)', u'normp': u'2', u'ord_cond': 1,
-  u'ord_den_j': 27, u'ord_disc': 27, u'p': u'[2,2,-w-10]', u'red':
-  -1}</td> <td>'p': ideal_string (prime ideal), 'normp':int (its
+  primes</td><td>{'p','normp','red','kod',ord_cond','ord_disc','ord_den_j'}^k</td><td>[{'cp':
+  1, 'kod': '\\( I_{27} \\)', 'normp': '2', 'ord_cond': 1,
+  'ord_den_j': 27, 'ord_disc': 27, 'p': '[2,2,-w-10]', 'red':
+  -1}]</td> <td>'p': ideal_string (prime ideal), 'normp':int (its
   norm), 'kod': string (Kodaira symbol), 'red': {-1,0,1} (reduction type), ord_cond:int (conductor
   exponent), ord_disc: int (discriminant exponent), ord_den_:int
   (j-invariants denominator exponent)</td></tr>
@@ -436,7 +436,14 @@ floats </td><td>R^r</td><td>[0.2815779492939666, 0.25465400108973096]</td>
 
 </table>
 
-Index information for collection nfcurves (currently incomplete, to be added)
+Index information for collection nfcurves
 
--  nfcurve.rand (auxilliary collection used for random objection access)
+-  {'_id': 1} (created by mongo)
+-  {'field_label': 1}
+-  {'degree': 1}
+-  {'number': 1}
+-  {'label': 1}
+-  {'field_label':1, 'conductor_norm':1, 'conductor_label':1, 'iso_nlabel':1,'number':1}
+
+-  nfcurves.rand (auxilliary collection used for random objection access)
 
