@@ -408,7 +408,14 @@ point-strings </td><td>P^2(K)^t (0&le;t&le2)</td><td>['[[0,0,0],[0,1,-1],[1,0,0]
 <tr><td> cm </td><td> CM code </td><td> int </td><td> Z </td><td> 0
 (for no CM), or a negative discriminant </td><td>&nbsp;</td></tr>
 
-<tr><td> local_data</td>
+<tr><td> local_data</td><td>List of local data at bad
+  primes</td><td>{'p','normp','red','kod',ord_cond','ord_disc','ord_den_j'}^k</td><td>[{u'cp':
+  1, u'kod': u'\\( I_{27} \\)', u'normp': u'2', u'ord_cond': 1,
+  u'ord_den_j': 27, u'ord_disc': 27, u'p': u'[2,2,-w-10]', u'red':
+  -1}</td> <td>'p': ideal_string (prime ideal), 'normp':int (its
+  norm), 'kod': string (Kodaira symbol), 'red': {-1,0,1} (reduction type), ord_cond:int (conductor
+  exponent), ord_disc: int (discriminant exponent), ord_den_:int
+  (j-invariants denominator exponent)</td></tr>
 
 <tr><td> minD</td> <td> minimal discriminant ideal </td>
 <td>ideal-string</td> <td>Ideal</td> <td>'[1399489,199927,101*w^2-44*w-121]</td><td>&nbsp;</td></tr>
@@ -420,10 +427,10 @@ floats </td><td>R^r</td><td>[0.2815779492939666, 0.25465400108973096]</td>
 <tr><td> reg</td><td> regulator </td><td> float </td><td>R</td><td><td>0.01024588468931388</td>
 <td>&nbsp;</td></tr>
 
-<tr><td> non_min_p</td><td>Non-minimal primes</td><td> list of ideal-strings</td><td>{ideals}^k</td><td><td>[]</td>
+<tr><td> non_min_p</td><td>Non-minimal primes</td><td> list of ideal-strings</td><td>{ideals}^k</td><td>[]</td>
 <td>&nbsp;</td></tr>
 
-<tr><td> equation</td><td> Weierstrass equation</td><td>string</td><td>'\\( y^2 + x y + y = x^{3} + a x^{2} + \\left(-30047 a - 303287\\right) x - 9341927 a - 94305014  \\)</td>
+<tr><td> equation</td><td> Weierstrass equation</td><td>string</td><td>&nbsp;</td><td>'\\( y^2 + x y + y = x^{3} + a x^{2} + \\left(-30047 a - 303287\\right) x - 9341927 a - 94305014  \\)</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 
 
