@@ -17,8 +17,7 @@ of degrees 4-6 to match Hilbert modular forms.
 * Complete the finding and uploading of curves over totally real
   fields to match the HMF newforms for fields of degrees >3.
 * compute and add p-adic data for curves over Q of conductor > 130000.
-* Precompute more data for the nfcurves collection so the webserver
-does not have to do any nontrivial computations on the fly.
+* compute more ranks and generators for ecnf
 
 ## Collection curves
 
@@ -280,14 +279,21 @@ int </td><td>N_0</td><td> 1 </td><td>&nbsp;</td> </tr>
 * Contributors: John Cremona, Alyson Deines, Steve Donelly, Paul Gunnells, Warren Moore, Haluk Sengun, John Voight, Dan Yasaki.
 * Origin: https://github.com/JohnCremona/ecnf-data
 * Extent: contains curves over several totally real fields (of degrees up to 6) and a few imaginary quadratic fields, in each case complete up to some conductor norm bound
-* Note: This collection is currently being rebuilt with additional data fields; the new version is temporarily called nfcurves2.  When this process is complete and the necessary code changes made the description here will be updated, and index information added.
+* Updated collection and description 22 July 2016.
 
 * Explanation of data fields representing elements of the field, including points:
-  - Each field of degree d has a distinguished generator
-  - A rational number is represented as a string
-  - A field element is represented as a list of d strings, each representing the coordinate with respect to the power basis
-  - A point is represented (in projective coordinates) as a list of 3 field elements, i.e. a list of 3 lists of d strings
-  - Generator fields are represented by lists of points
+  - Each field of degree d has a distinguished generator w.
+  - A rational number is represented as a string.
+  - A field element (NFelt) is usually represented as an NFelt-string, being d
+  rational-strings, representing the coordinates with respect to
+  the w-power basis, joined by ","; or in some contexts as a string
+  representing the element as a polynomial in the field generator w.
+  - A point (in projective coordinates) is represented as a
+  point-string:  3 NFelt-strings surrounded by "[","]", joined with
+  ",", the whole surrounded again by "[","]".
+  - An ideal is represented as an ideal-string [N,a,alpha] where N is
+  the norm, a the smallest positive integer and alpha a second
+  generator expressed as a polynomial in w.
 
 <table border=2>
 <tr>
@@ -342,9 +348,9 @@ class index</td></tr>
 <tr><td> iso_nlabel </td> <td> isogeny class index
 </td> <td> int </td> <td>N_0</td><td> 4 </td> <td>&nbsp;</td></tr>
 
-<tr><td> conductor_ideal </td> <td> data defining the conductor ideal
-</td> <td> string </td> <td>-</td><td>
-'[3618,1146,3]' </td> <td>representation generators</td></tr>
+<tr><td> conductor_ideal </td> <td>  data defining the conductor
+</td> <td> ideal-string </td> <td>-</td><td>
+'[13931,13931,-25*w^2+11*w]' </td> <td>representation generators</td></tr>
 
 <tr><td> conductor_norm </td> <td> conductor norm </td> <td> int </td>
 <td>N</td><td> 3618 </td> <td>&nbsp;</td></tr>
@@ -356,15 +362,13 @@ int </td><td>N</td> <td> 2 </td> <td>starts at 1</td></tr>
 list of ints (degrees) </td><td>M_k(N) (k&ge;0)</td> <td> [[1, 2], [2,
 1]] </td> <td>&nbsp;</td></tr>
 
-<tr><td> ainvs </td> <td> a-invariants </td> <td> list of 5 lists of d
-strings </td><td>&nbsp;</td> <td> [['1', '0'], ['1', '-1'], ['1',
-'1'], ['17', '-7'], ['9', '22']] </td> <td>coordinates with respect to
-power basis; d is the degree of the field</td></tr>
+<tr><td> ainvs </td> <td> a-invariants </td> <td> string
+</td><td>&nbsp;</td> <td> '0,0,1;0,0,0;1,1,1;0,2,-2;1,-1,-1' </td>
+<td>5 Weierstrass coefficients as NFelt-strings, joined by ";"</td></tr>
 
-<tr><td> jinv </td> <td> j-invariant </td> <td> list of d strings
+<tr><td> jinv </td> <td> j-invariant </td> <td> string
 </td> <td>&nbsp;</td><td> ['288857903821/4771277298',
-'7556047939133/9542554596'] </td> <td>coordinates with respect to
-power basis; d is the degree of the field</td></tr>
+'7556047939133/9542554596'] </td> <td>NFelt-string</td></tr>
 
 <tr><td> analytic_rank </td> <td> analytic rank </td> <td> int </td>
 <td>N_0</td><td> 0 </td> <td>&nbsp;</td></tr>
@@ -380,8 +384,8 @@ list of 2 ints </td> <td>N_0^2</td><td> [0, 0] </td>
 <td>N</td><td> 1 </td> <td>rounded float</td></tr>
 
 <tr><td> gens </td> <td> generators of infinite order </td> <td> list
-of lists of 3 lists of d strings </td> <td>A^2(K)^r
-(0&le;r&le;rank)</td><td> [[['2', '2'], ['11', '-12'], ['1', '0']]]
+of point-strings </td> <td>P^2(K)^r
+(0&le;r&le;rank)</td><td> ['[[0,-1,1],[0,0,0],[1,0,0]]', '[[0,-1,0],[-2,-1,1],[1,0,0]]']
 </td> <td>&nbsp;</td></tr>
 
 <tr><td> torsion_order </td> <td> torsion order </td> <td> int </td>
@@ -392,8 +396,7 @@ of lists of 3 lists of d strings </td> <td>A^2(K)^r
 </td><td> [3, 3] </td> <td>&nbsp;</td></tr>
 
 <tr><td> torsion_gens </td> <td> torsion generators </td><td> list of
-lists of 3 lists of d strings </td><td>A^2(K)^t (0&le;t&le2)</td><td>
-[[['-9', '2'], ['16', '18'], ['1', '0']]] </td> <td>&nbsp;</td></tr>
+point-strings </td><td>P^2(K)^t (0&le;t&le2)</td><td>['[[0,0,0],[0,1,-1],[1,0,0]]', '[[1/2,-3/4,0],[-5/8,1/8,1/2],[1,0,0]]'] </td> <td>&nbsp;</td></tr>
 
 <tr><td> q_curve </td> <td> Q-curve flag </td> <td> boolean </td>
 <td>{True, False}</td><td> False </td> <td>&nbsp;</td></tr>
@@ -404,6 +407,25 @@ lists of 3 lists of d strings </td><td>A^2(K)^t (0&le;t&le2)</td><td>
 
 <tr><td> cm </td><td> CM code </td><td> int </td><td> Z </td><td> 0
 (for no CM), or a negative discriminant </td><td>&nbsp;</td></tr>
+
+<tr><td> local_data</td>
+
+<tr><td> minD</td> <td> minimal discriminant ideal </td>
+<td>ideal-string</td> <td>'[1399489,199927,101*w^2-44*w-121]</td><td>&nbsp;</td></tr>
+
+<tr><td> heights</td> <td>heights of generators</td> <td> list of
+floats </td><td>[0.2815779492939666, 0.25465400108973096]</td>
+<td>&nbsp;</td></tr>
+
+<tr><td> reg</td><td> regulator </td><td> float </td><td>0.01024588468931388</td>
+<td>&nbsp;</td></tr>
+
+<tr><td> non_min_p</td><td>Non-minimal primes</td><td> list of ideal-strings</td><td>[]</td>
+<td>&nbsp;</td></tr>
+
+<tr><td> equation</td><td> Weierstrass equation</td><td>string</td><td>'\\( y^2 + x y + y = x^{3} + a x^{2} + \\left(-30047 a - 303287\\right) x - 9341927 a - 94305014  \\)</td>
+<td>&nbsp;</td></tr>
+
 
 </table>
 
