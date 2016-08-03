@@ -28,12 +28,15 @@
 * **total_label**: label including which generating vector, string of form 'g.a-b.g0.m1-m2-...-mr.x.y' where y is a positive integer representing the particular generating vector for a given refined passport, the value is assigned when the data is initially generated in the order the generating vectors are found
 * **_id**: mongodb generated
 * **hyperelliptic**: True/False whether curve is hyperelliptic
-* **hyp_inv**: hyperelliptic involution (if hyperelliptic), stored as list of positive integers representing a permutation
+* **hyp_involution**: hyperelliptic involution (if hyperelliptic), stored as list of positive integers representing a permutation
+* **cyclic_trigonal**: True/False whether curve is cyclic trigonal
+* **cinv**: trigonal automorphism (if cyclic trigonal), sotred as a list of positive intgers representing a permutation
 * **signH**: signature of full action, a string representing a list of positive integers for the action of the full automorphism group of this family
 * **full_auto**: group id for the full automorphism group for this family, as string representing a pair of integers encoding the GAP/Magma group id
 * **full_label**: label for full automorphism group, in same form as label above but for full automorphism group data
 * **cc**: ordered pair of positive integers where first number is which refined passport and second is which generating vector for that conjugacy class list
 * **con**: list of conjugacy classes where the action for this particular refined passport occurs, stored as a string representing a list of positive integers
+* **eqn** string representing an equation for the family, given in LaTeX notation
 
 #### Indexes on passports collection
 * **genus** - search/browse
