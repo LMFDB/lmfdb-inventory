@@ -22,6 +22,7 @@
 * **solv** (int): 1 if the group is solvable, otherwise 0
 * **subs** (list of pairs [n,t]): if K is a degree n field with this Galois group, this gives the subfields up to isomorphism in terms of their Galois groups
 * **repns** (list of pairs [n,t]): if K is a degree n field with this Galois group, this gives other small degree fields with the same Galois closure, up to isomorphism, in terms of their Galois groups
+* **arith_equiv** (int): number of arithmetically equivalent fields for number fields with this Galois group
 * **resolve** (list of pairs [n,t]):
 * **name** (string): the name given by gap (also used by pari, magma, sage, etc)
 * **pretty** (string): latex of a nicer name for this group
