@@ -39,7 +39,7 @@ of degrees 4-6 to match Hilbert modular forms.
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr>
 <td> label </td><td> Cremona label </td><td> string </td><td> -
