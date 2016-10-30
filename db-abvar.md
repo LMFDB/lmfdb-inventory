@@ -48,7 +48,7 @@
 <td> The first entry will always be 1 and the last $q^g$.  For i between 0 and g, $a_{2g-i} = q^{g-i} a_i$. </td></tr>
 
 <tr>
-<td> angle_numbers </td><td> Frobenius angle numbers </td><td> list of doubles </td> R^g </td><td> [0.0826163580681,0.320878822416] </td>
+<td> angle_numbers </td><td> Frobenius angle numbers </td><td> list of doubles </td><td> R^g </td><td> [0.0826163580681,0.320878822416] </td>
 <td> The positive arguments of the roots (considered as complex numbers) of the Weil L-polynomial.  There will be g of them unless the list includes 0 or pi. </td></tr>
 
 <tr>
@@ -78,7 +78,6 @@
 <tr>
 <td> principally_polarizable </td><td> An integer encoding whether the abelian variety is principally polarizable </td><td> int </td><td> - </td><td> 0 </td>
 <td> 1 means that it is definitely principally polarizable, -1 that it is definitely not, and 0 indicates uncertainty. </td></tr>
-<td></td></tr>
 
 <tr>
 <td> decomposition </td><td> The decomposition into simple factors </td><td> list of pairs (string, int) </td><td> - </td><td> [['2.16.am_cn',1], ['1.16.ah',2]] </td>
@@ -95,10 +94,12 @@
 <tr>
 <td> number_field </td><td> The label of the number field defined by the Weil polynomial </td><td> string </td><td> - </td><td> "4.0.27792.2" </td>
 <td>&nbsp;</td></tr>
-
+<tr>
+<td> galois_n </td><td> The degree label of the Galois group of the Weil polynomial </td><td> int </td><td> - </td><td> 4 </td>
+<td> </td></tr>
 <tr>
 <td> galois_t </td><td> The transitive label of the Galois group of the Weil polynomial </td><td> int </td><td> - </td><td> 2 </td>
-<td> The Galois group has degree 2g, so this label determines it completely. </td></tr>
+<td> </td></tr>
 </table>
 
 Index information on collection fq_isog:
