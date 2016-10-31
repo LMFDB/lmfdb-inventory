@@ -52,7 +52,7 @@
 <td> The positive arguments of the roots (considered as complex numbers) of the Weil L-polynomial.  There will be g of them unless the list includes 0 or pi. </td></tr>
 
 <tr>
-<td> angle_rank </td>
+<td> angle_ranks </td>
 <td> This is one less than the dimension of the space spanned by the arguments of the roots of the Weil polynomial divided by $\pi$ and one. </td><td>int</td><td>N</td><td>3</td><td>This might be empty if we haven't computed it yet.</td></tr>
 
 <tr>
@@ -84,12 +84,12 @@
 <td> The first entry in each pair is the label of the factor, the second is its multiplicity. </td></tr>
 
 <tr>
-<td> brauer_invariants </td><td> The Brauer invariants of the endomorphism algebra </td><td> list of strings </td><td> Q^k </td><td>["0","0","1/2" ] </td>
+<td> brauer_invariants </td><td> The Brauer invariants of the endomorphism algebra </td><td> list of strings </td><td> Q^k </td><td>["0","0","1/2"] </td>
 <td>For a simple isogeny class, the number of invariants is the number of primes above p in the number field defined by the Weil polynomial. For a non simple class, the Brauer invariants of its simple factors are concatenated, and they appear in the order in which the factors appear in the field decomposition.</td></tr>
 <tr>
 <td> places </td><td>The ideals corresponding to the Brauer invariants of the endomorphism algebra</td><td>list of lists of strings</td><td>((Q^d_i)^e_i)^f</td><td>[[["0","1"],["1","1/2"]],[["0","3"]]]</td><td>The outer set of lists corresponds to the simple factors of the isogeny class (so in the example, this isogeny class is a product of two simple isogeny classes). For each simple factor, the list contains one list per prime above p in the number field defined by the Weil polynomial. This list describes the prime ideal above p by giving the second generator of the ideal (the first generator is p), as a list of the coefficients of the generator when written in terms of a specific basis for the number field. This basis contains the powers of a root of the P-polynomial (which is the Weil polynomial but reversed).</td>
 <tr>
-<td> primitive_models </td><td>Every isogeny class defined over smaller fields such that this isogeny class is a base change of this isogeny class.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td><td>This list is complete.</td></tr>
+<td> primitive_models </td><td>Every isogeny class defined over smaller fields such that this isogeny class is a base change of this isogeny class.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td><td>If the isogeny class is primitive, the list contains only its own label. Otherwise, the list contains the label of every primitive isogeny class that base changes to this class. This list is complete.</td></tr>
 
 <tr>
 <td> number_field </td><td> The label of the number field defined by the Weil polynomial </td><td> string </td><td> - </td><td> "4.0.27792.2" </td>
