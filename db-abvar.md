@@ -64,11 +64,11 @@
 <td> The slopes are in increasing order, are symmetric under the involution $s \to 1-s$, and the corresponding Newton polygon has endpoints (0,0) and (2g,g).</td></tr>
 
 <tr>
-<td> A_counts </td><td> The number of points of the abelian variety over extensions of F\_q </td><td> list of ints </td><td> N^g </td><td> [118, 62068] </td>
+<td> A_counts </td><td> The number of points of the abelian variety over extensions of F\_q </td><td> list of strings </td><td> N^g </td><td> ["118", "62068"] </td>
 <td> Counts are given for $A(F_{q^n})$ for $1 \le n \le max(g,10)$; counts over larger extension fields can be determined from these using the Weil conjectures.</td></tr>
 
 <tr>
-<td> C_counts </td><td> The number of points of a corresponding curve </td><td> list of ints </td><td> Z^g </td><td> [5, 243] </td>
+<td> C_counts </td><td> The number of points of a corresponding curve </td><td> list of strings </td><td> Z^g </td><td> ["5", "243"] </td>
 <td> If the variety is a Jacobian, these are the point counts of a genus g curve of which this is the Jacobian.  In particular, if any point counts are negative then this abelian variety cannot be a Jacobian.</td></tr>
 
 <tr>
@@ -89,7 +89,7 @@
 <tr>
 <td> places </td><td>The ideals corresponding to the Brauer invariants of the endomorphism algebra</td><td>list of lists of strings</td><td>((Q^d_i)^e_i)^f</td><td>[[["0","1"],["1","1/2"]],[["0","3"]]]</td><td>The outer set of lists corresponds to the simple factors of the isogeny class (so in the example, this isogeny class is a product of two simple isogeny classes). For each simple factor, the list contains one list per prime above p in the number field defined by the Weil polynomial. This list describes the prime ideal above p by giving the second generator of the ideal (the first generator is p), as a list of the coefficients of the generator when written in terms of a specific basis for the number field. This basis contains the powers of a root of the P-polynomial (which is the Weil polynomial but reversed).</td>
 <tr>
-<td> primitive_models </td><td>Every isogeny class defined over smaller fields such that this isogeny class is a base change of this isogeny class.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td><td>If the isogeny class is primitive, the list contains only its own label. Otherwise, the list contains the label of every primitive isogeny class that base changes to this class. This list is complete.</td></tr>
+<td> primitive_models </td><td>Every isogeny class defined over smaller fields such that this isogeny class is a base change of this isogeny class.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td><td>If the isogeny class is primitive, the list is empty. Otherwise, the list contains the label of every primitive isogeny class that base changes to this class. This list is complete.</td></tr>
 
 <tr>
 <td> number_field </td><td> The label of the number field defined by the Weil polynomial </td><td> string </td><td> - </td><td> "4.0.27792.2" </td>
