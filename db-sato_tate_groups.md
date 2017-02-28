@@ -125,9 +125,9 @@ Extent: All groups of order up to 255 (up to isomorphism).  Easy to add more (up
  <p>**Example**: bool(False)</p>
 * **abelian**: true if the group is abelian, false otherwise
  <p>**Example**: bool(False)</p>
-* **perfect**: true if the group is perfect, false ohterwise
+* **perfect**: true if the group is perfect, false otherwise
  <p>**Example**: bool(False)</p>
-* **perfect**: true if the group is simple, false ohterwise
+* **simple**: true if the group is simple, false otherwise
  <p>**Example**: bool(False)</p>
 * **solvable**: true if the group is solvable, false otherwise
  <p>**Example**: bool(True)</p>
