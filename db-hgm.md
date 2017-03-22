@@ -1,6 +1,6 @@
 # Database hgm
 
-|||
+| | |
 |---|---|
 |**Description**|Hypergeometric motives|
 |**Status**|[beta](http://beta.lmfdb.org/Motive/Hypergeometric/Q/)|
