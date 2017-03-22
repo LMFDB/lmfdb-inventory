@@ -149,10 +149,19 @@ int </td><td> N </td><td> 1984 </td><td>&nbsp;</td></tr>
 Galois representation is not surjective </td><td> list of ints
 </td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
 
+<tr><td> non-maximal_primes </td><td> primes p for which the mod p
+Galois representation is not maximal </td><td> list of ints
+</td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
+
 <tr><td> galois_images </td><td> Sutherland codes for the images of
 the mod p Galois representations for the non-surjective primes
 </td><td> list of strings </td><td> - </td><td> ['5B']
 </td><td>Sutherland notation; for CM curves, only primes<100</td></tr>
+
+<tr><td> mod-p_images </td><td> Sutherland codes for the images of
+the mod p Galois representations for the non-maximal primes
+</td><td> list of strings </td><td> - </td><td> ['5B']
+</td><td>Sutherland notation</td></tr>
 
 <tr><td> 2adic_label </td><td> Rouse label of the associated modular
 curve (None for CM curves) </td><td> string </td><td> - </td><td>
@@ -192,13 +201,13 @@ list of ints </td><td> N^k  (k&ge;0)</td><td> [2,3] </td><td>&nbsp;</td></tr>
 list of dicts, one per prime, each with keys 'p' (value:int),
 'ord_cond' (value: int), 'ord_disc' (value: int), 'ord_den_j' (value:
 int), 'red' (value: int), 'cp' (value: int), 'kod' (value:
-string)</td><td> N </td><td> [{'cp': 1, 'kod': '\\( I_{1} \\)',
+string)</td><td> &nbsp; </td><td> [{'cp': 1, 'kod': '\\( I_{1} \\)',
 'ord_cond': 1, 'ord_den_j': 1, 'ord_disc': 1, 'p': 11, 'red': 1}]
 </td><td>&nbsp;</td></tr>
 
 <tr><td> min_quad_twist </td><td> minimal quadratic twist </td><td>
-dict with keys 'label' (value:string) and  'disc' (value: int)</td><td> N
-</td><td> {'disc': 1, 'label': '11a2'} </td><td>&nbsp;</td></tr>
+dict with keys 'label' (value:string) and 'disc' (value: int)</td><td>
+N </td><td> {'disc': 1, 'label': '11a2'} </td><td>&nbsp;</td></tr>
 
 <tr><td> aplist </td><td> Traces of Frobenius </td><td> list of 25
 ints</td><td> Z^25 </td><td> [0, 1, -1, ..., 2] </td><td>a_p for p<100</td></tr>
@@ -206,6 +215,16 @@ ints</td><td> Z^25 </td><td> [0, 1, -1, ..., 2] </td><td>a_p for p<100</td></tr>
 <tr><td> anlist </td><td> L-series coefficients </td><td> list of 20
 ints</td><td> Z^20 </td><td> [0, 1, -1, ..., 2] </td><td>a_n for
 0<=np<20</td></tr>
+
+<tr><td> iwdata </td><td> Iwasawa invariants </td><td> dictionary with
+keys ints, values lists of ints</td><td> Z^20 </td><td> {u'11': [1,
+0], u'3': [0, 0], u'2': [0, 1, 0], u'5': [0, 1]} </td><td>keys are primes,
+including all bad multiplicative primes and all primes up to some
+bound</td></tr>
+
+<tr><td> iwp0 </td><td> Iwasawa prime </td><td> int</td><td> N
+</td><td> 7 </td><td>if nonzero, a prime p0 such that lambda=mu=0 for
+all good p>=p0</td></tr>
 
 </table>
 
