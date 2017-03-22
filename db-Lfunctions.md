@@ -1,8 +1,9 @@
 # Database Lfunctions
 
-|||
-|---|---|
+
+
 |**Description**|L-functions|
+|---|---|
 |**Status**|[production](http://www.lmfdb.org/L/)|
 |**Contact**|[Jonathan Bober](https://github.com/jwbober), [David Farmer](https://github.com/davidfarmer)|
 |**Code**|[lfunctions](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lfunctions)|
