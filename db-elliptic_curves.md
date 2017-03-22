@@ -1,6 +1,6 @@
 # Database elliptic_curves
 
-|||
+| | |
 |---|---|
 |**Description**|Elliptic curves over **Q** and other number fields|
 |**Status**|[production](http://www.lmfdb.org/EllipticCurve/)|
