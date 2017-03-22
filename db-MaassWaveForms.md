@@ -1,6 +1,6 @@
 # Database MaassWaveForms
 
-|||
+| | |
 |---|---|
 |**Description**|Maass wave forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/Maass/)|

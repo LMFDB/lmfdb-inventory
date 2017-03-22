@@ -1,6 +1,6 @@
 # Database siegel_modular_forms
 
-|||
+| | |
 |---|---|
 |**Description**|Siegel modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GSp/Q/)|

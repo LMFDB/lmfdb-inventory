@@ -1,6 +1,6 @@
 # Database mod_l_eigenvalues
 
-|||
+| | |
 |---|---|
 |**Description**|---|
 |**Status**|---|
@@ -10,7 +10,7 @@
 
 ## Collection modlmf
 
-|||
+| | |
 |---|---|
 |**Description**|Mod-ell modular forms|
 |**Status**|[alpha](http://beta.lmfdb.org/ModularForm/GL2/ModL/)|

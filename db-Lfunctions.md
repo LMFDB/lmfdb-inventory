@@ -1,6 +1,6 @@
 # Database Lfunctions
 
-|||
+| | |
 |---|---|
 |**Description**|L-functions|
 |**Status**|[production](http://www.lmfdb.org/L/)|

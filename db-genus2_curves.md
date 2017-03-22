@@ -1,6 +1,7 @@
 # Database genus2_curves
 
-|||
+
+| | |
 |---|---|
 |**Description**|Genus 2 curves over **Q**|
 |**Status**|[production](http://www.lmfdb.org/Genus2Curve/Q/)|

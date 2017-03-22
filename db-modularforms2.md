@@ -1,6 +1,6 @@
 # Database modularforms2
 
-|||
+| | |
 |---|---|
 |**Description**|Classical modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/)|

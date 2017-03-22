@@ -1,6 +1,6 @@
 ## sato_tate_groups
 
-|||
+| | |
 |---|---|
 |**Description**|Sato-Tate groups|
 |**Status**|[production](http://www.lmfdb.org/SatoTateGroup)|

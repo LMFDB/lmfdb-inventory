@@ -1,6 +1,6 @@
 # Database SL2Zsubgroups
 
-|||
+| | |
 |---|---|
 |**Description**|Subgroups of SL(2,Z)|
 |**Status**|[future](https://github.com/LMFDB/lmfdb/issues/1407)|

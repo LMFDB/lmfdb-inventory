@@ -1,6 +1,6 @@
 # Database knowledge
 
-|||
+| | |
 |---|---|
 |**Description**|knowledge|
 |**Status**|[production](http://www.lmfdb.org/knowledge)|

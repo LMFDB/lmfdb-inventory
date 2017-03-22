@@ -1,6 +1,6 @@
 # Database mod_l_galois
 
-|||
+| | |
 |---|---|
 |**Description**|Mod-ell Galois representations|
 |**Status**|[alpha](http://beta.lmfdb.org/Representation/Galois/ModL/)|

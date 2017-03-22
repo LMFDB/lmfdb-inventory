@@ -1,6 +1,6 @@
 # Database Lattices
 
-|||
+| | |
 |---|---|
 |**Description**|Integral lattices|
 |**Status**|[production](http://www.lmfdb.org/Lattice)|

@@ -1,6 +1,6 @@
 # Database curve_automorphisms
 
-|||
+| | |
 |---|---|
 |**Description**|Group actions on higher genus curves|
 |**Status**|[alpha](http://beta.lmfdb.org/HigherGenus/C/aut/)|

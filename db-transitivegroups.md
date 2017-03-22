@@ -1,6 +1,6 @@
 # Database transitivegroups
 
-|||
+| | |
 |---|---|
 |**Description**|Galois groups|
 |**Status**|[production](http://www.lmfdb.org/GaloisGroup)|

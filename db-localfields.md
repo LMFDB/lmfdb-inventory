@@ -1,6 +1,6 @@
 # Database localfields
 
-|||
+| | |
 |---|---|
 |**Description**|Local number fields|
 |**Status**|[production](http://www.lmfdb.org/LocalField)|

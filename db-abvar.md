@@ -1,6 +1,6 @@
 # Database abvar
 
-|||
+| | |
 |---|---|
 |**Description**|Isogeny classes of abelian varieties over finite fields|
 |**Status**|[beta](http://beta.lmfdb.org/Variety/Abelian/Fq/)|

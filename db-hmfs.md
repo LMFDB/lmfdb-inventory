@@ -1,6 +1,6 @@
 # Database hmfs
 
-|||
+| | |
 |---|---|
 |**Description**|Hilbert modular forms|
 |**Status**|[production](http://www.lmfdb.org/ModularForm/GL2/TotallyReal/)|
