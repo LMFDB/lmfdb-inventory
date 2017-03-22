@@ -1,6 +1,6 @@
 # Database numberfields
 
-|||
+| | |
 |---|---|
 |**Description**|Number fields|
 |**Status**|[production](http://www.lmfdb.org/NumberField)|
