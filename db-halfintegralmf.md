@@ -1,6 +1,6 @@
 # Database halfintegralmf
 
-|||
+| | |
 |---|---|
 |**Description**|Half integral weight cuspforms spaces and Shimura decomposition|
 |**Status**|[alpha](http://beta.lmfdb.org/ModularForm/GL2/Q/holomorphic/half/)|
