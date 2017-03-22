@@ -1,8 +1,9 @@
 # Database genus2_curves
 
-|||
-|---|---|
+
+
 |**Description**|Genus 2 curves over **Q**|
+|---|---|
 |**Status**|[production](http://www.lmfdb.org/Genus2Curve/Q/)|
 |**Contact**|[Andrew Sutherland](https://github.com/AndrewVSutherland)|
 |**Code**|[genus2_curves](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/genus2_curves/)|
