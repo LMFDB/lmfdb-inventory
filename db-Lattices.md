@@ -1,8 +1,8 @@
 # Database Lattices
 
-
-|**Description**|Integral lattices|
+| | |
 |---|---|
+|**Description**|Integral lattices|
 |**Status**|[production](http://www.lmfdb.org/Lattice)|
 |**Contact**|[Samuele Anni](https://github.com/sanni85)|
 |**Code**|[lattice](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/lattice/)|
