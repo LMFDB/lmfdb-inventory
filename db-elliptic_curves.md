@@ -235,6 +235,7 @@ Index information on collection curves:
 -  {'number': 1} (for searching and stats)
 -  {'conductor': 1, 'iso_nlabel': 1, 'lmfdb_number': 1} (for sorting)
 -  {'non-surjective_primes': 1} (for searching)
+-  {'non-maximal_primes': 1} (for searching)
 -  {'cm': 1} (for searching)
 -  {'conductor': 1} (for searching)
 -  {'lmfdb_label': 1,'number': 1} (for searching)
