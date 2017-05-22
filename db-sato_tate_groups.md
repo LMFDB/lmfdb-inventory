@@ -87,9 +87,9 @@ Extent: Sato-Tate groups that arise for elliptic curves (3) and genus 2 curves (
 * **pretty**: pretty-print version of the name in latex math mode.<br>
   **Example**: u'\\mathrm{SU}(2)\\times\\mathrm{SU}(2)'</p>
 * **weight**: weight of the corresponding Sato-Tate group (nonnegative integer).<br>
-   **Example**: int(1)</p>
+  **Example**: int(1)</p>
 * **degree**: degree of the corresponding Sato-Tate group (positive integer).<br>
-   **Example**: int(4)</p>
+  **Example**: int(4)</p>
 * **real_dimension**: dimension of the identity component as a connected compact real Lie group (positive integer).<br>
   **Example**: int(6)</p>
 * **description**: mathematical description of the identity component as a set of d-by-d matrices (latex math mode string)
@@ -113,14 +113,16 @@ Extent: All groups of order up to 255 (up to isomorphism).  Easy to add more (up
 
 ### **Attributes**
  
-* **label**: GAP ID encoded as a string u'N.n', where N is the order of the group and n distinguishes groups of the same order (as determined in GAP).<br>
+* **label**: GAP ID encoded as a string u'N.n', where N is the order of the group and n distinguishes non-isomorphic groups of the same order (as determined in GAP).<br>
   **Example**: u'24.13'</p>
 * **name**: text discription of the group.<br>
   **Example**: u'C_2*A_4'</p>
 * **pretty**: pretty-print version of the name in latex math mode.<br>
   **Example**: u'C_2\\times A_4'</p>
-* **order**: order of the group (positive integer).<br>
+* **order**: order of the group, a positive integer.<br>
   **Example**: int(24)</p>
+* **exponent**: exponent of the group, a positive integer.<br>
+  **Example**: int(6)</p>
 * **cyclic**: true if the group is cyclic, false otherwise.<br>
   **Example**: bool(False)</p>
 * **abelian**: true if the group is abelian, false otherwise.<br>
@@ -131,6 +133,16 @@ Extent: All groups of order up to 255 (up to isomorphism).  Easy to add more (up
   **Example**: bool(False)</p>
 * **solvable**: true if the group is solvable, false otherwise.<br>
   **Example**: bool(True)</p>
+  **Example**:  [[u'2.1', int(1)], [u'4.2', int(1)], [u'8.5', int(1)], [u'12.3', int(1)]]</p>
+* **center**: small group label identifying the center of the group.<br>
+  **Example**:  u'2.1'</p>
+* **derived_group**: small group label identifying its commutator subgroup.<br>
+  **Example**:  u'4.2'</p>
+* **abelian_quotient**: small group label identifying the quotient of the group by its commutator subgroup.<br>
+  **Example**:  u'6.2'</p>
+* **maxmimal_subgroups**: maximal proper subgroups listed as pairs [label, n], where label is a small group label and n is the number of non-conjugate maximal subgroups in the isomorphism class identified by the label.<br>
+  **Example**:  [[u'6.2', int(1)], [u'8.5', int(1)], [u'12.3', int(1)]]</p>
+* **normal_subgroups**: normal proper subgroups listed as pairs [label, n], where label is a small group label and n is the number of non-conjugate normal subgroups in the isomorphism class identified by the label.<br>
 
 ### **Indexes**
 
