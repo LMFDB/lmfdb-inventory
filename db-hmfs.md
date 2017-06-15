@@ -17,7 +17,7 @@
 * Content: Totally real fields, for Hilbert modular forms
 * Contributors: John Cremona, Lassina Dembele, Steve Donnelly, Aurel Page, and John Voight
 * Origin: see arxiv:1605.02637
-* Extent: The database contains 368,356 Hilbert newforms over 400 totally real number fields of degree up to 6.
+* Extent: The database contains 400 totally real fields.
 
 <table border=2>
 <tr>
@@ -40,27 +40,27 @@
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> degree </td><td> field degree </td><td> int </td><td> -
+<td> degree </td><td> field degree </td><td> int </td><td> N
 </td><td> 2 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> discriminant </td><td> field discriminant </td><td> int </td><td> -
+<td> discriminant </td><td> field discriminant </td><td> int </td><td> Z
 </td><td> 49 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> narrow_class_no </td><td> narrow class number </td><td> int </td><td> -
+<td> narrow_class_no </td><td> narrow class number </td><td> int </td><td> N
 </td><td> 2 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> primes </td><td> fixed ordered list of primes </td><td> list of strings representing prime ideals [norm, integer generator, extra generator]</td><td> -
+<td> primes </td><td> fixed ordered list of primes </td><td> list of strings representing prime ideals [norm, integer generator, extra generator]</td><td> list of prime ideals
 </td><td> [u'[7, 7, 2*w^2 - w - 3]', u'[8, 2, 2]', ...] </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> ideals </td><td> fixed ordered list of ideals </td><td> list of strings representing prime ideals [norm, integer generator, extra generator]</td><td> -
+<td> ideals </td><td> fixed ordered list of ideals </td><td> list of strings representing ideals [norm, integer generator, extra generator]</td><td> list of ideals
 </td><td> [u'[1, 1, 1]', u'[7, 7, 2*w^2 - w - 3]', ...] </td>
 <td>&nbsp;</td></tr>
 
@@ -93,12 +93,12 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> deg </td><td> base field degree </td><td> int </td><td> -
+<td> deg </td><td> base field degree </td><td> int </td><td> N
 </td><td> 3 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> disc </td><td> base field discriminant </td><td> int </td><td> -
+<td> disc </td><td> base field discriminant </td><td> int </td><td> Z
 </td><td> 49 </td>
 <td>&nbsp;</td></tr>
 
@@ -113,7 +113,7 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> label_nsuffix </td><td> label numerical suffix </td><td> int </td><td> -
+<td> label_nsuffix </td><td> label numerical suffix </td><td> int </td><td> N
 </td><td> 0 </td>
 <td>&nbsp;</td></tr>
 
@@ -123,7 +123,7 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> level_ideal </td><td> level ideal definition </td><td> string </td><td> -
+<td> level_ideal </td><td> level ideal definition </td><td> string </td><td> ideal
 </td><td> u'[27, 3, 3]' </td>
 <td>&nbsp;</td></tr>
 
@@ -133,7 +133,7 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> level_norm </td><td> level ideal norm  </td><td> int </td><td> -
+<td> level_norm </td><td> level ideal norm  </td><td> int </td><td> N
 </td><td> 27 </td>
 <td>&nbsp;</td></tr>
 
@@ -143,32 +143,32 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> parallel_weight </td><td> parallel weight </td><td> int </td><td> -
+<td> parallel_weight </td><td> parallel weight </td><td> int </td><td> N
 </td><td> 2 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> dimension </td><td> dimension of Hecke constituent space </td><td> int </td><td> -
+<td> dimension </td><td> dimension of Hecke constituent space </td><td> int </td><td> N
 </td><td> 1 </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> is_CM </td><td> is a CM form? </td><td> string </td><td> -
+<td> is_CM </td><td> is a CM form? </td><td> string </td><td> bool
 </td><td> u'no' </td>
-<td>&nbsp;</td></tr>
+<td>{'yes','no'}</td></tr>
 
 <tr>
-<td> is_base_change </td><td> is a base change form? </td><td> string </td><td> -
+<td> is_base_change </td><td> is a base change form? </td><td> string </td><td> bool
 </td><td> u'yes' </td>
-<td>&nbsp;</td></tr>
+<td>{'yes','no'}</td></tr>
 
 <tr>
-<td> hecke_polynomial </td><td> defining polynomial for Hecke field </td><td> string representing a polynomial in x </td><td> -
+<td> hecke_polynomial </td><td> defining polynomial for Hecke field </td><td> string representing a polynomial in x </td><td> Z[x]
 </td><td> u'x^2 - 5' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> hecke_eigenvalues </td><td> Hecke eigenvalues </td><td> list of strings representing polynomials in x </td><td> -
+<td> hecke_eigenvalues </td><td> Hecke eigenvalues </td><td> list of strings representing polynomials in x </td><td> list from Z[x]
 </td><td> [u'-5', u'-4', u'1', u'1', ...] </td>
 <td>&nbsp;</td></tr>
 
