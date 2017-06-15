@@ -183,3 +183,23 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 </table>
+
+Index information on collection curves:
+
+-  {'_id': 1} (created by mongo)
+-  {'deg': 1} (for searching)
+-  {'dimension': 1} (for searching)
+-  {'disc': 1} (for searching)
+-  {'field_label': 1} (for searching)
+-  {'is_CM': 1} (for searching)
+-  {'is_base_change': 1} (for searching)
+-  {'label': 1} (for searching)
+-  {'label_nsuffix': 1} (for searching)
+-  {'label_suffix': 1} (for searching)
+-  {'level_ideal': 1} (for searching)
+-  {'level_label': 1} (for searching)
+-  {'level_norm': 1} (for searching) 
+-  {'parallel_weight': 1} (for searching)
+-  {'short_label': 1} (for searching)
+-  {'weight': 1} (for searching)
+
