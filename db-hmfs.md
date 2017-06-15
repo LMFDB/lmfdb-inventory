@@ -183,7 +183,7 @@ Index information on collection fields:
 <td>&nbsp;</td></tr>
 
 <tr>
-<td> AL_eigenvalues_fixed </td><td> are Atkin-Lehner eigenvalues fixed? </td><td>  </td><td> -
+<td> AL_eigenvalues_fixed </td><td> are Atkin-Lehner eigenvalues fixed? </td><td> string </td><td> -
 </td><td> 'done' </td>
 <td>&nbsp;</td></tr>
 
