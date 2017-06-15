@@ -56,12 +56,12 @@
 
 <tr>
 <td> primes </td><td> fixed ordered list of primes </td><td> list of strings representing prime ideals [norm, integer generator, extra generator]</td><td> list of prime ideals
-</td><td> [u'[7, 7, 2*w^2 - w - 3]', u'[8, 2, 2]', ...] </td>
+</td><td> ['[7, 7, 2*w^2 - w - 3]', '[8, 2, 2]', ...] </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> ideals </td><td> fixed ordered list of ideals </td><td> list of strings representing ideals [norm, integer generator, extra generator]</td><td> list of ideals
-</td><td> [u'[1, 1, 1]', u'[7, 7, 2*w^2 - w - 3]', ...] </td>
+</td><td> ['[1, 1, 1]', '[7, 7, 2*w^2 - w - 3]', ...] </td>
 <td>&nbsp;</td></tr>
 
 </table>
@@ -88,8 +88,13 @@ Index information on collection fields:
 </tr>
 
 <tr>
+<td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
+</td>
+<td>assigned my Mongo; contains creation timestamp</td></tr>
+
+<tr>
 <td> field_label </td><td> base field label </td><td> string </td><td> -
-</td><td> u'3.3.49.1' </td>
+</td><td> '3.3.49.1' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
@@ -104,12 +109,12 @@ Index information on collection fields:
 
 <tr>
 <td> label </td><td> form label </td><td> string </td><td> -
-</td><td> u'3.3.49.1-27.1-a' </td>
+</td><td> '3.3.49.1-27.1-a' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> short_label </td><td> form short label </td><td> string </td><td> -
-</td><td> u'27.1-a' </td>
+</td><td> '27.1-a' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
@@ -119,17 +124,17 @@ Index information on collection fields:
 
 <tr>
 <td> label_suffix </td><td> label (alpha) suffix </td><td> string </td><td> -
-</td><td> u'a' </td>
+</td><td> 'a' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> level_ideal </td><td> level ideal definition </td><td> string </td><td> ideal
-</td><td> u'[27, 3, 3]' </td>
+</td><td> '[27, 3, 3]' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> level_label </td><td> level ideal label </td><td> string </td><td> -
-</td><td> u'27.1' </td>
+</td><td> '27.1' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
@@ -139,7 +144,7 @@ Index information on collection fields:
 
 <tr>
 <td> weight </td><td> weight </td><td> string </td><td> -
-</td><td> u'[2, 2, 2]' </td>
+</td><td> '[2, 2, 2]' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
@@ -154,32 +159,32 @@ Index information on collection fields:
 
 <tr>
 <td> is_CM </td><td> is a CM form? </td><td> string </td><td> bool
-</td><td> u'no' </td>
-<td>{'yes','no'}</td></tr>
+</td><td> 'no' </td>
+<td>in {'yes','no'}</td></tr>
 
 <tr>
 <td> is_base_change </td><td> is a base change form? </td><td> string </td><td> bool
-</td><td> u'yes' </td>
-<td>{'yes','no'}</td></tr>
+</td><td> 'yes' </td>
+<td>in {'yes','no'}</td></tr>
 
 <tr>
 <td> hecke_polynomial </td><td> defining polynomial for Hecke field </td><td> string representing a polynomial in x </td><td> Z[x]
-</td><td> u'x^2 - 5' </td>
+</td><td>'x^2 - 5' </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> hecke_eigenvalues </td><td> Hecke eigenvalues </td><td> list of strings representing polynomials in x </td><td> list from Z[x]
-</td><td> [u'-5', u'-4', u'1', u'1', ...] </td>
+</td><td> ['-5', '-4', '1', '1', ...] </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> AL_eigenvalues </td><td> Atkin-Lehner eigenvalues </td><td> list of lists of strings, a pair [ideal definition, eigenvalue] for each Atkin-Lehner prime </td><td> -
-</td><td> [[u'[27, 3, 3]', u'-1']] </td>
+</td><td> [['[27, 3, 3]', '-1']] </td>
 <td>&nbsp;</td></tr>
 
 <tr>
 <td> AL_eigenvalues_fixed </td><td> are Atkin-Lehner eigenvalues fixed? </td><td>  </td><td> -
-</td><td> u'done' </td>
+</td><td> 'done' </td>
 <td>&nbsp;</td></tr>
 
 </table>
