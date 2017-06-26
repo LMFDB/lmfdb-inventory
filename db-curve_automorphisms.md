@@ -3,7 +3,7 @@
 | | |
 |---|---|
 |**Description**|Group actions on higher genus curves|
-|**Status**|[alpha](http://beta.lmfdb.org/HigherGenus/C/aut/)|
+|**Status**|[beta](http://beta.lmfdb.org/HigherGenus/C/aut/)|
 |**Contact**|[Jen Paulhus](https://github.com/jenpaulhus)|
 |**Code**|[higher_genus_w_automorphisms](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/higher_genus_w_automorphisms)|
 |**Collections**|[passports](http://beta.lmfdb.org/api/curve_automorphisms/passports)|
@@ -36,7 +36,9 @@
 * **full_label**: label for full automorphism group, in same form as label above but for full automorphism group data
 * **cc**: ordered pair of positive integers where first number is which refined passport and second is which generating vector for that conjugacy class list
 * **con**: list of conjugacy classes where the action for this particular refined passport occurs, stored as a string representing a list of positive integers
-* **eqn** string representing an equation for the family, given in LaTeX notation
+* **eqn**: string representing an equation for the family, given in LaTeX notation
+* **jacobian_decomp**: a list, where each element of the list encodes one factor in a decomposition of the corresponding Jacobian variety, each factor is represented by a list of three integers: the first representing the dimension of the factor, the second the number of isogenous copies of that factor, and the third which irreducible complex character of the automorphism group this factor corresponds to
+* **ndim**: integer representing the dimension of the corresponing Shimura variety
 
 #### Indexes on passports collection
 * **genus** - search/browse
