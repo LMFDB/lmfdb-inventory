@@ -75,9 +75,9 @@
 * **reg** (float): regulator, computed if we have fundamental units
  
   **Example:** 3.2345
-* **subfields** (list): List of subfields, each represented as a pair [coefs, mult].  The coefficients are of a polredabs'ed polynomial for the subfield, and mult is the multiplicity of the subfield (since representing a field by a polynomial only gives it up to isomorphism).
+* **subs** (list): List of subfields, each represented as a pair [coefs, mult].  The coefficients are of a polredabs'ed polynomial for the subfield stored as a string, and mult is the multiplicity of the subfield (since representing a field by a polynomial only gives it up to isomorphism).
 
-  **Example:** [[[1, 0, 1], 2], [[6, -2, 1, 0, 1], 1]]
+  **Example:** [['1,0,1', 2], ['6,-2,1,0,1', 1]]
 * **unitsGmodule** (list of pairs of integers): in some cases we have data on the units modulo torsion as an integral Galois module.  In each pair, the first coordinate is an index to the database of integral representations of the finite group, and the second is the multiplicity with which this representation appears.
 
   **Example:** [[3, 1]]
