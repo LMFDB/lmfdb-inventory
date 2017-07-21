@@ -104,6 +104,7 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * {'**discriminant**': 1}: 
  * {'**galois**': 1}: 
  * {'**galois**': 1, '**ramps**': 1}: 
+ * {'**galois**': 1, '**ramps_all**': 1}: 
  * {'**label**': 1}: 
  * {'**ramps**': 1}: 
  * {'**ramps_all**: 1}:
