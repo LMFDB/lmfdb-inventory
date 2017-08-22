@@ -37,7 +37,7 @@
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr>
 <td> label </td><td> field label </td><td> string </td><td> -
@@ -74,7 +74,7 @@
 Index information on collection fields:
 
 -  {'_id': 1} (created by mongo)
--  {'label': 1} (for retirving data)
+-  {'label': 1} (for retrieving data)
 
 ## Collection forms
 
@@ -96,7 +96,7 @@ Index information on collection fields:
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr>
 <td> field_label </td><td> base field label </td><td> string </td><td> -
@@ -216,7 +216,7 @@ Index information on collection forms:
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr>
 <td> field_label </td><td> base field label </td><td> string </td><td> -
@@ -323,7 +323,7 @@ Index information on collection forms.search:
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr>
 <td> label </td><td> form label </td><td> string </td><td> -
