@@ -555,21 +555,23 @@ Indexes for instances collection:
     </tr>
 </table>
 
-## Lhash description
+### Lhash description
 
-* For modular forms, it matches the url of the origin object
+#### Modular forms
+ it matches the url of the origin object
 
-* For genus 2 curves and elliptic curves over the rationals it's an integer stored as a string, the integer is obtained by the Hash function described in Section 4.3 of <a href="https://arxiv.org/abs/1602.03715">arXiv 1602.03715</a>
+#### genus 2 curves and elliptic curves over QQ
+it's an integer stored as a string, the integer is obtained by the Hash function described in Section 4.3 of <a href="https://arxiv.org/abs/1602.03715">arXiv 1602.03715</a>
 
-*  elliptic curves over a numberfield
-For a primitive L-function we use 'str(&lt;first zero of L_0&gt; * 2^100).round())'.
+####  elliptic curves over a numberfield
+* For a primitive L-function we use `str(<first zero of L_0> * 2^100).round())`.
 
-If we do not have enough precision for the integer above to be correct we prepend an underscore.
+* If we do not have enough precision for the integer above to be correct we prepend an underscore.
 
-For the nonprimitive case, if the factors are on the database, it's the Lhash of the factors separated by a comma, with no spaces.
+* For the nonprimitive case, if the factors are on the database, it's the Lhash of the factors separated by a comma, with no spaces.
 
-For last, if one of the primitive factors is not in the database we use
-'str(&lt;first zero of L_0&gt; * 2^100).round())' prepended with an underscore.
+* For last, if one of the primitive factors is not in the database we use
+`str(<first zero of L_0> * 2^100).round())` prepended with an underscore.
 
 
 
