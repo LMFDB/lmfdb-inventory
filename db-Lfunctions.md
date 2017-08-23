@@ -24,6 +24,7 @@ Indexes for instances collection:
 * **type**: used to filter instances by type
 
 ## Collection Lfunctions
+
 <table border=2>
     <tr>
         <th>Field</th>
@@ -124,7 +125,6 @@ Indexes for instances collection:
         </td>
         <td>
         </td>
-
     </tr>
     <tr>
         <th>
