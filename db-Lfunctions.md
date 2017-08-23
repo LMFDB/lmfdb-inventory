@@ -172,7 +172,6 @@ Indexes for instances collection:
         </td>
         <td>
         </td>
-
     </tr>
     <tr>
         <th>
@@ -208,7 +207,7 @@ Indexes for instances collection:
     </tr>
     <tr>
         <td>
-            `sign_arg`       
+            sign_arg
         </td>
         <td>
             the argument of the root number
@@ -220,7 +219,6 @@ Indexes for instances collection:
             0     
         </td>
         <td>
-
     </tr>
     <tr>
         <th>
@@ -475,7 +473,6 @@ Indexes for instances collection:
             Not optional! However, not all entries in the DB have it at the moment
         </td>
     </tr>
-
     <tr>
         <th>
             positive_zeros
@@ -573,5 +570,4 @@ Indexes for instances collection:
         </td>
         <td></td>
     </tr>
-
 </table>
