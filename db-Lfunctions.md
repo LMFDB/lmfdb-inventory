@@ -68,27 +68,10 @@ Indexes for instances collection:
             Lhash          
         </th>
         <td>
-            A string that is used to connect the collection instances and this collection
-            <ul>
-                <li>
-                    Generic for modular forms, it matches the url of the origin object
-                </li>
-                <li>
-                    For genus 2 curves and elliptic curves over the rationals it's an integer stored as a string, the integer is obtained by the Hash function described in Section 4.3 of <a href="https://arxiv.org/abs/1602.03715">arXiv 1602.03715</a>
-                </li>
-                <li>
-                    For a primitive L-function for which it's origin is an elliptic curves over a numberfield we use str(&lt;first zero of L_0&gt; * 2^100).round()).
-                    <br>
-                    If we do not have enough precision for the integer above to be correct we prepend an underscore.
-                    <br>
-                    For the nonprimitive case, if the factors are on the database, it's the Lhash of the factors separated by a comma, with no spaces.
-                    <br>
-                    For last, if one of the primitive factors is not in the database we use
-                    str(&lt;first zero of L_0&gt; * 2^100).round()) prepended with an underscore.
-                </li>
-            </ul>
-        </td>
-        <td>
+            A string that is used to connect the collection instances and this collection.
+            See below
+            </td>
+            <td>
             string      
         </td>
         <td>
@@ -571,3 +554,24 @@ Indexes for instances collection:
         <td></td>
     </tr>
 </table>
+
+## Lhash description
+<ul>
+                <li>
+                    Generic for modular forms, it matches the url of the origin object
+                </li>
+                <li>
+                    For genus 2 curves and elliptic curves over the rationals it's an integer stored as a string, the integer is obtained by the Hash function described in Section 4.3 of <a href="https://arxiv.org/abs/1602.03715">arXiv 1602.03715</a>
+                </li>
+                <li>
+                    For a primitive L-function for which it's origin is an elliptic curves over a numberfield we use str(&lt;first zero of L_0&gt; * 2^100).round()).
+                    <br>
+                    If we do not have enough precision for the integer above to be correct we prepend an underscore.
+                    <br>
+                    For the nonprimitive case, if the factors are on the database, it's the Lhash of the factors separated by a comma, with no spaces.
+                    <br>
+                    For last, if one of the primitive factors is not in the database we use
+                    str(&lt;first zero of L_0&gt; * 2^100).round()) prepended with an underscore.
+                </li>
+            </ul>
+
