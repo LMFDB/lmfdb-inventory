@@ -85,6 +85,13 @@
 
   **Example:** {u'sib': ['-4,1,2,-7,6,-3,1', '1,0,-1,-1,-1,0,1', '183,-217,111,-28,35,-14,4,0,1']}
 
+* **oldpolredabscoeffs** (list of ints as string): polredabs changed its definition.  We store the current one, but sage produces the old version.  If they are different, we store the old coefficients here so we can search on them.
+
+  **Example:** '-3,0,1'
+* **oldpolredabscoeffhash** (string): output of hexdigest applied to oldpolredabscoeffscoeffs -- it can be used as an index for coefficient lookup (coeffs can be too long)
+
+  **Example:** 'c187070bd71b8ab0a64176f5bc999046'
+
 The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * if length of d is less than 19, set the hash equal to d, otherwise use the first 19 characters
  * multiply the result by the sign of the discriminant
@@ -106,6 +113,7 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * {'**galois**': 1, '**ramps**': 1}: 
  * {'**galois**': 1, '**ramps_all**': 1}: 
  * {'**label**': 1}: 
+ * {'**'oldpolredabscoeffshash**': 1}: 
  * {'**ramps**': 1}: 
  * {'**ramps_all**: 1}:
  * {'**signature**': 1}: 
