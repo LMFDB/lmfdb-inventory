@@ -557,7 +557,7 @@ Jacobian is defined </td>
 * Content: Tamagawa numbers for bad primes of genus 2 curves over QQ.
 * Contributors: Raymond von Bommel.
 * Origin: code by Raymond von Bommel.
-* Extent: All but 8 tamagawa n.
+* Extent: All but 54 tamagaw numbers are present (the missing tamagawa numbers are all for p=2)
 
 <table border=2>
 
