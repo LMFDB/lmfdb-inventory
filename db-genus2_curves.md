@@ -7,7 +7,7 @@
 |**Status**|[production](http://www.lmfdb.org/Genus2Curve/Q/)|
 |**Contact**|[Andrew Sutherland](https://github.com/AndrewVSutherland)|
 |**Code**|[genus2_curves](https://github.com/LMFDB/lmfdb/tree/master/lmfdb/genus2_curves/)|
-|**Collections**|[curves](http://www.lmfdb.org/api/genus2_curves/curves), [endomorphisms](http://www.lmfdb.org/api/genus2_curves/endomorphisms)|
+|**Collections**|[curves](http://www.lmfdb.org/api/genus2_curves/curves), [endomorphisms](http://www.lmfdb.org/api/genus2_curves/endomorphisms), [tamagawa_numbers](http://www.lmfdb.org/api/genus2_curves/tamagawa_numbers)|
 
 **Contributors**: Andrew Booker, Jeroen Sijsling, Andrew Sutherland, John Voight, and Dan Yasaki
 
@@ -551,3 +551,53 @@ Jacobian is defined </td>
 
 ### Index information for endomorphisms collection:
 * label -- lookup
+
+## Collection tamagaw_numbers
+
+* Content: Tamagawa numbers for bad primes of genus 2 curves over QQ.
+* Contributors: Raymond von Bommel.
+* Origin: code by Raymond von Bommel.
+* Extent: All but 8 tamagawa n.
+
+<table border=2>
+
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type of stored data</th>
+<th>Mathematical type</th>
+<th>Example of stored data</th>
+<th>Remarks</th>
+</tr>
+
+<tr>
+<td> label </td>
+<td> LMFDB label of a genus 2 curve </td>
+<td> string </td>
+<td> - </td>
+<td> 169.a.169.1 </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> p </td>
+<td> prime of bad reduction for the specified curve </td>
+<td> integer </td>
+<td> prime number </td>
+<td> 13 </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> tamagawa_number </td>
+<td> tamagawa number of the curve at the prime p </td>
+<td> integer </td>
+<td> integer </td>
+<td> 1 </td>
+<td> </td>
+</tr>
+
+</table>
+
+### Index information for endomorphisms collection:
+* label/p - compound index for lookup
