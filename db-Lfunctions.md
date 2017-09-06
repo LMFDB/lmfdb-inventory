@@ -553,6 +553,24 @@ Indexes for instances collection:
         </td>
         <td></td>
     </tr>
+    <tr>
+        <th>
+            Group             
+        </th>
+        <td>
+            the codomain group of the galois representation
+        </td>
+        <td>
+            string
+        </td>
+        <td>
+            u'GL2' or u'GL3' or u'GSp4'
+        </td>
+        <td>
+            Not every entry has this attribute
+        </td>
+    </tr>
+    
 </table>
 
 ### Lhash description
