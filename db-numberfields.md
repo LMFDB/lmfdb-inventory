@@ -102,19 +102,19 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
  * {'**class_group**':1}: class group
  * {'**class_number**': 1}: class number
  * {'**coeffhash**': 1}:
- * {'**degree**':1}: 
  * {'**degree**': 1, '**disc_abs_key**':1, '**disc_sign**':1}:
- * {'**degree**': 1, '**discriminant**':1}:
  * {'**degree**': 1, '**ramps**': 1}:
  * {'**degree**': 1, '**ramps_all**': 1}:
  * {'**disc_abs_key**': 1, '**disc_sign**': 1, '**signature**': -1}:
- * {'**discriminant**': 1}: 
  * {'**galois**': 1}: 
  * {'**galois**': 1, '**ramps**': 1}: 
  * {'**galois**': 1, '**ramps_all**': 1}: 
  * {'**label**': 1}: 
- * {'**'oldpolredabscoeffshash**': 1}: 
+ * {'**'oldpolredabscoeffhash**': 1}: 
  * {'**ramps**': 1}: 
  * {'**ramps_all**: 1}:
  * {'**signature**': 1}: 
- * fields.rand (auxilliary collection used for random objection access)
+
+## Collection fields.rand
+
+ * auxilliary collection used for random objection access
