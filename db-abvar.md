@@ -44,15 +44,15 @@
 <td> All of the roots of the Weil L-polynomial have absolute value $1/\sqrt{q}$. </td></tr>
 
 <tr>
-<td> polynomial </td><td> Coefficients of the Weil L-polynomial </td><td> list of ints </td><td> $\mathbb{Z}^{2g+1}$ </td><td> [1,-12,65,-192,256] </td>
+<td> poly </td><td> Coefficients of the Weil L-polynomial </td><td> string consisting of space separated integers </td><td> $\mathbb{Z}^{2g+1}$ </td><td> "1 -12 65 -192 256" </td>
 <td> The first entry will always be 1 and the last $q^g$.  For i between 0 and g, $a_{2g-i} = q^{g-i} a_i$. </td></tr>
 
 <tr>
-<td> angle_numbers </td><td> Frobenius angle numbers </td><td> list of python floats </td><td> $\mathbb{R}^g$ </td><td> [0.0826163580681, 0.320878822416] </td>
+<td> angles </td><td> Frobenius angle numbers </td><td> list of python floats </td><td> $\mathbb{R}^g$ </td><td> [0.0826163580681, 0.320878822416] </td>
 <td> The sorted list (with multiplicity) of $\theta$ with $0 \le \theta \le 1$ and $\frac{1}{\sqrt{q}} e^{\pi i \theta}$ a root of the L-polynomial.  There will be $g$ of them unless the list includes 0 or 1. </td></tr>
 
 <tr>
-<td> angle_ranks </td><td> $\operatorname{dim}\left(\operatorname{span}_{\mathbb{Q}}\left(1, \theta_1, \dots, \theta_{2g}\right)\right) - 1,$ where the roots of the L-polynomial are $\frac{1}{\sqrt{q}}e^{\pi i \theta_k}$.</td>
+<td> ang_rank </td><td> $\operatorname{dim}\left(\operatorname{span}_{\mathbb{Q}}\left(1, \theta_1, \dots, \theta_{2g}\right)\right) - 1,$ where the roots of the L-polynomial are $\frac{1}{\sqrt{q}}e^{\pi i \theta_k}$.</td>
 <td>int</td><td>$\mathbb{N}$</td><td>3</td><td>This might be empty if we haven't computed it yet. Note that the field is plural due to a typo in the original import script.</td></tr>
 
 <tr>
@@ -60,31 +60,35 @@
 <td> The rank of the $p$-torsion subgroup of the abelian variety.  Equal to the number of occurences of the slope 0 in the Newton slopes. </td></tr>
 
 <tr>
-<td> slopes </td><td> The slopes of the Newton polygon of the Weil polynomial </td><td> list of strings </td><td> $\mathbb{Q}^{2g+1}$ </td><td> ["0", "1/2", "1/2", "1"] </td>
+<td> slps </td><td> The slopes of the Newton polygon of the Weil polynomial </td><td> string consisting of space separated rationals </td><td> $\mathbb{Q}^{2g+1}$ </td><td> "0 1/2 1/2 1" </td>
 <td> The slopes are in increasing order, are symmetric under the involution $s \to 1-s$, and the corresponding Newton polygon has endpoints (0,0) and (2g,g).</td></tr>
 
 <tr>
-<td> A_counts </td><td> The number of points of the abelian variety over extensions of $\mathbb{F}_q$ </td><td> list of ints </td><td> $\mathbb{N}^g$ </td><td> [1, 19, 76, 171, 961, 5776, 22051, 69939, 261364, 1113799] </td>
+<td> A_cnts </td><td> The number of points of the abelian variety over extensions of $\mathbb{F}_q$ </td><td> string consisting of space separated integers </td><td> $\mathbb{N}^{10}$ </td><td> "1 19 76 171 961 5776 22051 69939 261364 1113799" </td>
 <td> Counts are given for $A(\mathbb{F}_{q^n})$ for $1 \le n \le \operatorname{max}(g,10);$ counts over larger extension fields can be determined from these using the Weil conjectures.</td></tr>
 
 <tr>
-<td> C_counts </td><td> The number of points of a corresponding curve </td><td> list of ints </td><td> $\mathbb{Z}^g$ </td><td> [6, 9, 10, 30, 87, 168, 274, 513, 1086, 2178] </td>
+<td> C_cnts </td><td> The number of points of a corresponding curve over extensions of $\mathbb{F}_q$ </td><td> string consisting of space separated integers </td><td> $\mathbb{Z}^{10}$ </td><td> "6 9 10 30 87 168 274 513 1086 2178" </td>
 <td> If the variety is a Jacobian, these are the point counts of a genus $g$ curve of which this is the Jacobian.  In particular, if any point counts are negative then this abelian variety cannot be a Jacobian.</td></tr>
 
 <tr>
-<td> known_jacobian </td><td> An integer encoding whether the abelian variety is a Jacobian </td><td> int </td><td> - </td><td> 0 </td>
+<td> pt_cnt </td><td> The number of points of a corresponding curve </td><td> int </td><td> $\mathbb{Z}$ </td><td> 6 </td>
+<td>If the variety is a Jacobian, this is the point count of a genus $g$ curve of which this is the Jacobian.</td></tr>
+
+<tr>
+<td> is_jac </td><td> An integer encoding whether the abelian variety is a Jacobian </td><td> int </td><td> - </td><td> 0 </td>
 <td> 1 means that it is definitely a Jacobian, -1 that it is definitely not, and 0 indicates uncertainty. </td></tr>
 
 <tr>
-<td> principally_polarizable </td><td> An integer encoding whether the abelian variety is principally polarizable </td><td> int </td><td> - </td><td> 0 </td>
+<td> is_pp </td><td> An integer encoding whether the abelian variety is principally polarizable </td><td> int </td><td> - </td><td> 0 </td>
 <td> 1 means that it is definitely principally polarizable, -1 that it is definitely not, and 0 indicates uncertainty. </td></tr>
 
 <tr>
-<td> decomposition </td><td> The decomposition into simple factors </td><td> list of pairs [string, int] </td><td> - </td><td> [['2.16.am_cn',1], ['1.16.ah',2]] </td>
+<td> decomp </td><td> The decomposition into simple factors </td><td> list of pairs [string, int] </td><td> - </td><td> [['2.16.am_cn',1], ['1.16.ah',2]] </td>
 <td> The first entry in each pair is the label of the factor, the second is its multiplicity. </td></tr>
 
 <tr>
-<td> brauer_invariants </td><td> The Brauer invariants of the endomorphism algebra </td><td> list of strings </td><td> $\mathbb{Q}^k$ </td><td>["0","0","1/2"] </td>
+<td> brauer_invs </td><td> The Brauer invariants of the endomorphism algebra </td><td> string consisting of space separated rationals </td><td> $\mathbb{Q}^k$ </td><td> "0 0 1/2" </td>
 <td>For a simple isogeny class, the number of invariants is the number of primes above p in the number field defined by the Weil polynomial. For a non simple class, the Brauer invariants of its simple factors are concatenated, and they appear in the order in which the factors appear in the field decomposition.</td></tr>
 
 <tr>
@@ -92,29 +96,63 @@
 <td>The outer set of lists corresponds to the simple factors of the isogeny class (so in the example, this isogeny class is a product of two simple isogeny classes). For each simple factor, the list contains one list per prime above $p$ in the number field defined by the Weil polynomial. This list describes the prime ideal above $p$ by giving the second generator of the ideal (the first generator is always $p$), as a list of the coefficients of the generator when written in terms of a specific basis for the number field. This basis consists of the powers of a root of the P-polynomial (which is the reverse of the L-polynomial).</td>
 
 <tr>
-<td> primitive_models </td><td>The isogeny classes over subfields of $\mathbb{F}_q$ that yield this class upon base change.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td>
-<td>If this isogeny class is primitive (not a base change from a subfield), the list has one element: the label of this class. Otherwise, the list contains the label of every primitive isogeny class that base changes to this class.</td></tr>
+<td> prim_models </td><td>The isogeny classes over subfields of $\mathbb{F}_q$ that yield this class upon base change.</td><td>list of strings</td><td>-</td><td>['2.2.ab_ab','2.2.b_ab']</td>
+<td>If this isogeny class is primitive (not a base change from a subfield), the list will be empty. Otherwise, the list contains the label of every primitive isogeny class that base changes to this class.</td></tr>
 
 <tr>
-<td> number_field </td><td> The label of the number field defined by the Weil polynomial </td><td> string </td><td> - </td><td> "4.0.27792.2" </td>
+<td> nf </td><td> The label of the number field defined by the Weil polynomial </td><td> string </td><td> - </td><td> "4.0.27792.2" </td>
 <td>If the number field was not in the database when the isogeny class was added to the database, this string is empty. If the isogeny class is not simple, this is also an empty string.</td></tr>
+
 <tr>
-<td> galois_n </td><td> The degree label of the Galois group of the Weil polynomial </td><td> int </td><td> - </td><td> 4 </td>
-<td>If the number field was not in the database when the isogeny class was added to the database, this string is empty. If the isogeny class is not simple, this is also an empty string.</td></tr>
+<td> gal </td><td> The Galois group of the Weil polynomial </td><td> bson pair </td><td> - </td><td> ('n': 4, 't': 2) </td>
+<td>If the number field was not in the database when the isogeny class was added to the database or the isogeny class is not simple, 't' will be an empty string.</td></tr>
 <tr>
-<td> galois_t </td><td> The transitive label of the Galois group of the Weil polynomial </td><td> int </td><td> - </td><td> 2 </td>
-<td>If the number field was not in the database when the isogeny class was added to the database, this string is empty. If the isogeny class is not simple, this is also an empty string.</td></tr>
+
+<tr>
+<td> is_simp </td><td> Whether this isogeny class is simple </td><td> bool </td><td> - </td><td> True </td>
+<td></td></tr>
+
+<tr>
+<td> is_prim </td><td> Whether this isogeny class is primitive </td><td> bool </td><td> - </td><td> True </td>
+<td></td></tr>
+
+<tr>
+<td> sort </td><td> An order-preserving encoding of g, q, poly </td><td> string </td><td> - </td> "209BU" </td>
+<td> Numbers are encoded in base 62 with digits 0-9, A-Z, a-z. The first character gives g, the second and third give q, and the remainder give the coefficients of the polynomial.  The Newton identites and Weil bound are used to find an interval in which each successive coefficient must lie, and then the possibilites are encoded in order. </td></tr>
 </table>
 
 Index information on collection fq_isog:
 
 - {'_id': 1} (created by mongo)
-- {'label': 1} (for searching)
-- {'polynomial': 1} (for searching)
-- {'p_rank': 1} (for searching)
-- {'slopes': 1} (for searching)
-- {'A_counts': 1} (for searching)
-- {'C_counts': 1} (for searching)
-- {'known_jacobian': 1} (for searching)
-- {'principally_polarizable': 1} (for searching)
-- {'decomposition': 1} (for searching)
+- {'label': 1} (unique)
+- {'sort': 1} (unique)
+- {'g': 1, 'q': 1, 'sort': 1}
+- {'g': 1, 'sort': 1}
+- {'q': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'p_rank': 1, 'sort': 1}
+- {'p_rank': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'ang_rank': 1, 'sort': 1}
+- {'ang_rank': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'pt_cnt': 1, 'sort': 1}
+- {'pt_cnt': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'C_cnts': 1, 'sort': 1}
+- {'C_cnts': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'A_cnts': 1, 'sort': 1}
+- {'A_cnts': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'poly': 1, 'sort': 1}
+- {'poly': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'slps': 1, 'sort': 1}
+- {'slps': 1, 'sort': 1}
+- {'nf': 1, 'sort': 1}
+- {'decomp': 1, 'sort': 1}
+- {'q': 1, 'gal': 1, 'sort': 1}
+- {'gal': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'is_jac': 1, 'sort': 1}
+- {'is_jac': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'is_pp': 1, 'sort': 1}
+- {'is_pp': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'is_simp': 1, 'sort': 1}
+- {'is_simp': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'is_prim': 1, 'sort': 1}
+- {'is_prim': 1, 'sort': 1}
+- {'g': 1, 'q': 1, 'is_simp': 1, 'is_prim': 1, 'sort': 1}
