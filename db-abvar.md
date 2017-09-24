@@ -116,7 +116,7 @@
 <td></td></tr>
 
 <tr>
-<td> sort </td><td> An order-preserving encoding of g, q, poly </td><td> string </td><td> - </td> "209BU" </td>
+<td> sort </td><td> An order-preserving encoding of g, q, poly </td><td> string </td><td> - </td><td> "209BU" </td>
 <td> Numbers are encoded in base 62 with digits 0-9, A-Z, a-z. The first character gives g, the second and third give q, and the remainder give the coefficients of the polynomial.  The Newton identites and Weil bound are used to find an interval in which each successive coefficient must lie, and then the possibilites are encoded in order. </td></tr>
 </table>
 
