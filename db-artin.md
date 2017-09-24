@@ -1,6 +1,6 @@
 # Database artin
 
-|||
+| | |
 |---|---|
 |Description|Artin representations|
 |Status|[production](http://www.lmfdb.org/ArtinRepresentation/)|

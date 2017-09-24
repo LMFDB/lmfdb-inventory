@@ -1,6 +1,6 @@
 # Database localfields
 
-|||
+| | |
 |---|---|
 |**Description**|Local number fields|
 |**Status**|[production](http://www.lmfdb.org/LocalField)|
@@ -34,9 +34,9 @@
  * **label** (string): label
 
   **Example**: '11.6.4.1'
- * **coeffs** (list of integers): coefficients of a defining polynomial, starting with the constant term
+ * **coeffs** (list of integers as string): coefficients of a defining polynomial, starting with the constant term, concatenated with commas and stored as a string
 
-  **Example**: [41503, 0, 0, 220, 0, 0, 1]
+  **Example**: '41503,0,0,220,0,0,1'
  * **aut** (integer): number of automorphisms of the field
 
   **Example**: 6
@@ -46,9 +46,9 @@
  * **galT** (integer): the T-number for the Galois group
 
   **Example**: 2
- * **inertia** (four-tuple, degree, whether it is transitive or not, the pair [d,t] for the degree and t-number if transitive, and optionally an html display string): inertia subgroup
+ * **inertia** (pair, string and pair of integers): inertia subgroup.  The string indicates whether it is transitive or not ('i' or 't'), and the pair of integers is a group identifier ([degree, t-number] if transitive, or [order, gap-id] if not transitive)
 
-  **Example**: [3, 'i', [3, 1], '<i>C</i><sub>3</sub>']
+  **Example**: ['i', [3, 1]]
  * **slopes** (list of rational numbers as string): wild ramification slopes
 
   **Example**: '[]'
@@ -73,13 +73,22 @@
  * **eisen** (polynomial as string, in variable y over Q_p(t)): Eisenstein polynomial defining relative extension of this field over the maxmial unramified subfield
 
   **Example**: 'y^3 - 11*t^3'
+ * **gsm** (TeX string): Galois splitting model.  It is either a polynomial of positive degree, '0' to signify that the data has not been computed, or '-1' to signify that it is known that none exists
+
+  **Example**: 'x^3 - 3'
+ * **subfields** (list of pairs): Subfield data.  The first component of each pair is the coefficients of our defining polynomial for the subfield stored as a string, and the second component is an integer giving the multiplicity
+
+  **Example**: [['3,-1,1', 1], ['2,-1,0,0,0,1', 1]]
 
 ### Index information for collection fields
  * {'**_id**': 1}: Created by mongo
- * {'**e**': 1}: search by ramification index
- * {'**f**': 1}: search by residue field degree
+ * {'**c**': 1, '**p**': 1}: search by discriminant exponent and prime
+ * {'**coeffs**': 1, '**p**': 1}: search by defining polynomial and prime
+ * {'**e**': 1, '**p**': 1}: search by ramification index and prime
+ * {'**f**': 1, '**p**': 1}: search by residue field degree and prime
+ * {'**gal**': 1}: search by Galois group
  * {'**label**': 1}: search by label
- * {'**metadata**': 1}: Created by mongo
  * {'**n**': 1}: search by degree
- * {'**p**': 1}: search by prime
  * {'**p**': 1,'**n**': 1}: search by prime and degree
+
+

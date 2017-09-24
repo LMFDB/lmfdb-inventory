@@ -1,6 +1,6 @@
 # Database elliptic_curves
 
-|||
+| | |
 |---|---|
 |**Description**|Elliptic curves over **Q** and other number fields|
 |**Status**|[production](http://www.lmfdb.org/EllipticCurve/)|
@@ -149,10 +149,19 @@ int </td><td> N </td><td> 1984 </td><td>&nbsp;</td></tr>
 Galois representation is not surjective </td><td> list of ints
 </td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
 
+<tr><td> non-maximal_primes </td><td> primes p for which the mod p
+Galois representation is not maximal </td><td> list of ints
+</td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
+
 <tr><td> galois_images </td><td> Sutherland codes for the images of
 the mod p Galois representations for the non-surjective primes
 </td><td> list of strings </td><td> - </td><td> ['5B']
 </td><td>Sutherland notation; for CM curves, only primes<100</td></tr>
+
+<tr><td> mod-p_images </td><td> Sutherland codes for the images of
+the mod p Galois representations for the non-maximal primes
+</td><td> list of strings </td><td> - </td><td> ['5B']
+</td><td>Sutherland notation</td></tr>
 
 <tr><td> 2adic_label </td><td> Rouse label of the associated modular
 curve (None for CM curves) </td><td> string </td><td> - </td><td>
@@ -171,8 +180,20 @@ generating the image (None for CM curves) </td><td> list of lists of 4
 ints </td><td> GL(2,Z)^k  (k&ge;0)</td><td> [[5,0,0,5],[5,5,0,1],[5,5,0,3]]
 </td><td>&nbsp;</td></tr>
 
-<tr><td> isogeny_matrix </td><td> isogeny matrix </td><td> list of
-lists of ints)</td><td> M_k(N)  (k&ge;0)</td><td> [[1,5,25],[5,1,5],[25,5,1]]
+<tr><td> isogeny_matrix </td><td> matrix of isogeny degrees for class</td><td> list of
+lists of ints</td><td> M_k(N)  (k&ge;0)</td><td> [[1,5,25],[5,1,5],[25,5,1]]
+</td><td>&nbsp;</td></tr>
+
+<tr><td> isogeny_degrees </td><td> degrees of cyclic isogenies
+</td><td> list of ints</td><td> N^k  (k&ge;0)</td><td> [1,5,25]
+</td><td>&nbsp;</td></tr>
+
+<tr><td> class_deg </td><td> maximal degree of a cyclic isogeny in the class
+</td><td> int</td><td> N </td><td> 25
+</td><td>&nbsp;</td></tr>
+
+<tr><td> class_size </td><td> size of the isogeny class
+</td><td> int</td><td> N </td><td> 3
 </td><td>&nbsp;</td></tr>
 
 <tr><td> sha_an </td><td> analytic order of Sha </td><td> float
@@ -192,13 +213,13 @@ list of ints </td><td> N^k  (k&ge;0)</td><td> [2,3] </td><td>&nbsp;</td></tr>
 list of dicts, one per prime, each with keys 'p' (value:int),
 'ord_cond' (value: int), 'ord_disc' (value: int), 'ord_den_j' (value:
 int), 'red' (value: int), 'cp' (value: int), 'kod' (value:
-string)</td><td> N </td><td> [{'cp': 1, 'kod': '\\( I_{1} \\)',
+string)</td><td> &nbsp; </td><td> [{'cp': 1, 'kod': '\\( I_{1} \\)',
 'ord_cond': 1, 'ord_den_j': 1, 'ord_disc': 1, 'p': 11, 'red': 1}]
 </td><td>&nbsp;</td></tr>
 
 <tr><td> min_quad_twist </td><td> minimal quadratic twist </td><td>
-dict with keys 'label' (value:string) and  'disc' (value: int)</td><td> N
-</td><td> {'disc': 1, 'label': '11a2'} </td><td>&nbsp;</td></tr>
+dict with keys 'label' (value:string) and 'disc' (value: int)</td><td>
+N </td><td> {'disc': 1, 'label': '11a2'} </td><td>&nbsp;</td></tr>
 
 <tr><td> aplist </td><td> Traces of Frobenius </td><td> list of 25
 ints</td><td> Z^25 </td><td> [0, 1, -1, ..., 2] </td><td>a_p for p<100</td></tr>
@@ -206,6 +227,16 @@ ints</td><td> Z^25 </td><td> [0, 1, -1, ..., 2] </td><td>a_p for p<100</td></tr>
 <tr><td> anlist </td><td> L-series coefficients </td><td> list of 20
 ints</td><td> Z^20 </td><td> [0, 1, -1, ..., 2] </td><td>a_n for
 0<=np<20</td></tr>
+
+<tr><td> iwdata </td><td> Iwasawa invariants </td><td> dictionary with
+keys ints, values lists of ints</td><td> Z^20 </td><td> {u'11': [1,
+0], u'3': [0, 0], u'2': [0, 1, 0], u'5': [0, 1]} </td><td>keys are primes,
+including all bad multiplicative primes and all primes up to some
+bound</td></tr>
+
+<tr><td> iwp0 </td><td> Iwasawa prime </td><td> int</td><td> N
+</td><td> 7 </td><td>if nonzero, a prime p0 such that lambda=mu=0 for
+all good p>=p0</td></tr>
 
 </table>
 
@@ -216,6 +247,7 @@ Index information on collection curves:
 -  {'number': 1} (for searching and stats)
 -  {'conductor': 1, 'iso_nlabel': 1, 'lmfdb_number': 1} (for sorting)
 -  {'non-surjective_primes': 1} (for searching)
+-  {'non-maximal_primes': 1} (for searching)
 -  {'cm': 1} (for searching)
 -  {'conductor': 1} (for searching)
 -  {'lmfdb_label': 1,'number': 1} (for searching)
@@ -230,7 +262,8 @@ Index information on collection curves:
 -  {'torsion': 1} (for searching)
 -  {'label': 1, 'number': 1} (for searching)
 -  {'xainvs': 1} (for searching)
--  curves2.rand (auxilliary collection used for random objection access)
+-  curves.rand (auxilliary collection used for random objection access)
+-  curves.stats (auxilliary collection of statistics)
 
 
 ## Collection padic_db
@@ -252,7 +285,7 @@ Index information on collection curves:
 </tr>
 
 <tr> <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>
-</td>-<td> </td> <td>assigned my Mongo; contains creation
+</td>-<td> </td> <td>assigned by Mongo; contains creation
 timestamp</td></tr>
 
 <tr> </td><td> lmfdb_iso </td><td> LMFDB label of isogeny class
@@ -308,7 +341,7 @@ int </td><td>N_0</td><td> 1 </td><td>&nbsp;</td> </tr>
 <tr>
 <td> _id </td><td> Mongo id </td><td> ObjectId </td><td>-</td><td>
 </td>
-<td>assigned my Mongo; contains creation timestamp</td></tr>
+<td>assigned by Mongo; contains creation timestamp</td></tr>
 
 <tr><td> field_label </td><td> Base field label </td><td> string
 </td><td>&nbsp;</td><td> '2.0.8.1' </td><td>&nbsp;</td></tr>
@@ -362,6 +395,18 @@ int </td><td>N</td> <td> 2 </td> <td>starts at 1</td></tr>
 list of ints (degrees) </td><td>M_k(N) (k&ge;0)</td> <td> [[1, 2], [2,
 1]] </td> <td>&nbsp;</td></tr>
 
+<tr><td> isogeny_degrees </td><td> degrees of cyclic isogenies
+</td><td> list of ints</td><td> N^k  (k&ge;0)</td><td> [1,5,25]
+</td><td>&nbsp;</td></tr>
+
+<tr><td> class_deg </td><td> maximal degree of a cyclic isogeny in the class
+</td><td> int</td><td> N </td><td> 25
+</td><td>&nbsp;</td></tr>
+
+<tr><td> class_size </td><td> size of the isogeny class
+</td><td> int</td><td> N </td><td> 3
+</td><td>&nbsp;</td></tr>
+
 <tr><td> ainvs </td> <td> a-invariants </td> <td> string
 </td><td>&nbsp;</td> <td> '0,0,1;0,0,0;1,1,1;0,2,-2;1,-1,-1' </td>
 <td>5 Weierstrass coefficients as NFelt-strings, joined by ";"</td></tr>
@@ -382,6 +427,9 @@ list of 2 ints </td> <td>N_0^2</td><td> [0, 0] </td>
 
 <tr><td> sha_an </td> <td> analytic order of Sha </td> <td> int </td>
 <td>N</td><td> 1 </td> <td>rounded float</td></tr>
+
+<tr><td> ngens </td> <td> number of stored generators </td> <td> int </td> <td>N_0</td><td> 0
+</td> <td>&nbsp;</td></tr>
 
 <tr><td> gens </td> <td> generators of infinite order </td> <td> list
 of point-strings </td> <td>P^2(K)^r
@@ -433,6 +481,16 @@ floats </td><td>R^r</td><td>[0.2815779492939666, 0.25465400108973096]</td>
 <tr><td> equation</td><td> Weierstrass equation</td><td>string</td><td>&nbsp;</td><td>'\\( y^2 + x y + y = x^{3} + a x^{2} + \\left(-30047 a - 303287\\right) x - 9341927 a - 94305014  \\)</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 
+<tr><td> non-surjective_primes </td><td> primes p for which the mod p
+Galois representation is not surjective </td><td> list of ints
+</td><td> N^k (k&ge;0)</td><td> [5] </td><td>&nbsp;</td></tr>
+
+<tr><td> galois_images </td><td> Sutherland codes for the images of
+the mod p Galois representations for the non-surjective primes
+</td><td> list of strings </td><td> - </td><td> ['5B']
+</td><td>Sutherland notation; for CM curves, only primes<100</td></tr>
+
+
 
 </table>
 
@@ -446,4 +504,5 @@ Index information for collection nfcurves
 -  {'field_label':1, 'conductor_norm':1, 'conductor_label':1, 'iso_nlabel':1,'number':1}
 
 -  nfcurves.rand (auxilliary collection used for random objection access)
+-  nfcurves.stats (auxilliary collection of statistics)
 

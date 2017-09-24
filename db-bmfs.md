@@ -1,6 +1,6 @@
 # Database bmfs
 
-|||
+| | |
 |---|---|
 |**Description**|Bianchi modular forms|
 |**Status**|[future](https://github.com/LMFDB/lmfdb/issues/1431#issuecomment-225529987)|

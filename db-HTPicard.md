@@ -1,6 +1,6 @@
 # Database HTPicard
 
-|||
+| | |
 |---|---|
 |**Description**|Maass forms on SL_2(Z[i])|
 |**Status**|[future](https://github.com/LMFDB/lmfdb/issues/1431#issuecomment-225549206)|
