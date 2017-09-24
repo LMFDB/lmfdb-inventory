@@ -44,7 +44,7 @@
 <td> All of the roots of the Weil L-polynomial have absolute value 1/q^{1/2}. </td></tr>
 
 <tr>
-<td> poly </td><td> Coefficients of the Weil L-polynomial </td><td> string consisting of space separated integers </td><td> Z^{2g+1} </td><td> "1 -12 65 -192 256" </td>
+<td> poly </td><td> Coefficients of the Weil L-polynomial </td><td> string consisting of space separated integers </td><td> Z^{2g+1} </td><td> '1 -12 65 -192 256' </td>
 <td> The first entry will always be 1 and the last q^g.  For i between 0 and g, a_{2g-i} = q^{g-i} a_i. </td></tr>
 
 <tr>
@@ -60,15 +60,15 @@
 <td> The rank of the p-torsion subgroup of the abelian variety.  Equal to the number of occurences of the slope 0 in the Newton slopes. </td></tr>
 
 <tr>
-<td> slps </td><td> The slopes of the Newton polygon of the Weil polynomial </td><td> string consisting of space separated rationals </td><td> Q^{2g+1} </td><td> "0 1/2 1/2 1" </td>
+<td> slps </td><td> The slopes of the Newton polygon of the Weil polynomial </td><td> string consisting of space separated rationals </td><td> Q^{2g+1} </td><td> '0 1/2 1/2 1' </td>
 <td> The slopes are in increasing order, are symmetric under the involution s \to 1-s, and the corresponding Newton polygon has endpoints (0,0) and (2g,g).</td></tr>
 
 <tr>
-<td> A_cnts </td><td> The number of points of the abelian variety over extensions of F_q </td><td> string consisting of space separated integers </td><td> N^{10} </td><td> "1 19 76 171 961 5776 22051 69939 261364 1113799" </td>
+<td> A_cnts </td><td> The number of points of the abelian variety over extensions of F_q </td><td> string consisting of space separated integers </td><td> N^{10} </td><td> '1 19 76 171 961 5776 22051 69939 261364 1113799' </td>
 <td> Counts are given for A(F_{q^n}) for $1 \le n \le max(g,10);$ counts over larger extension fields can be determined from these using the Weil conjectures.</td></tr>
 
 <tr>
-<td> C_cnts </td><td> The number of points of a corresponding curve over extensions of F_q </td><td> string consisting of space separated integers </td><td> Z^{10} </td><td> "6 9 10 30 87 168 274 513 1086 2178" </td>
+<td> C_cnts </td><td> The number of points of a corresponding curve over extensions of F_q </td><td> string consisting of space separated integers </td><td> Z^{10} </td><td> '6 9 10 30 87 168 274 513 1086 2178' </td>
 <td> If the variety is a Jacobian, these are the point counts of a genus g curve of which this is the Jacobian.  In particular, if any point counts are negative then this abelian variety cannot be a Jacobian.</td></tr>
 
 <tr>
@@ -116,7 +116,7 @@
 <td></td></tr>
 
 <tr>
-<td> sort </td><td> An order-preserving encoding of g, q, poly </td><td> string </td><td> - </td><td> "209BU" </td>
+<td> sort </td><td> An order-preserving encoding of g, q, poly </td><td> string </td><td> - </td><td> '209BU' </td>
 <td> Numbers are encoded in base 62 with digits 0-9, A-Z, a-z. The first character gives g, the second and third give q, and the remainder give the coefficients of the polynomial.  The Newton identites and Weil bound are used to find an interval in which each successive coefficient must lie, and then the possibilites are encoded in order. </td></tr>
 </table>
 
