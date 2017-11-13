@@ -118,3 +118,29 @@ The dischash is computed as follows, assuming the disc_abs_key is stored as d
 ## Collection fields.rand
 
  * auxilliary collection used for random objection access
+
+## Collection stats
+
+ * auxilliary collection used for number field statistics
+
+ **degree** list of the number of fields of each degree
+
+ **nt** list indexed by degree-1, each a list indexed by t-1 for Galois group t
+
+ **nsig** list indexed by degree-1, each a list indexed by r_2
+
+ **h** list for each class number from 1 to 50
+
+ **h_range** list of class number counts for ranges based on powers of 10
+ 
+ **has_h** the number of fields for which we have the class number
+
+ **dn** counts of dihedral fields by degree
+
+ **hdeg** list indexed by degree, each a list of counts based on log_10(h)
+
+ **has_hdeg** number of fields where we have class numbers
+
+ **sigclass1** list indexed by degree, of lists of number of class number 1 fields based on r_2
+
+ **sighasclass** list indexed by degree, of lists of number of fields for which we have the class numbers based on r_2 
