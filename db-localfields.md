@@ -51,13 +51,18 @@
   **Example**: ['i', [3, 1]]
  * **slopes** (list of rational numbers as string): wild ramification slopes
 
-  **Example**: '[]'
+  **Example**: '[4/3, 4/3]'
  * **t** (integer): tame degree for the Galois closure
 
   **Example**: 3
  * **u** (integer): degree of maximal unramified subfield of the Galois closure
 
   **Example**: 2
+  
+  * **top_slope** (string encoding rational): largest slope in the format "ab.cdefghijkL" where ab.cdefghijk is a truncated decimal expansion of the rational number, padded with 0's if needed, and L is the rational number
+
+  **Example**: '01.3333333334/3' for 4/3
+  
  * **gms** (rational number as string): Galois mean slope
 
   **Example**: '2/3'
